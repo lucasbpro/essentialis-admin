@@ -4,15 +4,18 @@ import React from 'react';
 //import Routes from '../../routes';
 
 import Topbar from '../Topbar';
-//import Home from '../../routes/Home'
+import Home from '../../pages/Home'
+import Recipes from '../../pages/Recipes'
 //import Footer from '../../components/Footer';
 
 import './App.scss';
+//import 'bootstrap/dist/css/bootstrap.css';
 
 const App = () => {
   return(
       <div data-testid="app" className="app">
           <Topbar/>
+          <Recipes/>
       </div>
   )
 };

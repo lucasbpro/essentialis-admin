@@ -1,7 +1,7 @@
 import React from 'react';
-import '../RecipeFilter.scss';
+//import '../RecipesFilter.scss';
 
-const RecipeFilter = ({handleFilter}) => {
+const RecipesFilter = ({handleFilter}) => {
 
 	return (
 		<div className="container-filters">
@@ -26,4 +26,4 @@ const RecipeFilter = ({handleFilter}) => {
 	)
 }
 
-export default RecipeFilter;
+export default RecipesFilter;
