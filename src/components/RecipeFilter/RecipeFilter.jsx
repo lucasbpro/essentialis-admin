@@ -4,26 +4,25 @@ import React from 'react';
 const RecipesFilter = ({handleFilter}) => {
 
 	return (
-		<div className="container-filters">
-			<div className="filters__search">
-				<input 
-					id="text"
-					type="text" 
-					className="filters__search__input" 
-					placeholder="Pesquisar pelo nome da receita" 
-					onChange={event => handleFilter(event)}
-				/>
-  
-				<button
-				  id="search"
-				  className="filters__search__icon"
-				  onClick={event => handleFilter(event)}  
-				>
-				  <i className="fa fa-search"/>
-				</button>
-			</div>
+		<div className="container-filter">
+			<h1> Pesquisar Receita </h1>
+			<input 
+				id="text"
+				type="text" 
+				className="input-busca" 
+				placeholder="Digite uma palavra-chave!" 
+				onChange={event => handleFilter(event)}
+			/>
 		</div>
 	)
 }
 
 export default RecipesFilter;
+
+{/* <button
+id="search"
+className="filters__search__icon"
+onClick={event => handleFilter(event)}  
+>
+botao <i className="fa fa-search"/>
+</button> */}

@@ -36,8 +36,9 @@ const Recipes = () => {
 
 
   return (
-    <div data-testid="recipes" className="recipes">
+    <div className="container">
         <RecipeFilter handleFilter={handleFilter}/>
+        {(isFilterApplied && filteredRecipes.length===0) && <h3> O filtro não retornou resultados </h3>}
         {isFilterApplied && <RecipesTable recipesList={filteredRecipes}/>}
     </div>
   );

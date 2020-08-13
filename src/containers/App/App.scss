@@ -24,7 +24,7 @@ a {
 }
 
 button {
-  background-color: transparent;
+  background-color: #A2228F;
   border: none;
   box-shadow: none;
   outline: none;
@@ -32,9 +32,17 @@ button {
 
 .container {
   width: 100%;
+  padding: 20px;
   margin: 0 auto;
 }
 
+.input-busca {
+  margin: 10px 0 10px 0;
+  width: 50%;
+  font-size: medium;
+  border-color: #A2228F;
+  border-radius: 0.5rem;
+}
 
 
 
