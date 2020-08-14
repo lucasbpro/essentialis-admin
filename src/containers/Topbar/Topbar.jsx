@@ -13,6 +13,10 @@ const Topbar = ()=> {
 				</a>
 			</div>
 			<p> Essentialis Admin </p>
+
+			<button className="menu-icon"> 
+				<i className="fa fa-bars" aria-hidden="true"/> 
+			</button>
   		</header>
 	);
 }

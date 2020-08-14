@@ -4,12 +4,14 @@ import { Route,
 
 import Home from './Home';
 import NotFound from './NotFound';
+import Recipes from './Recipes/Recipes';
 
-const Routes = () => (
+const Pages = () => (
     <Switch>
       <Route exact path="/" component={Home} />
+      <Route exact path="/receitas" component={Recipes} />
       <Route component={NotFound}/>
     </Switch>
 );
 
-export default Routes;
+export default Pages;
