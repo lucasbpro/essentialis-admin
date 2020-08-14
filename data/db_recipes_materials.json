@@ -1,0 +1,1714 @@
+{
+    "recipes_materials": [
+        {
+            "id": "1",
+            "recipe_id": "1",
+            "material_id": "4",
+            "amount": "150"
+        },
+        {
+            "id": "2",
+            "recipe_id": "1",
+            "material_id": "3",
+            "amount": "25"
+        },
+        {
+            "id": "3",
+            "recipe_id": "1",
+            "material_id": "35",
+            "amount": "2"
+        },
+        {
+            "id": "4",
+            "recipe_id": "1",
+            "material_id": "53",
+            "amount": "75"
+        },
+        {
+            "id": "5",
+            "recipe_id": "1",
+            "material_id": "88",
+            "amount": "10"
+        },
+        {
+            "id": "6",
+            "recipe_id": "2",
+            "material_id": "3",
+            "amount": "150"
+        },
+        {
+            "id": "7",
+            "recipe_id": "2",
+            "material_id": "17",
+            "amount": "50"
+        },
+        {
+            "id": "8",
+            "recipe_id": "2",
+            "material_id": "35",
+            "amount": "2"
+        },
+        {
+            "id": "9",
+            "recipe_id": "2",
+            "material_id": "81",
+            "amount": "30"
+        },
+        {
+            "id": "10",
+            "recipe_id": "2",
+            "material_id": "53",
+            "amount": "15"
+        },
+        {
+            "id": "11",
+            "recipe_id": "2",
+            "material_id": "88",
+            "amount": "10"
+        },
+        {
+            "id": "12",
+            "recipe_id": "2",
+            "material_id": "92",
+            "amount": "30"
+        },
+        {
+            "id": "13",
+            "recipe_id": "3",
+            "material_id": "13",
+            "amount": "410"
+        },
+        {
+            "id": "14",
+            "recipe_id": "3",
+            "material_id": "107",
+            "amount": "35"
+        },
+        {
+            "id": "15",
+            "recipe_id": "3",
+            "material_id": "76",
+            "amount": "20"
+        },
+        {
+            "id": "16",
+            "recipe_id": "3",
+            "material_id": "79",
+            "amount": "10"
+        },
+        {
+            "id": "17",
+            "recipe_id": "3",
+            "material_id": "45",
+            "amount": "20"
+        },
+        {
+            "id": "18",
+            "recipe_id": "3",
+            "material_id": "92",
+            "amount": "80"
+        },
+        {
+            "id": "19",
+            "recipe_id": "3",
+            "material_id": "12",
+            "amount": "60"
+        },
+        {
+            "id": "20",
+            "recipe_id": "4",
+            "material_id": "13",
+            "amount": "410"
+        },
+        {
+            "id": "21",
+            "recipe_id": "4",
+            "material_id": "59",
+            "amount": "10"
+        },
+        {
+            "id": "22",
+            "recipe_id": "4",
+            "material_id": "96",
+            "amount": "10"
+        },
+        {
+            "id": "23",
+            "recipe_id": "4",
+            "material_id": "81",
+            "amount": "20"
+        },
+        {
+            "id": "24",
+            "recipe_id": "4",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "25",
+            "recipe_id": "4",
+            "material_id": "106",
+            "amount": "20"
+        },
+        {
+            "id": "26",
+            "recipe_id": "4",
+            "material_id": "9",
+            "amount": "35"
+        },
+        {
+            "id": "27",
+            "recipe_id": "4",
+            "material_id": "92",
+            "amount": "80"
+        },
+        {
+            "id": "28",
+            "recipe_id": "5",
+            "material_id": "13",
+            "amount": "410"
+        },
+        {
+            "id": "29",
+            "recipe_id": "5",
+            "material_id": "106",
+            "amount": "20"
+        },
+        {
+            "id": "30",
+            "recipe_id": "5",
+            "material_id": "92",
+            "amount": "60"
+        },
+        {
+            "id": "31",
+            "recipe_id": "5",
+            "material_id": "91",
+            "amount": "35"
+        },
+        {
+            "id": "32",
+            "recipe_id": "5",
+            "material_id": "81",
+            "amount": "30"
+        },
+        {
+            "id": "33",
+            "recipe_id": "5",
+            "material_id": "23",
+            "amount": "25"
+        },
+        {
+            "id": "34",
+            "recipe_id": "5",
+            "material_id": "86",
+            "amount": "200"
+        },
+        {
+            "id": "35",
+            "recipe_id": "5",
+            "material_id": "50",
+            "amount": "10"
+        },
+        {
+            "id": "36",
+            "recipe_id": "6",
+            "material_id": "13",
+            "amount": "380"
+        },
+        {
+            "id": "37",
+            "recipe_id": "6",
+            "material_id": "25",
+            "amount": "100"
+        },
+        {
+            "id": "38",
+            "recipe_id": "6",
+            "material_id": "94",
+            "amount": "40"
+        },
+        {
+            "id": "39",
+            "recipe_id": "6",
+            "material_id": "76",
+            "amount": "20"
+        },
+        {
+            "id": "40",
+            "recipe_id": "6",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "41",
+            "recipe_id": "6",
+            "material_id": "54",
+            "amount": "20"
+        },
+        {
+            "id": "42",
+            "recipe_id": "6",
+            "material_id": "55",
+            "amount": "10"
+        },
+        {
+            "id": "43",
+            "recipe_id": "6",
+            "material_id": "92",
+            "amount": "120"
+        },
+        {
+            "id": "44",
+            "recipe_id": "6",
+            "material_id": "113",
+            "amount": "2"
+        },
+        {
+            "id": "45",
+            "recipe_id": "7",
+            "material_id": "13",
+            "amount": "410"
+        },
+        {
+            "id": "46",
+            "recipe_id": "7",
+            "material_id": "107",
+            "amount": "35"
+        },
+        {
+            "id": "47",
+            "recipe_id": "7",
+            "material_id": "92",
+            "amount": "60"
+        },
+        {
+            "id": "48",
+            "recipe_id": "7",
+            "material_id": "73",
+            "amount": "20"
+        },
+        {
+            "id": "49",
+            "recipe_id": "7",
+            "material_id": "49",
+            "amount": "10"
+        },
+        {
+            "id": "50",
+            "recipe_id": "8",
+            "material_id": "13",
+            "amount": "450"
+        },
+        {
+            "id": "51",
+            "recipe_id": "8",
+            "material_id": "102",
+            "amount": "20"
+        },
+        {
+            "id": "52",
+            "recipe_id": "8",
+            "material_id": "92",
+            "amount": "80"
+        },
+        {
+            "id": "53",
+            "recipe_id": "8",
+            "material_id": "71",
+            "amount": "30"
+        },
+        {
+            "id": "54",
+            "recipe_id": "8",
+            "material_id": "43",
+            "amount": "10"
+        },
+        {
+            "id": "55",
+            "recipe_id": "9",
+            "material_id": "19",
+            "amount": "280"
+        },
+        {
+            "id": "56",
+            "recipe_id": "9",
+            "material_id": "13",
+            "amount": "350"
+        },
+        {
+            "id": "57",
+            "recipe_id": "9",
+            "material_id": "107",
+            "amount": "50"
+        },
+        {
+            "id": "58",
+            "recipe_id": "9",
+            "material_id": "92",
+            "amount": "80"
+        },
+        {
+            "id": "59",
+            "recipe_id": "9",
+            "material_id": "81",
+            "amount": "20"
+        },
+        {
+            "id": "60",
+            "recipe_id": "9",
+            "material_id": "84",
+            "amount": "4"
+        },
+        {
+            "id": "61",
+            "recipe_id": "9",
+            "material_id": "96",
+            "amount": "30"
+        },
+        {
+            "id": "62",
+            "recipe_id": "9",
+            "material_id": "56",
+            "amount": "10"
+        },
+        {
+            "id": "63",
+            "recipe_id": "10",
+            "material_id": "16",
+            "amount": "50"
+        },
+        {
+            "id": "64",
+            "recipe_id": "10",
+            "material_id": "3",
+            "amount": "150"
+        },
+        {
+            "id": "65",
+            "recipe_id": "10",
+            "material_id": "83",
+            "amount": "10"
+        },
+        {
+            "id": "66",
+            "recipe_id": "10",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "67",
+            "recipe_id": "10",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "68",
+            "recipe_id": "10",
+            "material_id": "27",
+            "amount": "10"
+        },
+        {
+            "id": "69",
+            "recipe_id": "11",
+            "material_id": "17",
+            "amount": "200"
+        },
+        {
+            "id": "70",
+            "recipe_id": "11",
+            "material_id": "4",
+            "amount": "2"
+        },
+        {
+            "id": "71",
+            "recipe_id": "11",
+            "material_id": "3",
+            "amount": "600"
+        },
+        {
+            "id": "72",
+            "recipe_id": "11",
+            "material_id": "77",
+            "amount": "10"
+        },
+        {
+            "id": "73",
+            "recipe_id": "11",
+            "material_id": "84",
+            "amount": "10"
+        },
+        {
+            "id": "74",
+            "recipe_id": "11",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "75",
+            "recipe_id": "11",
+            "material_id": "52",
+            "amount": "20"
+        },
+        {
+            "id": "76",
+            "recipe_id": "11",
+            "material_id": "119",
+            "amount": "5"
+        },
+        {
+            "id": "77",
+            "recipe_id": "11",
+            "material_id": "21",
+            "amount": "5"
+        },
+        {
+            "id": "78",
+            "recipe_id": "11",
+            "material_id": "92",
+            "amount": "100"
+        },
+        {
+            "id": "79",
+            "recipe_id": "11",
+            "material_id": "97",
+            "amount": "5"
+        },
+        {
+            "id": "80",
+            "recipe_id": "12",
+            "material_id": "13",
+            "amount": "150"
+        },
+        {
+            "id": "81",
+            "recipe_id": "12",
+            "material_id": "19",
+            "amount": "280"
+        },
+        {
+            "id": "82",
+            "recipe_id": "12",
+            "material_id": "62",
+            "amount": "10"
+        },
+        {
+            "id": "83",
+            "recipe_id": "12",
+            "material_id": "107",
+            "amount": "35"
+        },
+        {
+            "id": "84",
+            "recipe_id": "12",
+            "material_id": "79",
+            "amount": "20"
+        },
+        {
+            "id": "85",
+            "recipe_id": "12",
+            "material_id": "106",
+            "amount": "20"
+        },
+        {
+            "id": "86",
+            "recipe_id": "12",
+            "material_id": "10",
+            "amount": "35"
+        },
+        {
+            "id": "87",
+            "recipe_id": "12",
+            "material_id": "92",
+            "amount": "80"
+        },
+        {
+            "id": "88",
+            "recipe_id": "13",
+            "material_id": "13",
+            "amount": "450"
+        },
+        {
+            "id": "89",
+            "recipe_id": "13",
+            "material_id": "99",
+            "amount": "20"
+        },
+        {
+            "id": "90",
+            "recipe_id": "13",
+            "material_id": "72",
+            "amount": "20"
+        },
+        {
+            "id": "91",
+            "recipe_id": "13",
+            "material_id": "48",
+            "amount": "20"
+        },
+        {
+            "id": "92",
+            "recipe_id": "13",
+            "material_id": "92",
+            "amount": "80"
+        },
+        {
+            "id": "93",
+            "recipe_id": "13",
+            "material_id": "89",
+            "amount": "100"
+        },
+        {
+            "id": "94",
+            "recipe_id": "14",
+            "material_id": "13",
+            "amount": "450"
+        },
+        {
+            "id": "95",
+            "recipe_id": "14",
+            "material_id": "100",
+            "amount": "30"
+        },
+        {
+            "id": "96",
+            "recipe_id": "14",
+            "material_id": "81",
+            "amount": "30"
+        },
+        {
+            "id": "97",
+            "recipe_id": "14",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "98",
+            "recipe_id": "14",
+            "material_id": "58",
+            "amount": "20"
+        },
+        {
+            "id": "99",
+            "recipe_id": "14",
+            "material_id": "68",
+            "amount": "10"
+        },
+        {
+            "id": "100",
+            "recipe_id": "14",
+            "material_id": "92",
+            "amount": "80"
+        },
+        {
+            "id": "101",
+            "recipe_id": "14",
+            "material_id": "39",
+            "amount": "2"
+        },
+        {
+            "id": "102",
+            "recipe_id": "15",
+            "material_id": "17",
+            "amount": "60"
+        },
+        {
+            "id": "103",
+            "recipe_id": "15",
+            "material_id": "3",
+            "amount": "100"
+        },
+        {
+            "id": "104",
+            "recipe_id": "15",
+            "material_id": "83",
+            "amount": "10"
+        },
+        {
+            "id": "105",
+            "recipe_id": "15",
+            "material_id": "79",
+            "amount": "5"
+        },
+        {
+            "id": "106",
+            "recipe_id": "15",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "107",
+            "recipe_id": "15",
+            "material_id": "54",
+            "amount": "5"
+        },
+        {
+            "id": "108",
+            "recipe_id": "16",
+            "material_id": "20",
+            "amount": "85"
+        },
+        {
+            "id": "109",
+            "recipe_id": "16",
+            "material_id": "2",
+            "amount": "50"
+        },
+        {
+            "id": "110",
+            "recipe_id": "16",
+            "material_id": "7",
+            "amount": "50"
+        },
+        {
+            "id": "111",
+            "recipe_id": "16",
+            "material_id": "91",
+            "amount": "85"
+        },
+        {
+            "id": "112",
+            "recipe_id": "16",
+            "material_id": "58",
+            "amount": "30"
+        },
+        {
+            "id": "113",
+            "recipe_id": "16",
+            "material_id": "39",
+            "amount": "2"
+        },
+        {
+            "id": "114",
+            "recipe_id": "17",
+            "material_id": "17",
+            "amount": "200"
+        },
+        {
+            "id": "115",
+            "recipe_id": "17",
+            "material_id": "3",
+            "amount": "700"
+        },
+        {
+            "id": "116",
+            "recipe_id": "17",
+            "material_id": "55",
+            "amount": "30"
+        },
+        {
+            "id": "117",
+            "recipe_id": "17",
+            "material_id": "78",
+            "amount": "60"
+        },
+        {
+            "id": "118",
+            "recipe_id": "17",
+            "material_id": "121",
+            "amount": "10"
+        },
+        {
+            "id": "119",
+            "recipe_id": "17",
+            "material_id": "40",
+            "amount": "10"
+        },
+        {
+            "id": "120",
+            "recipe_id": "17",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "121",
+            "recipe_id": "18",
+            "material_id": "17",
+            "amount": "200"
+        },
+        {
+            "id": "122",
+            "recipe_id": "18",
+            "material_id": "3",
+            "amount": "700"
+        },
+        {
+            "id": "123",
+            "recipe_id": "18",
+            "material_id": "43",
+            "amount": "30"
+        },
+        {
+            "id": "124",
+            "recipe_id": "18",
+            "material_id": "82",
+            "amount": "60"
+        },
+        {
+            "id": "125",
+            "recipe_id": "18",
+            "material_id": "40",
+            "amount": "10"
+        },
+        {
+            "id": "126",
+            "recipe_id": "19",
+            "material_id": "17",
+            "amount": "50"
+        },
+        {
+            "id": "127",
+            "recipe_id": "19",
+            "material_id": "3",
+            "amount": "150"
+        },
+        {
+            "id": "128",
+            "recipe_id": "19",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "129",
+            "recipe_id": "19",
+            "material_id": "76",
+            "amount": "20"
+        },
+        {
+            "id": "130",
+            "recipe_id": "19",
+            "material_id": "89",
+            "amount": "10"
+        },
+        {
+            "id": "131",
+            "recipe_id": "20",
+            "material_id": "13",
+            "amount": "420"
+        },
+        {
+            "id": "132",
+            "recipe_id": "20",
+            "material_id": "123",
+            "amount": "15"
+        },
+        {
+            "id": "133",
+            "recipe_id": "20",
+            "material_id": "96",
+            "amount": "10"
+        },
+        {
+            "id": "134",
+            "recipe_id": "20",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "135",
+            "recipe_id": "20",
+            "material_id": "85",
+            "amount": "10"
+        },
+        {
+            "id": "136",
+            "recipe_id": "20",
+            "material_id": "101",
+            "amount": "20"
+        },
+        {
+            "id": "137",
+            "recipe_id": "20",
+            "material_id": "9",
+            "amount": "35"
+        },
+        {
+            "id": "138",
+            "recipe_id": "20",
+            "material_id": "35",
+            "amount": "2"
+        },
+        {
+            "id": "139",
+            "recipe_id": "20",
+            "material_id": "92",
+            "amount": "80"
+        },
+        {
+            "id": "140",
+            "recipe_id": "21",
+            "material_id": "13",
+            "amount": "200"
+        },
+        {
+            "id": "141",
+            "recipe_id": "21",
+            "material_id": "25",
+            "amount": "50"
+        },
+        {
+            "id": "142",
+            "recipe_id": "21",
+            "material_id": "94",
+            "amount": "20"
+        },
+        {
+            "id": "143",
+            "recipe_id": "21",
+            "material_id": "81",
+            "amount": "5"
+        },
+        {
+            "id": "144",
+            "recipe_id": "21",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "145",
+            "recipe_id": "21",
+            "material_id": "54",
+            "amount": "10"
+        },
+        {
+            "id": "146",
+            "recipe_id": "21",
+            "material_id": "55",
+            "amount": "10"
+        },
+        {
+            "id": "147",
+            "recipe_id": "21",
+            "material_id": "92",
+            "amount": "50"
+        },
+        {
+            "id": "148",
+            "recipe_id": "21",
+            "material_id": "113",
+            "amount": "3"
+        },
+        {
+            "id": "149",
+            "recipe_id": "22",
+            "material_id": "13",
+            "amount": "500"
+        },
+        {
+            "id": "150",
+            "recipe_id": "22",
+            "material_id": "81",
+            "amount": "30"
+        },
+        {
+            "id": "151",
+            "recipe_id": "22",
+            "material_id": "60",
+            "amount": "40"
+        },
+        {
+            "id": "152",
+            "recipe_id": "22",
+            "material_id": "92",
+            "amount": "120"
+        },
+        {
+            "id": "153",
+            "recipe_id": "22",
+            "material_id": "38",
+            "amount": "5"
+        },
+        {
+            "id": "154",
+            "recipe_id": "23",
+            "material_id": "17",
+            "amount": "200"
+        },
+        {
+            "id": "155",
+            "recipe_id": "23",
+            "material_id": "3",
+            "amount": "700"
+        },
+        {
+            "id": "156",
+            "recipe_id": "23",
+            "material_id": "50",
+            "amount": "5"
+        },
+        {
+            "id": "157",
+            "recipe_id": "23",
+            "material_id": "56",
+            "amount": "5"
+        },
+        {
+            "id": "158",
+            "recipe_id": "23",
+            "material_id": "81",
+            "amount": "30"
+        },
+        {
+            "id": "159",
+            "recipe_id": "23",
+            "material_id": "78",
+            "amount": "5"
+        },
+        {
+            "id": "160",
+            "recipe_id": "23",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "161",
+            "recipe_id": "23",
+            "material_id": "121",
+            "amount": "5"
+        },
+        {
+            "id": "162",
+            "recipe_id": "23",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "163",
+            "recipe_id": "24",
+            "material_id": "122",
+            "amount": "41"
+        },
+        {
+            "id": "164",
+            "recipe_id": "24",
+            "material_id": "64",
+            "amount": "10"
+        },
+        {
+            "id": "165",
+            "recipe_id": "24",
+            "material_id": "74",
+            "amount": "10"
+        },
+        {
+            "id": "166",
+            "recipe_id": "24",
+            "material_id": "80",
+            "amount": "10"
+        },
+        {
+            "id": "167",
+            "recipe_id": "24",
+            "material_id": "36",
+            "amount": "2"
+        },
+        {
+            "id": "168",
+            "recipe_id": "25",
+            "material_id": "13",
+            "amount": "900"
+        },
+        {
+            "id": "169",
+            "recipe_id": "25",
+            "material_id": "80",
+            "amount": "30"
+        },
+        {
+            "id": "170",
+            "recipe_id": "25",
+            "material_id": "60",
+            "amount": "40"
+        },
+        {
+            "id": "171",
+            "recipe_id": "25",
+            "material_id": "74",
+            "amount": "16"
+        },
+        {
+            "id": "172",
+            "recipe_id": "25",
+            "material_id": "92",
+            "amount": "100"
+        },
+        {
+            "id": "173",
+            "recipe_id": "25",
+            "material_id": "29",
+            "amount": "10"
+        },
+        {
+            "id": "174",
+            "recipe_id": "26",
+            "material_id": "116",
+            "amount": "400"
+        },
+        {
+            "id": "175",
+            "recipe_id": "26",
+            "material_id": "58",
+            "amount": "20"
+        },
+        {
+            "id": "176",
+            "recipe_id": "26",
+            "material_id": "88",
+            "amount": "10"
+        },
+        {
+            "id": "177",
+            "recipe_id": "26",
+            "material_id": "4",
+            "amount": "20"
+        },
+        {
+            "id": "178",
+            "recipe_id": "27",
+            "material_id": "4",
+            "amount": "150"
+        },
+        {
+            "id": "179",
+            "recipe_id": "27",
+            "material_id": "3",
+            "amount": "25"
+        },
+        {
+            "id": "180",
+            "recipe_id": "27",
+            "material_id": "35",
+            "amount": "2"
+        },
+        {
+            "id": "181",
+            "recipe_id": "27",
+            "material_id": "53",
+            "amount": "75"
+        },
+        {
+            "id": "182",
+            "recipe_id": "27",
+            "material_id": "88",
+            "amount": "10"
+        },
+        {
+            "id": "183",
+            "recipe_id": "28",
+            "material_id": "3",
+            "amount": "150"
+        },
+        {
+            "id": "184",
+            "recipe_id": "28",
+            "material_id": "17",
+            "amount": "50"
+        },
+        {
+            "id": "185",
+            "recipe_id": "28",
+            "material_id": "37",
+            "amount": "2"
+        },
+        {
+            "id": "186",
+            "recipe_id": "28",
+            "material_id": "81",
+            "amount": "30"
+        },
+        {
+            "id": "187",
+            "recipe_id": "28",
+            "material_id": "49",
+            "amount": "15"
+        },
+        {
+            "id": "188",
+            "recipe_id": "28",
+            "material_id": "88",
+            "amount": "10"
+        },
+        {
+            "id": "189",
+            "recipe_id": "28",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "190",
+            "recipe_id": "29",
+            "material_id": "13",
+            "amount": "200"
+        },
+        {
+            "id": "191",
+            "recipe_id": "29",
+            "material_id": "107",
+            "amount": "20"
+        },
+        {
+            "id": "192",
+            "recipe_id": "29",
+            "material_id": "76",
+            "amount": "10"
+        },
+        {
+            "id": "193",
+            "recipe_id": "29",
+            "material_id": "79",
+            "amount": "5"
+        },
+        {
+            "id": "194",
+            "recipe_id": "29",
+            "material_id": "45",
+            "amount": "10"
+        },
+        {
+            "id": "195",
+            "recipe_id": "29",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "196",
+            "recipe_id": "29",
+            "material_id": "12",
+            "amount": "30"
+        },
+        {
+            "id": "197",
+            "recipe_id": "30",
+            "material_id": "13",
+            "amount": "230"
+        },
+        {
+            "id": "198",
+            "recipe_id": "30",
+            "material_id": "59",
+            "amount": "5"
+        },
+        {
+            "id": "199",
+            "recipe_id": "30",
+            "material_id": "96",
+            "amount": "5"
+        },
+        {
+            "id": "200",
+            "recipe_id": "30",
+            "material_id": "81",
+            "amount": "10"
+        },
+        {
+            "id": "201",
+            "recipe_id": "30",
+            "material_id": "74",
+            "amount": "5"
+        },
+        {
+            "id": "202",
+            "recipe_id": "30",
+            "material_id": "106",
+            "amount": "10"
+        },
+        {
+            "id": "203",
+            "recipe_id": "30",
+            "material_id": "9",
+            "amount": "18"
+        },
+        {
+            "id": "204",
+            "recipe_id": "30",
+            "material_id": "92",
+            "amount": "50"
+        },
+        {
+            "id": "205",
+            "recipe_id": "31",
+            "material_id": "13",
+            "amount": "200"
+        },
+        {
+            "id": "206",
+            "recipe_id": "31",
+            "material_id": "106",
+            "amount": "10"
+        },
+        {
+            "id": "207",
+            "recipe_id": "31",
+            "material_id": "92",
+            "amount": "30"
+        },
+        {
+            "id": "208",
+            "recipe_id": "31",
+            "material_id": "91",
+            "amount": "18"
+        },
+        {
+            "id": "209",
+            "recipe_id": "31",
+            "material_id": "81",
+            "amount": "15"
+        },
+        {
+            "id": "210",
+            "recipe_id": "31",
+            "material_id": "23",
+            "amount": "10"
+        },
+        {
+            "id": "211",
+            "recipe_id": "31",
+            "material_id": "86",
+            "amount": "100"
+        },
+        {
+            "id": "212",
+            "recipe_id": "31",
+            "material_id": "50",
+            "amount": "5"
+        },
+        {
+            "id": "213",
+            "recipe_id": "32",
+            "material_id": "13",
+            "amount": "190"
+        },
+        {
+            "id": "214",
+            "recipe_id": "32",
+            "material_id": "25",
+            "amount": "50"
+        },
+        {
+            "id": "215",
+            "recipe_id": "32",
+            "material_id": "94",
+            "amount": "20"
+        },
+        {
+            "id": "216",
+            "recipe_id": "32",
+            "material_id": "76",
+            "amount": "10"
+        },
+        {
+            "id": "217",
+            "recipe_id": "32",
+            "material_id": "74",
+            "amount": "5"
+        },
+        {
+            "id": "218",
+            "recipe_id": "32",
+            "material_id": "54",
+            "amount": "10"
+        },
+        {
+            "id": "219",
+            "recipe_id": "32",
+            "material_id": "55",
+            "amount": "5"
+        },
+        {
+            "id": "220",
+            "recipe_id": "32",
+            "material_id": "92",
+            "amount": "60"
+        },
+        {
+            "id": "221",
+            "recipe_id": "32",
+            "material_id": "113",
+            "amount": "2"
+        },
+        {
+            "id": "222",
+            "recipe_id": "33",
+            "material_id": "13",
+            "amount": "230"
+        },
+        {
+            "id": "223",
+            "recipe_id": "33",
+            "material_id": "107",
+            "amount": "20"
+        },
+        {
+            "id": "224",
+            "recipe_id": "33",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "225",
+            "recipe_id": "33",
+            "material_id": "73",
+            "amount": "10"
+        },
+        {
+            "id": "226",
+            "recipe_id": "33",
+            "material_id": "49",
+            "amount": "5"
+        },
+        {
+            "id": "227",
+            "recipe_id": "34",
+            "material_id": "13",
+            "amount": "230"
+        },
+        {
+            "id": "228",
+            "recipe_id": "34",
+            "material_id": "102",
+            "amount": "10"
+        },
+        {
+            "id": "229",
+            "recipe_id": "34",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "230",
+            "recipe_id": "34",
+            "material_id": "71",
+            "amount": "15"
+        },
+        {
+            "id": "231",
+            "recipe_id": "34",
+            "material_id": "43",
+            "amount": "5"
+        },
+        {
+            "id": "232",
+            "recipe_id": "35",
+            "material_id": "17",
+            "amount": "150"
+        },
+        {
+            "id": "233",
+            "recipe_id": "35",
+            "material_id": "4",
+            "amount": "1"
+        },
+        {
+            "id": "234",
+            "recipe_id": "35",
+            "material_id": "3",
+            "amount": "350"
+        },
+        {
+            "id": "235",
+            "recipe_id": "35",
+            "material_id": "77",
+            "amount": "5"
+        },
+        {
+            "id": "236",
+            "recipe_id": "35",
+            "material_id": "84",
+            "amount": "5"
+        },
+        {
+            "id": "237",
+            "recipe_id": "35",
+            "material_id": "74",
+            "amount": "5"
+        },
+        {
+            "id": "238",
+            "recipe_id": "35",
+            "material_id": "52",
+            "amount": "10"
+        },
+        {
+            "id": "239",
+            "recipe_id": "35",
+            "material_id": "119",
+            "amount": "2"
+        },
+        {
+            "id": "240",
+            "recipe_id": "35",
+            "material_id": "21",
+            "amount": "2"
+        },
+        {
+            "id": "241",
+            "recipe_id": "35",
+            "material_id": "92",
+            "amount": "50"
+        },
+        {
+            "id": "242",
+            "recipe_id": "35",
+            "material_id": "97",
+            "amount": "2"
+        },
+        {
+            "id": "243",
+            "recipe_id": "36",
+            "material_id": "13",
+            "amount": "80"
+        },
+        {
+            "id": "244",
+            "recipe_id": "36",
+            "material_id": "19",
+            "amount": "150"
+        },
+        {
+            "id": "245",
+            "recipe_id": "36",
+            "material_id": "62",
+            "amount": "5"
+        },
+        {
+            "id": "246",
+            "recipe_id": "36",
+            "material_id": "107",
+            "amount": "18"
+        },
+        {
+            "id": "247",
+            "recipe_id": "36",
+            "material_id": "79",
+            "amount": "10"
+        },
+        {
+            "id": "248",
+            "recipe_id": "36",
+            "material_id": "106",
+            "amount": "10"
+        },
+        {
+            "id": "249",
+            "recipe_id": "36",
+            "material_id": "10",
+            "amount": "18"
+        },
+        {
+            "id": "250",
+            "recipe_id": "36",
+            "material_id": "92",
+            "amount": "50"
+        },
+        {
+            "id": "251",
+            "recipe_id": "37",
+            "material_id": "13",
+            "amount": "230"
+        },
+        {
+            "id": "252",
+            "recipe_id": "37",
+            "material_id": "99",
+            "amount": "10"
+        },
+        {
+            "id": "253",
+            "recipe_id": "37",
+            "material_id": "72",
+            "amount": "10"
+        },
+        {
+            "id": "254",
+            "recipe_id": "37",
+            "material_id": "48",
+            "amount": "10"
+        },
+        {
+            "id": "255",
+            "recipe_id": "37",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "256",
+            "recipe_id": "37",
+            "material_id": "89",
+            "amount": "50"
+        },
+        {
+            "id": "257",
+            "recipe_id": "38",
+            "material_id": "13",
+            "amount": "230"
+        },
+        {
+            "id": "258",
+            "recipe_id": "38",
+            "material_id": "100",
+            "amount": "15"
+        },
+        {
+            "id": "259",
+            "recipe_id": "38",
+            "material_id": "81",
+            "amount": "15"
+        },
+        {
+            "id": "260",
+            "recipe_id": "38",
+            "material_id": "74",
+            "amount": "5"
+        },
+        {
+            "id": "261",
+            "recipe_id": "38",
+            "material_id": "58",
+            "amount": "10"
+        },
+        {
+            "id": "262",
+            "recipe_id": "38",
+            "material_id": "68",
+            "amount": "5"
+        },
+        {
+            "id": "263",
+            "recipe_id": "38",
+            "material_id": "92",
+            "amount": "40"
+        },
+        {
+            "id": "264",
+            "recipe_id": "38",
+            "material_id": "39",
+            "amount": "1"
+        },
+        {
+            "id": "265",
+            "recipe_id": "39",
+            "material_id": "20",
+            "amount": "85"
+        },
+        {
+            "id": "266",
+            "recipe_id": "39",
+            "material_id": "2",
+            "amount": "50"
+        },
+        {
+            "id": "267",
+            "recipe_id": "39",
+            "material_id": "7",
+            "amount": "50"
+        },
+        {
+            "id": "268",
+            "recipe_id": "39",
+            "material_id": "91",
+            "amount": "85"
+        },
+        {
+            "id": "269",
+            "recipe_id": "39",
+            "material_id": "49",
+            "amount": "10"
+        },
+        {
+            "id": "270",
+            "recipe_id": "39",
+            "material_id": "46",
+            "amount": "20"
+        },
+        {
+            "id": "271",
+            "recipe_id": "39",
+            "material_id": "27",
+            "amount": "2"
+        },
+        {
+            "id": "272",
+            "recipe_id": "40",
+            "material_id": "13",
+            "amount": "252"
+        },
+        {
+            "id": "273",
+            "recipe_id": "40",
+            "material_id": "123",
+            "amount": "10"
+        },
+        {
+            "id": "274",
+            "recipe_id": "40",
+            "material_id": "96",
+            "amount": "5"
+        },
+        {
+            "id": "275",
+            "recipe_id": "40",
+            "material_id": "74",
+            "amount": "5"
+        },
+        {
+            "id": "276",
+            "recipe_id": "40",
+            "material_id": "85",
+            "amount": "5"
+        },
+        {
+            "id": "277",
+            "recipe_id": "40",
+            "material_id": "101",
+            "amount": "15"
+        },
+        {
+            "id": "278",
+            "recipe_id": "40",
+            "material_id": "9",
+            "amount": "20"
+        },
+        {
+            "id": "279",
+            "recipe_id": "40",
+            "material_id": "35",
+            "amount": "2"
+        },
+        {
+            "id": "280",
+            "recipe_id": "40",
+            "material_id": "92",
+            "amount": "50"
+        },
+        {
+            "id": "281",
+            "recipe_id": "41",
+            "material_id": "122",
+            "amount": "50"
+        },
+        {
+            "id": "282",
+            "recipe_id": "41",
+            "material_id": "46",
+            "amount": "3"
+        },
+        {
+            "id": "283",
+            "recipe_id": "41",
+            "material_id": "49",
+            "amount": "2"
+        },
+        {
+            "id": "284",
+            "recipe_id": "41",
+            "material_id": "80",
+            "amount": "5"
+        },
+        {
+            "id": "285",
+            "recipe_id": "41",
+            "material_id": "37",
+            "amount": "2"
+        }
+    ]
+}

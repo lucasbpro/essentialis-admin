@@ -1,0 +1,168 @@
+{
+    "recipes": [
+        {
+            "id": "1",
+            "description": "Aromatizador 250 ml"
+        },
+        {
+            "id": "2",
+            "description": "Sabonete L\u00edquido 250 ml "
+        },
+        {
+            "id": "3",
+            "description": "Sabonete Fitoter\u00e1pico de Aveia"
+        },
+        {
+            "id": "4",
+            "description": "Sabonete Fitoter\u00e1pico de Argila Branca"
+        },
+        {
+            "id": "5",
+            "description": "Sabonete Fitoter\u00e1pico de Arroz c/ Canela"
+        },
+        {
+            "id": "6",
+            "description": "Sabonete Fitoter\u00e1pico de Chocolate"
+        },
+        {
+            "id": "7",
+            "description": "Sabonete Fitoter\u00e1pico de Capim-Lim\u00e3o"
+        },
+        {
+            "id": "8",
+            "description": "Sabonete Fitoter\u00e1pico de Alecrim"
+        },
+        {
+            "id": "9",
+            "description": "Sabonete Fitoter\u00e1pico de Leite de Cabra com Mel"
+        },
+        {
+            "id": "10",
+            "description": "Sabonete L\u00edquido Facial de Pepino com Aloe Vera"
+        },
+        {
+            "id": "11",
+            "description": "Sabonete \u00cdntimo Perolado - 300 mL"
+        },
+        {
+            "id": "12",
+            "description": "Sabonete Fitoter\u00e1pico de Argila Verde"
+        },
+        {
+            "id": "13",
+            "description": "Sabonete Fitoter\u00e1pico de Camomila"
+        },
+        {
+            "id": "14",
+            "description": "Sabonete Fitoter\u00e1pico de Lavanda"
+        },
+        {
+            "id": "15",
+            "description": "Espuma Facial"
+        },
+        {
+            "id": "16",
+            "description": "Esfera Efervescente de Lavanda"
+        },
+        {
+            "id": "17",
+            "description": "Shampoo de Caf\u00e9 - 300mL"
+        },
+        {
+            "id": "18",
+            "description": "Shampoo de Mam\u00e3o Papaya com Alecrim"
+        },
+        {
+            "id": "19",
+            "description": "Sabonete de Camomila L\u00edquido"
+        },
+        {
+            "id": "20",
+            "description": "Sabonete Fitoter\u00e1pico de Argila Branca com Rosa Mosqueta"
+        },
+        {
+            "id": "21",
+            "description": "Sabonete de Brigadeiro"
+        },
+        {
+            "id": "22",
+            "description": "Sabonete de Cora\u00e7\u00e3o Mini"
+        },
+        {
+            "id": "23",
+            "description": "Shampoo Adstringente de \u00c1gua de Arroz - 300mL"
+        },
+        {
+            "id": "24",
+            "description": "\u00c1lcool em Gel - 30 g"
+        },
+        {
+            "id": "25",
+            "description": "Sabonete Lembran\u00e7a - 40g"
+        },
+        {
+            "id": "26",
+            "description": "Bombom Sach\u00ea Perfumado de Sagu "
+        },
+        {
+            "id": "27",
+            "description": "Refil Aromatizador 250 ml"
+        },
+        {
+            "id": "28",
+            "description": "Refil Sabonete L\u00edquido 250 ml "
+        },
+        {
+            "id": "29",
+            "description": "Sabonete Fitoter\u00e1pico de Aveia - p/ 03"
+        },
+        {
+            "id": "30",
+            "description": "Sabonete Fitoter\u00e1pico de Argila Branca - p/ 03"
+        },
+        {
+            "id": "31",
+            "description": "Sabonete Fitoter\u00e1pico de Arroz c/ Canela - p/ 03"
+        },
+        {
+            "id": "32",
+            "description": "Sabonete Fitoter\u00e1pico de Chocolate"
+        },
+        {
+            "id": "33",
+            "description": "Sabonete Fitoter\u00e1pico de Capim-Lim\u00e3o"
+        },
+        {
+            "id": "34",
+            "description": "Sabonete Fitoter\u00e1pico de Alecrim"
+        },
+        {
+            "id": "35",
+            "description": "Sabonete \u00cdntimo Perolado - 300 mL p/02"
+        },
+        {
+            "id": "36",
+            "description": "Sabonete Fitoter\u00e1pico de Argila Verde - p/ 03"
+        },
+        {
+            "id": "37",
+            "description": "Sabonete Fitoter\u00e1pico de Camomila - p/ 03"
+        },
+        {
+            "id": "38",
+            "description": "Sabonete Fitoter\u00e1pico de Lavanda - P/ 03"
+        },
+        {
+            "id": "39",
+            "description": "Esfera Efervescente de Capim Lim\u00e3o"
+        },
+        {
+            "id": "40",
+            "description": "Sabonete Fitoter\u00e1pico de Argila Branca com Rosa Mosqueta"
+        },
+        {
+            "id": "41",
+            "description": "\u00c1lcool em Gel Vidro - 50 g"
+        }
+    ]
+}
