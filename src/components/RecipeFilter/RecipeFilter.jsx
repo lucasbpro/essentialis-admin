@@ -18,11 +18,3 @@ const RecipesFilter = ({handleFilter}) => {
 }
 
 export default RecipesFilter;
-
-{/* <button
-id="search"
-className="filters__search__icon"
-onClick={event => handleFilter(event)}  
->
-botao <i className="fa fa-search"/>
-</button> */}

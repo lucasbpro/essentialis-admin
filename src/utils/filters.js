@@ -1,13 +1,23 @@
-function isStringInText(string, text){
+function isStringInText(string, text) {
     return (text.toLowerCase().search(string.toLowerCase()) !== -1);
 }
 
-function filterByText(list, textToSearch) {
-    console.log(textToSearch)
+function isEqual(num1, num2) {
+    return parseInt(num1)===parseInt(num2);
+}
+
+function filterListByText(list, textToSearch) {
     return list.filter(listItem => {
         return (isStringInText(textToSearch, listItem.description))     
         });
 }
+
+function filterMaterialsByRecipeId(materialsRecipesList, recipeId) {
+    const filteredItems = materialsRecipesList.filter(item => isEqual(item.recipe_id, recipeId));
+    return filteredItems.map(item => item.material_id)
+}
+
+
 
 /* function alphabeticSort(string1,string2){
     if(string1.charCodeAt(0) !== string2.charCodeAt(0)){
@@ -44,6 +54,7 @@ function orderByAdmissionDate(contacts){
 } */
 
 export {
-    filterByText
+    filterListByText,
+    filterMaterialsByRecipeId
 };
   

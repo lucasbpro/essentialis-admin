@@ -1088,6 +1088,24 @@
             "unit_material": "mL",
             "stock_amt": "0",
             "sell_by_date": ""
+        },
+        {
+            "id": "122",
+            "description": "Álcool em Gel",
+            "package_price": "",
+            "package_amt": "",
+            "unit_material": "mL",
+            "stock_amt": "0",
+            "sell_by_date": ""
+        },
+        {
+            "id": "123",
+            "description": "Ess\u00eancia de Rosas",
+            "package_price": "",
+            "package_amt": "",
+            "unit_material": "mL",
+            "stock_amt": "0",
+            "sell_by_date": ""
         }
     ]
 }

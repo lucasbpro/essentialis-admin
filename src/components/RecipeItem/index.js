@@ -1,14 +1,16 @@
 import React from 'react';
 import {TableItem} from './styles'
 
-function RecipeItem({recipe}){
+function RecipeItem({recipeDescription, materialsDescription}){
 
-    return(recipe.length === 0? null :
+    return(recipeDescription === undefined? null :
         <TableItem data-testid="recipe" className="recipe">
-            <td>{recipe.description}</td>
-            <td>{recipe.package_price}</td>
-            <td>{recipe.unit_material}</td>
-            <td>{recipe.stock_amt}</td>
+            <td>{recipeDescription}</td>
+            <td>{materialsDescription.map(item => {
+                    return <p>{item}</p>
+                })}
+            </td>
+            <td>{`Hoje`}</td>
         </TableItem>
     );
 }
