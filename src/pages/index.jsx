@@ -8,7 +8,7 @@ import Recipes from './Recipes/Recipes';
 
 const Pages = () => (
     <Switch>
-      <Route exact path="/" component={Home} />
+      <Route exact path="/" component={Recipes} />
       <Route exact path="/receitas" component={Recipes} />
       <Route component={NotFound}/>
     </Switch>
