@@ -4,7 +4,7 @@ import {TableItem} from './styles'
 function RecipeItem({recipeDescription, materialsDescription, modificationDate}){
 
     return(recipeDescription === undefined? null :
-        <TableItem data-testid="recipe" className="recipe">
+        <TableItem>
             <td>{recipeDescription}</td>
             <td>
                 <ul>

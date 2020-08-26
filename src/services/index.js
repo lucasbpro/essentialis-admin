@@ -1,4 +1,7 @@
-const URL_API = "https://essentialis-server.herokuapp.com";
+
+//const URL_API = "https://essentialis-server.herokuapp.com";
+const URL_API = "http://localhost:8000";
+
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
 const URL_RECIPE_MATERIALS = `${URL_API}/recipes_materials`;

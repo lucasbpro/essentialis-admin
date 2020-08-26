@@ -65,7 +65,7 @@
         },
         {
             "id": "8",
-            "description": "Anf\u00f3tero",
+            "description": "AnfÓtero",
             "package_price": "20.64",
             "package_amt": "1000",
             "unit_material": "mL",
@@ -173,7 +173,7 @@
         },
         {
             "id": "20",
-            "description": "Bicarbonato de S\u00f3dio",
+            "description": "Bicarbonato de SÓdio",
             "package_price": "3",
             "package_amt": "80",
             "unit_material": "g",
@@ -200,7 +200,7 @@
         },
         {
             "id": "23",
-            "description": "Canela em P\u00f3",
+            "description": "Canela em PÓ",
             "package_price": "2.1",
             "package_amt": "20",
             "unit_material": "g",
@@ -650,7 +650,7 @@
         },
         {
             "id": "73",
-            "description": "Extrato de Pr\u00f3polis com Capim Lim\u00e3o",
+            "description": "Extrato de PrÓpolis com Capim Lim\u00e3o",
             "package_price": "5",
             "package_amt": "100",
             "unit_material": "mL",
@@ -659,7 +659,7 @@
         },
         {
             "id": "74",
-            "description": "Extrato Glic\u00f3lico de Aloe Vera",
+            "description": "Extrato GlicÓlico de Aloe Vera",
             "package_price": "27",
             "package_amt": "500",
             "unit_material": "mL",
@@ -668,7 +668,7 @@
         },
         {
             "id": "75",
-            "description": "Extrato Glic\u00f3lico de Arnica ",
+            "description": "Extrato GlicÓlico de Arnica ",
             "package_price": "5",
             "package_amt": "100",
             "unit_material": "mL",
@@ -677,7 +677,7 @@
         },
         {
             "id": "76",
-            "description": "Extrato Glic\u00f3lico de Aveia",
+            "description": "Extrato GlicÓlico de Aveia",
             "package_price": "5",
             "package_amt": "100",
             "unit_material": "g",
@@ -686,7 +686,7 @@
         },
         {
             "id": "77",
-            "description": "Extrato Glic\u00f3lico de Barbatim\u00e3o",
+            "description": "Extrato GlicÓlico de Barbatim\u00e3o",
             "package_price": "27",
             "package_amt": "500",
             "unit_material": "mL",
@@ -695,7 +695,7 @@
         },
         {
             "id": "78",
-            "description": "Extrato Glic\u00f3lico de Caf\u201a",
+            "description": "Extrato GlicÓlico de Caf\u201a",
             "package_price": "30",
             "package_amt": "500",
             "unit_material": "mL",
@@ -704,7 +704,7 @@
         },
         {
             "id": "79",
-            "description": "Extrato Glic\u00f3lico de Cal\u02c6ndula",
+            "description": "Extrato GlicÓlico de Calêndula",
             "package_price": "5",
             "package_amt": "100",
             "unit_material": "mL",
@@ -713,7 +713,7 @@
         },
         {
             "id": "80",
-            "description": "Extrato Glic\u00f3lico de G\u201armen de Trigo ",
+            "description": "Extrato GlicÓlico de G\u201armen de Trigo ",
             "package_price": "27",
             "package_amt": "500",
             "unit_material": "mL",
@@ -722,7 +722,7 @@
         },
         {
             "id": "81",
-            "description": "Extrato Glic\u00f3lico de Leite de Cabra",
+            "description": "Extrato GlicÓlico de Leite de Cabra",
             "package_price": "27",
             "package_amt": "500",
             "unit_material": "mL",
@@ -731,7 +731,7 @@
         },
         {
             "id": "82",
-            "description": "Extrato Glic\u00f3lico de Mam\u00e3o Papaia",
+            "description": "Extrato GlicÓlico de Mam\u00e3o Papaia",
             "package_price": "30",
             "package_amt": "500",
             "unit_material": "mL",
@@ -740,7 +740,7 @@
         },
         {
             "id": "83",
-            "description": "Extrato Glic\u00f3lico de Pepino",
+            "description": "Extrato GlicÓlico de Pepino",
             "package_price": "27",
             "package_amt": "500",
             "unit_material": "mL",
@@ -749,7 +749,7 @@
         },
         {
             "id": "84",
-            "description": "Extrato Glic\u00f3lico de Pr\u00f3polis",
+            "description": "Extrato GlicÓlico de PrÓpolis",
             "package_price": "11",
             "package_amt": "100",
             "unit_material": "mL",
@@ -758,7 +758,7 @@
         },
         {
             "id": "85",
-            "description": "Extrato Glic\u00f3lico de Uva",
+            "description": "Extrato GlicÓlico de Uva",
             "package_price": "27",
             "package_amt": "500",
             "unit_material": "mL",
@@ -812,7 +812,7 @@
         },
         {
             "id": "91",
-            "description": "Lauril em P\u00f3",
+            "description": "Lauril em PÓ",
             "package_price": "15.8",
             "package_amt": "250",
             "unit_material": "g",
@@ -884,7 +884,7 @@
         },
         {
             "id": "99",
-            "description": "\u00f3leo de Camomila",
+            "description": "Óleo de Camomila",
             "package_price": "4.95",
             "package_amt": "100",
             "unit_material": "mL",
@@ -893,7 +893,7 @@
         },
         {
             "id": "100",
-            "description": "\u00f3leo de G\u00e9rmen de Trigo",
+            "description": "Óleo de G\u00e9rmen de Trigo",
             "package_price": "4.95",
             "package_amt": "100",
             "unit_material": "mL",
@@ -902,7 +902,7 @@
         },
         {
             "id": "101",
-            "description": "\u00f3leo de Rosa Mosqueta",
+            "description": "Óleo de Rosa Mosqueta",
             "package_price": "12",
             "package_amt": "100",
             "unit_material": "mL",
@@ -911,7 +911,7 @@
         },
         {
             "id": "102",
-            "description": "\u00f3leo de Semente de Uva",
+            "description": "Óleo de Semente de Uva",
             "package_price": "3.6",
             "package_amt": "100",
             "unit_material": "mL",
@@ -920,7 +920,7 @@
         },
         {
             "id": "103",
-            "description": "\u00f3leo de Silicone",
+            "description": "Óleo de Silicone",
             "package_price": "19.55",
             "package_amt": "100",
             "unit_material": "mL",
@@ -929,7 +929,7 @@
         },
         {
             "id": "104",
-            "description": "\u00f3leo Mineral",
+            "description": "Óleo Mineral",
             "package_price": "22.8",
             "package_amt": "1000",
             "unit_material": "mL",
@@ -938,7 +938,7 @@
         },
         {
             "id": "105",
-            "description": "\u00f3leo Vegetal de Abacate",
+            "description": "Óleo Vegetal de Abacate",
             "package_price": "10.34",
             "package_amt": "100",
             "unit_material": "mL",
@@ -947,7 +947,7 @@
         },
         {
             "id": "106",
-            "description": "\u00f3leo Vegetal de Am\u02c6ndoas",
+            "description": "Óleo Vegetal de Amêndoas",
             "package_price": "8.24",
             "package_amt": "100",
             "unit_material": "mL",
@@ -956,7 +956,7 @@
         },
         {
             "id": "107",
-            "description": "\u00f3leo Vegetal de Coco de Baba\u00e7u",
+            "description": "Óleo Vegetal de Coco de Baba\u00e7u",
             "package_price": "29.84",
             "package_amt": "500",
             "unit_material": "g",
@@ -965,7 +965,7 @@
         },
         {
             "id": "108",
-            "description": "\u00f3leo Vegetal de Girassol ",
+            "description": "Óleo Vegetal de Girassol ",
             "package_price": "6.54",
             "package_amt": "100",
             "unit_material": "mL",

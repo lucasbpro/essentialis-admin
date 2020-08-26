@@ -25,14 +25,15 @@ const RecipesTable = ({recipesList, allMaterials}) => {
 
                <tbody>
                   {recipesList.map((recipe, index)  => {
+                     
                      const materialsIds = filterMaterialsByRecipeId(materialsRecipesMap, recipe.id);
-                     const materialsList = allMaterials.filter(item => materialsIds.includes(item.id))
-                     const materialsDescription = materialsList.map(item => item.description)
+                     const materialsList = allMaterials.filter(item => materialsIds.includes(item.id));
+                     const materialsDescription = materialsList.map(item => item.description);
 
                      return <RecipeItem key={index} 
                                         recipeDescription={recipe.description} 
                                         materialsDescription={materialsDescription}
-                                        modifiedOn={recipe.modificada_em} />
+                                        modificationDate={recipe.modificada_em} />
                   })} 
                </tbody>
             </Table>

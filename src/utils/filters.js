@@ -35,8 +35,6 @@ function filterMaterialsByRecipeId(materialsRecipesList, recipeId) {
     return filteredItems.map(item => item.material_id)
 }
 
-
-
 /* function alphabeticSort(string1,string2){
     if(string1.charCodeAt(0) !== string2.charCodeAt(0)){
         return string1.charCodeAt(0) - string2.charCodeAt(0);
