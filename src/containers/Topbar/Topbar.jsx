@@ -6,13 +6,18 @@ import './Topbar.scss';
 const Topbar = ()=> {
 
 	return(
-		<header data-testid="topbar" className="topbar">
-			<div className="topbar_logo">
+		<header className="topbar">
+			<div>
 				<a href="/"> 
-					<img className="topbar_logo" src={LogoEssentialis} alt="Logo-Essentialis"/>  
+					<img className="topbar-logo" src={LogoEssentialis} alt="Logo-Essentialis"/>  
 				</a>
 			</div>
-			<p> Essentialis Admin </p>
+			
+			<div>
+				<a href="/" className="topbar-title"> 
+					Essentialis Admin
+				</a>
+			</div>
 
 			<button className="menu-icon"> 
 				<i className="fa fa-bars" aria-hidden="true"/> 

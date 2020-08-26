@@ -15,11 +15,20 @@
     box-shadow: 0px 1px 3px 0px #dadada;
   }
   
-  .topbar_logo {
+  .topbar-logo {
     display: inline-block;
     height: 40px;
     padding: 0;
     justify-content: left;
+  }
+
+  .topbar-title {
+    height: 40px;
+    color : #A2228F;
+    font-size: 20px;
+    font-family: 'Carter One', cursive;
+    margin-left: 5px;
+    pointer-events: none;
   }
   
   .menu-icon{
@@ -28,6 +37,7 @@
     border: none;
     box-shadow: none;
     cursor: pointer;
+    pointer-events: none;
     font-size: 2rem;
     line-height: 0;
     outline: none;
