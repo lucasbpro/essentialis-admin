@@ -2,28 +2,14 @@ import React, {useEffect, useState} from "react";
 import RecipeItem from '../../components/RecipeItem';
 import Table from 'react-bootstrap/Table'
 
-import {filterMaterialsByRecipeId} from '../../utils/filters'
+import {getRecipesMaterialsMap} from '../../services';
+import {filterMaterialsByRecipeId} from '../../utils/filters';
 
 const RecipesTable = ({recipesList, allMaterials}) => { 
 
-      const URL_RECIPE_MATERIALS = "http://localhost:8000/recipes_materials";
-
       const [materialsRecipesMap, setMap] = useState([]);
 
-      useEffect(() => {
-         if (window.location.href.includes('localhost')) {
-           fetch(URL_RECIPE_MATERIALS)
-             .then(async (response) => {
-               if (response.ok) {
-                 const resposta = await response.json();
-                 setMap(resposta);
-                 return;
-               }
-               throw new Error(`Error when communicating with server at ${URL_RECIPE_MATERIALS}`);
-             });
-         }
-       }, [])
-
+      useEffect(() => getRecipesMaterialsMap().then(resposta => setMap(resposta)), [])
 
       if (recipesList.length===0)
          return null;

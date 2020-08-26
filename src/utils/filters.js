@@ -2,13 +2,31 @@ function isStringInText(string, text) {
     return (text.toLowerCase().search(string.toLowerCase()) !== -1);
 }
 
+function removeAccents (str) {
+    var map = {
+        'a' : 'á|à|ã|â|À|Á|Ã|Â',
+        'e' : 'é|è|ê|É|È|Ê',
+        'i' : 'í|ì|î|Í|Ì|Î',
+        'o' : 'ó|ò|ô|õ|Ó|Ò|Ô|Õ',
+        'u' : 'ú|ù|û|ü|Ú|Ù|Û|Ü',
+        'c' : 'ç|Ç',
+        'n' : 'ñ|Ñ'
+    };
+    
+    for (var pattern in map) {
+        str = str.replace(new RegExp(map[pattern], 'g'), pattern);
+    };
+
+    return str;
+};
+
 function isEqual(num1, num2) {
     return parseInt(num1)===parseInt(num2);
 }
 
 function filterListByText(list, textToSearch) {
     return list.filter(listItem => {
-        return (isStringInText(textToSearch, listItem.description))     
+        return (isStringInText(removeAccents(textToSearch), removeAccents(listItem.description)))     
         });
 }
 
