@@ -11,7 +11,7 @@
         },
         {
             "id": "2",
-            "description": "\u00e1cido C\u00edtrico",
+            "description": "Ácido C\u00edtrico",
             "package_price": "5.5",
             "package_amt": "200",
             "unit_material": "g",
@@ -20,7 +20,7 @@
         },
         {
             "id": "3",
-            "description": "\u00e1gua Desmineralizada",
+            "description": "Água Desmineralizada",
             "package_price": "3.5",
             "package_amt": "1000",
             "unit_material": "mL",
@@ -29,7 +29,7 @@
         },
         {
             "id": "4",
-            "description": "\u00e1lcool de Cereais",
+            "description": "Álcool de Cereais",
             "package_price": "35",
             "package_amt": "5000",
             "unit_material": "mL",
@@ -155,7 +155,7 @@
         },
         {
             "id": "18",
-            "description": "Base para \u00e1lcool Gel",
+            "description": "Base para Álcool Gel",
             "package_price": "15.5",
             "package_amt": "1000",
             "unit_material": "mL",

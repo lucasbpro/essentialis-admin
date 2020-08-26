@@ -17,8 +17,8 @@ const RecipesTable = ({recipesList, allMaterials}) => {
             <Table striped bordered hover>
                <thead>
                   <tr>
-                     <th> Nome  </th>
-                     <th> Materiais </th>
+                     <th> Nome da Receita </th>
+                     <th> Materiais Utilizados </th>
                      <th> Modificada em </th>
                   </tr>
                </thead>
