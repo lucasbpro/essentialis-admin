@@ -31,7 +31,8 @@ const RecipesTable = ({recipesList, allMaterials}) => {
 
                      return <RecipeItem key={index} 
                                         recipeDescription={recipe.description} 
-                                        materialsDescription={materialsDescription} />
+                                        materialsDescription={materialsDescription}
+                                        modifiedOn={recipe.modificada_em} />
                   })} 
                </tbody>
             </Table>
