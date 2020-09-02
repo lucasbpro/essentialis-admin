@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "node ./server.js",
-    "devAPI" : "react-scripts start",
+    "dev" : "react-scripts start",
     "devLocal": "concurrently \"react-scripts start\" \"node ./server.js\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

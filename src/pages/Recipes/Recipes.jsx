@@ -17,8 +17,13 @@ const Recipes = () => {
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [isFilterApplied, setFilterApplied] = useState(false);
 
-  useEffect(() => getAllRecipes().then(resposta => setRecipes(resposta)), [])
-  useEffect(() => getAllMaterials().then(resposta => setAllMaterials(resposta)), [])
+  useEffect(() => {
+    getAllRecipes().then(resposta => setRecipes(resposta));
+  }, [])
+
+  useEffect(() => {
+    getAllMaterials().then(resposta => setAllMaterials(resposta))
+  }, [])
 
   const handleFilter = (event) => {
       setFilteredRecipes(filterListByText(recipesList, event.target.value))

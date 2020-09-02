@@ -9,7 +9,9 @@ const RecipesTable = ({recipesList, allMaterials}) => {
 
       const [materialsRecipesMap, setMap] = useState([]);
 
-      useEffect(() => getRecipesMaterialsMap().then(resposta => setMap(resposta)), [])
+      useEffect(() => {
+         getRecipesMaterialsMap().then(resposta => setMap(resposta));
+      }, [])
 
       if (recipesList.length===0)
          return null;
@@ -24,13 +26,14 @@ const RecipesTable = ({recipesList, allMaterials}) => {
                </thead>
 
                <tbody>
-                  {recipesList.map((recipe, index)  => {
+                  {recipesList && recipesList.map((recipe, index)  => {
                      
                      const materialsIds = filterMaterialsByRecipeId(materialsRecipesMap, recipe.id);
                      const materialsList = allMaterials.filter(item => materialsIds.includes(item.id));
                      const materialsDescription = materialsList.map(item => item.description);
 
                      return <RecipeItem key={index} 
+                                        recipeId={recipe.id}
                                         recipeDescription={recipe.description} 
                                         materialsDescription={materialsDescription}
                                         modificationDate={recipe.modificada_em} />

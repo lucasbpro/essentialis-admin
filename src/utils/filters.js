@@ -31,8 +31,21 @@ function filterListByText(list, textToSearch) {
 }
 
 function filterMaterialsByRecipeId(materialsRecipesList, recipeId) {
-    const filteredItems = materialsRecipesList.filter(item => isEqual(item.recipe_id, recipeId));
+    let filteredItems = [];
+
+    if (materialsRecipesList.length === 0)
+        return filteredItems;
+
+    filteredItems = materialsRecipesList.filter(item => isEqual(item.recipe_id, recipeId));
     return filteredItems.map(item => item.material_id)
+}
+
+function filterMaterialsAmountByRecipeId(materialsRecipesList, recipeId) {
+    const filteredItems = materialsRecipesList.filter(item => isEqual(item.recipe_id, recipeId));
+    return filteredItems.map(item => {
+        return {"id": item.material_id, 
+                "amount": item.amount}
+    })
 }
 
 /* function alphabeticSort(string1,string2){
@@ -71,6 +84,7 @@ function orderByAdmissionDate(contacts){
 
 export {
     filterListByText,
-    filterMaterialsByRecipeId
+    filterMaterialsByRecipeId,
+    filterMaterialsAmountByRecipeId
 };
   
