@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react';
 //import Loading from '../../components/Loading';
 import OrderFilter from '../../components/OrderFilter'
 import OrderTable  from '../../containers/OrderTable';
-import {filterOrdersByStatus} from '../../utils/filters'
+import {filterOrdersByStatus, sortOrdersByDate} from '../../utils/filters'
 import {getAllOrders} from '../../services';
 
 const Orders = () => {
@@ -13,7 +13,7 @@ const Orders = () => {
   const [isFilterApplied, setFilterApplied] = useState(false);
 
   useEffect(() => {
-    getAllOrders().then(resposta => setOrders(resposta));
+    getAllOrders().then(out => sortOrdersByDate(out)).then(out=>setOrders(out));
   }, [])
 
   const handleFilter = (event) => {

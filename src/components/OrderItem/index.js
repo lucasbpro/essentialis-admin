@@ -4,8 +4,6 @@ import {TableItem} from './styles'
 
 function OrderItem({index, orderDescription, orderDate, orderStatus, paymentStatus }){
 
-    console.log(orderDescription)
-
     return(orderDescription === undefined? null :
         <TableItem key={index}>
             <td>{orderDescription}</td>
