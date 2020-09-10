@@ -1,8 +1,21 @@
 function isStringInText(string, text) {
+
+    console.log(string)
+    console.log(text)
+
+
+    if(text === undefined || string === undefined)
+        return false;
+    
+
+
     return (text.toLowerCase().search(string.toLowerCase()) !== -1);
 }
 
 function removeAccents (str) {
+    if(str===undefined)
+        return str;
+    
     var map = {
         'a' : 'á|à|ã|â|À|Á|Ã|Â',
         'e' : 'é|è|ê|É|È|Ê',
@@ -48,6 +61,10 @@ function filterMaterialsAmountByRecipeId(materialsRecipesList, recipeId) {
     })
 }
 
+function filterOrdersByStatus(ordersList, status) {
+    return ordersList.filter(listItem => isStringInText(removeAccents(status), removeAccents(listItem.status_fabrication)));     
+};
+
 /* function alphabeticSort(string1,string2){
     if(string1.charCodeAt(0) !== string2.charCodeAt(0)){
         return string1.charCodeAt(0) - string2.charCodeAt(0);
@@ -85,6 +102,7 @@ function orderByAdmissionDate(contacts){
 export {
     filterListByText,
     filterMaterialsByRecipeId,
-    filterMaterialsAmountByRecipeId
+    filterMaterialsAmountByRecipeId,
+    filterOrdersByStatus
 };
   

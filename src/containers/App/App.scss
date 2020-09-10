@@ -75,6 +75,17 @@ h3 {
   }
 }
 
+.home {
+  display: flex;
+  justify-content: center;
+}
+
+.loading {
+  margin-top: 50px;
+  font-size: 24px;
+  color: #202020;
+}
+
 .container {
   width: 375px;
   padding: 3%;
@@ -82,9 +93,10 @@ h3 {
 }
 
 .input-busca {
+  padding: 0 0 0 5px;
   margin: 10px 0 10px 0;
   width: 100%;
-  font-size: medium;
+  font-size: large;
   border-color: #A2228F;
   border-radius: 0.5rem;
 }

@@ -1,10 +1,11 @@
 
-const URL_API = "https://essentialis-server.herokuapp.com";
-//const URL_API = "http://localhost:8000";
+//const URL_API = "https://essentialis-server.herokuapp.com";
+const URL_API = "http://localhost:8000";
 
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
 const URL_RECIPE_MATERIALS = `${URL_API}/recipes_materials`;
+const URL_ORDERS = `${URL_API}/orders`;
 
 async function get(URL){
   return fetch(URL).then(async (response) => {
@@ -44,11 +45,21 @@ async function getRecipesMaterialsMap(){
   return get(URL_RECIPE_MATERIALS);
 }
 
+async function getAllOrders(){
+  return get(URL_ORDERS);
+}
+
+async function getOrderById(orderId){
+  return get(`${URL_ORDERS}/${orderId}`);
+}
+
 export {
     getAllRecipes,
     getRecipeById,
     getAllMaterials,
     getMaterialById,
     getMaterialsByIds,
-    getRecipesMaterialsMap
+    getRecipesMaterialsMap,
+    getAllOrders,
+    getOrderById
 }
