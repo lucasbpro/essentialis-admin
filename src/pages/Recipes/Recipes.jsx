@@ -6,7 +6,6 @@ import {getAllRecipes, getAllMaterials} from '../../services';
 
 import RecipeFilter from '../../components/RecipeFilter'
 import RecipesTable from '../../containers/RecipesTable';
-import './Recipes.scss';
 
 import {filterListByText} from '../../utils/filters'
 
