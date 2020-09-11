@@ -3,6 +3,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Pages from '../../pages';
 import Topbar from '../Topbar';
+import ErrorBoundary from '../../components/ErrorBoundary';
 //import Menu from '../Menu';
 //import Footer from '../../components/Footer';
 
@@ -13,11 +14,13 @@ const App = () => {
 
   return(
       <div className="app">
+        <ErrorBoundary>
           <Router>
             <Topbar/>
             {/*isMenuSelected && <Menu/>*/}
             <Pages/>
           </Router>
+        </ErrorBoundary>
       </div>
   )
 };
