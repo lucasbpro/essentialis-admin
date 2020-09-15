@@ -22,6 +22,8 @@ const OrderTable = ({ordersList}) => {
 
                      return <OrderItem key={index} 
                                        index={index}
+                                       productId={order.product_id} 
+                                       orderId={order.id} 
                                        orderDescription={order.productDescription} 
                                        orderDate={order.order_date}
                                        orderStatus={order.status_fabrication} 
