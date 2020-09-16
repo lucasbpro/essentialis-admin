@@ -34,6 +34,10 @@ button {
   outline: none;
 }
 
+.button-red {
+  background-color: #d60e0e;
+}
+
 h1 {
   margin-block-start: 0px;
   margin-block-end: 15px;
@@ -117,4 +121,8 @@ span{
   font-size: large;
   border-color: #A2228F;
   border-radius: 0.5rem;
+}
+
+.section{
+  padding-top: 20px;
 }

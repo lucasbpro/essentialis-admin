@@ -12,18 +12,21 @@ const OrderTable = ({ordersList}) => {
                   <tr>
                      <th> Produto </th>
                      <th> Data do pedido </th>
-                     <th> Status Fabricação </th>
-                     <th> Status Pagamento </th>
+                     <th> Cliente </th>
+                     <th> Status </th>
                   </tr>
                </thead>
 
                <tbody>
                   {ordersList && ordersList.map((order, index)  => {
 
+                     const customerName = "Fulano";
+
                      return <OrderItem key={index} 
                                        index={index}
                                        productId={order.product_id} 
                                        orderId={order.id} 
+                                       customerName={customerName}
                                        orderDescription={order.productDescription} 
                                        orderDate={order.order_date}
                                        orderStatus={order.status_fabrication} 
