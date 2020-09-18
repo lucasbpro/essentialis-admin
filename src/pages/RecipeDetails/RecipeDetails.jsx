@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
+import {Redirect} from 'react-router';
 //import Loading from '../../components/Loading';
 
 import {getRecipesMaterialsMap, getRecipeById, getMaterialsByIds} from '../../services';
@@ -33,8 +34,10 @@ const RecipeDetails = () => {
     setLoading(false);
   }, [materialsIds]);
 
-  if(loading || materialsList===[])
+  if(loading)
     return <h2>Carregando...</h2>;
+  else if(recipeInfo.length===0 || materialsList.lenght===0)
+      return <Redirect to="/notfound" />
   else return (
     <div className="container">
         <h2>{recipeInfo.description}</h2>
