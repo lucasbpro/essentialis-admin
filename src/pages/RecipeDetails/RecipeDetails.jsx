@@ -38,7 +38,8 @@ const RecipeDetails = () => {
   else return (
     <div className="container">
         <h2>{recipeInfo.description}</h2>
-        <p>Lista de Materiais:</p>
+
+        <p>Última atualização em {`${recipeInfo.modificada_em}`}</p>
 
         <Table striped bordered hover>
           <thead>
