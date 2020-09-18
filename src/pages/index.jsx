@@ -16,6 +16,7 @@ const Pages = () => (
       <Route exact path="/receita/:recipeId" component={RecipeDetails}/>
       <Route exact path="/pedido/:orderId" component={OrderDetails}/>
       <Route exact path="/pedidos" component={Orders}/>
+      <Route exact path="/notfound" component={NotFound}/>
       <Route component={NotFound}/>
     </Switch>
 );
