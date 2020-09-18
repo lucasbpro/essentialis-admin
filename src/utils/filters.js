@@ -1,8 +1,13 @@
 function isStringInText(string, text) {
+    if(text === undefined || string === undefined)
+        return false;
     return (text.toLowerCase().search(string.toLowerCase()) !== -1);
 }
 
 function removeAccents (str) {
+    if(str===undefined)
+        return str;
+    
     var map = {
         'a' : 'á|à|ã|â|À|Á|Ã|Â',
         'e' : 'é|è|ê|É|È|Ê',
@@ -10,7 +15,8 @@ function removeAccents (str) {
         'o' : 'ó|ò|ô|õ|Ó|Ò|Ô|Õ',
         'u' : 'ú|ù|û|ü|Ú|Ù|Û|Ü',
         'c' : 'ç|Ç',
-        'n' : 'ñ|Ñ'
+        'n' : 'ñ|Ñ',
+        ''  : ' '
     };
     
     for (var pattern in map) {
@@ -48,6 +54,24 @@ function filterMaterialsAmountByRecipeId(materialsRecipesList, recipeId) {
     })
 }
 
+function filterOrdersByStatus(ordersList, status) {
+    return ordersList.filter(listItem => isStringInText(removeAccents(status), removeAccents(listItem.status_fabrication)));     
+};
+
+function filterOrdersByCustomer(ordersList, customerName) {
+    return ordersList.filter(listItem => isStringInText(removeAccents(customerName), removeAccents(listItem.customerName)));     
+};
+
+function dateSort(string1,string2){
+    const date1 = new Date(string1);
+    const date2 = new Date(string2);
+    return date1.getTime() - date2.getTime();
+}
+
+function sortOrdersByDate(orderList){
+    return orderList.sort( (order1,order2) => dateSort(order2.order_date,order1.order_date) )
+}
+
 /* function alphabeticSort(string1,string2){
     if(string1.charCodeAt(0) !== string2.charCodeAt(0)){
         return string1.charCodeAt(0) - string2.charCodeAt(0);
@@ -55,36 +79,16 @@ function filterMaterialsAmountByRecipeId(materialsRecipesList, recipeId) {
         return alphabeticSort(string1.substring(1),string2.substring(1));
     }
 }
-   
-function dateSort(string1,string2){
-    const date1 = new Date(string1);
-    const date2 = new Date(string2);
-    return date1.getTime() - date2.getTime();
-}
 
 function orderByName(contacts){
     return contacts.sort( (a,b) => alphabeticSort(a.name,b.name) )
-}
-
-function orderByCountry(contacts){
-    return contacts.sort( (a,b) => alphabeticSort(a.country,b.country) )
-}
-
-function orderByCompany(contacts){
-    return contacts.sort( (a,b) => alphabeticSort(a.company,b.company) )
-}
-
-function orderByDepartment(contacts){
-    return contacts.sort( (a,b) => alphabeticSort(a.department,b.department) )
-}
-
-function orderByAdmissionDate(contacts){
-    return contacts.sort( (a,b) => dateSort(a.admissionDate,b.admissionDate) )
 } */
 
 export {
     filterListByText,
     filterMaterialsByRecipeId,
-    filterMaterialsAmountByRecipeId
+    filterMaterialsAmountByRecipeId,
+    filterOrdersByStatus,
+    filterOrdersByCustomer,
+    sortOrdersByDate
 };
-  

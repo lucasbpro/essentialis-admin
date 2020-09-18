@@ -3,16 +3,25 @@
 This defines all constants (usually strings) used in the website as, for example, in input labels and 
 placeholders. */ 
 
-// API URL
-const URL_API = "https://5e9935925eabe7001681c856.mockapi.io/api/v1/catalog";
-
 // Placeholders
 //const IMAGE_PLACEHOLDER = "https://via.placeholder.com/470x594/FFFFFF/?text=Imagem+Indisponível"
 
-// Labes
-const LABEL_URL_INPUT = "Insira o nome da loja virtual";
+//Status de Pedidos
+const TO_MANUFACTURE = "Fabricação a iniciar";
+const MANUFACTURE_ONGOING = "Fabricação em curso";
+const READY_FOR_DELIVERY = "Pronto para entrega";
+const PENDING_PAYMENT = "Pagamento pendente";
+const PAYMENT_COMPLETE = "Pago";
+const DELIVERED = "Entregue ao cliente";
 
 export{
-    URL_API,
-    LABEL_URL_INPUT
+    TO_MANUFACTURE,
+    READY_FOR_DELIVERY,
+    PENDING_PAYMENT,
+    PAYMENT_COMPLETE,
+    DELIVERED,
+    MANUFACTURE_ONGOING
 }
+
+
+
