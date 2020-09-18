@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# npm lock - Heroku deploy will use yarn-lock
+package-lock.json
