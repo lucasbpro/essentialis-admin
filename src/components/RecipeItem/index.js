@@ -17,7 +17,6 @@ function RecipeItem({recipeId, recipeDescription, materialsDescription, modifica
                     })}
                 </ul>
             </td>
-            <td>{modificationDate}</td>
         </TableItem>
     );
 }

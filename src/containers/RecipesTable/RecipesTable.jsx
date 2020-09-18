@@ -21,7 +21,6 @@ const RecipesTable = ({recipesList, allMaterials}) => {
                   <tr>
                      <th> Nome da Receita </th>
                      <th> Materiais Utilizados </th>
-                     <th> Modificada em </th>
                   </tr>
                </thead>
 
@@ -35,8 +34,7 @@ const RecipesTable = ({recipesList, allMaterials}) => {
                      return <RecipeItem key={index} 
                                         recipeId={recipe.id}
                                         recipeDescription={recipe.description} 
-                                        materialsDescription={materialsDescription}
-                                        modificationDate={recipe.modificada_em} />
+                                        materialsDescription={materialsDescription} />
                   })} 
                </tbody>
             </Table>
