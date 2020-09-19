@@ -1,11 +1,12 @@
 
-const URL_API = "https://essentialis-server.herokuapp.com";
-//const URL_API = "http://localhost:8000";
+//const URL_API = "https://essentialis-server.herokuapp.com";
+const URL_API = "http://localhost:8000";
 
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
 const URL_RECIPE_MATERIALS = `${URL_API}/recipes_materials`;
 const URL_ORDERS = `${URL_API}/orders`;
+const URL_CUSTOMERS = `${URL_API}/customers`;
 
 const axios = require('axios');
 
@@ -80,6 +81,16 @@ async function deleteOrder(orderId){
   return axios.delete(`${URL_ORDERS}/${orderId}`).then(resposta => resposta); 
 }
 
+/****************************  CUSTOMERS *********************************/ 
+
+async function getAllCustomers(){
+  return get(URL_CUSTOMERS);
+}
+
+async function getCustomerById(customerId){
+  return get(`${URL_CUSTOMERS}/${customerId}`);
+}
+
 export {
     getAllRecipes,
     getRecipeById,
@@ -90,5 +101,7 @@ export {
     getAllOrders,
     getOrderById,
     updateOrder,
-    deleteOrder
+    deleteOrder,
+    getAllCustomers,
+    getCustomerById
 }
