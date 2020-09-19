@@ -6,8 +6,9 @@ import { Route,
 import NotFound from './NotFound';
 import Recipes from './Recipes/Recipes';
 import RecipeDetails from './RecipeDetails';
-import Orders from './Orders/Orders';
-import OrderDetails from './OrderDetails/OrderDetails';
+import Orders from './Orders';
+import OrderDetails from './OrderDetails';
+import CreateOrder from './CreateOrder';
 
 const Pages = () => (
     <Switch>
@@ -16,6 +17,7 @@ const Pages = () => (
       <Route exact path="/receita/:recipeId" component={RecipeDetails}/>
       <Route exact path="/pedido/:orderId" component={OrderDetails}/>
       <Route exact path="/pedidos" component={Orders}/>
+      <Route exact path="/novo-pedido" component={CreateOrder}/>
       <Route exact path="/notfound" component={NotFound}/>
       <Route component={NotFound}/>
     </Switch>

@@ -80,6 +80,10 @@ async function deleteOrder(orderId){
   return axios.delete(`${URL_ORDERS}/${orderId}`).then(resposta => resposta); 
 }
 
+async function createOrder(newOrder){
+  return axios.post(`${URL_ORDERS}`,newOrder).then(resposta => resposta); 
+}
+
 export {
     getAllRecipes,
     getRecipeById,
@@ -90,5 +94,6 @@ export {
     getAllOrders,
     getOrderById,
     updateOrder,
-    deleteOrder
+    deleteOrder,
+    createOrder
 }
