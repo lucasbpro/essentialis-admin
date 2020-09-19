@@ -81,6 +81,10 @@ async function deleteOrder(orderId){
   return axios.delete(`${URL_ORDERS}/${orderId}`).then(resposta => resposta); 
 }
 
+async function createOrder(newOrder){
+  return axios.post(`${URL_ORDERS}`,newOrder).then(resposta => resposta); 
+}
+
 /****************************  CUSTOMERS *********************************/ 
 
 async function getAllCustomers(){
@@ -90,6 +94,8 @@ async function getAllCustomers(){
 async function getCustomerById(customerId){
   return get(`${URL_CUSTOMERS}/${customerId}`);
 }
+
+
 
 export {
     getAllRecipes,
@@ -102,6 +108,7 @@ export {
     getOrderById,
     updateOrder,
     deleteOrder,
+    createOrder,
     getAllCustomers,
     getCustomerById
 }
