@@ -1,7 +1,16 @@
+/***************** SET DESIRED ENVIRONMENT HERE 
+ *  0 = local
+ *  1 = development environment
+ *  2 or other = production environment
+ * */ 
 
-//const URL_API = "https://essentialis-server.herokuapp.com";
-const URL_API = "http://localhost:8000";
+const environment = 1; 
 
+/**************************************/
+
+const URL_API = environment===0? "http://localhost:8000": 
+                                  (environment===1? "https://essentialis-server.herokuapp.com" : 
+                                                     "https://essentialis-api.herokuapp.com");
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
 const URL_RECIPE_MATERIALS = `${URL_API}/recipes_materials`;

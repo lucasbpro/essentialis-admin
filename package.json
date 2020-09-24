@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "node ./server.js",
-    "dev": "react-scripts start",
+    "devAPI": "react-scripts start",
     "devLocal": "concurrently \"react-scripts start\" \"node ./server.js\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

@@ -12,12 +12,12 @@ import CreateOrder from './CreateOrder';
 
 const Pages = () => (
     <Switch>
-      <Route exact path="/" component={Recipes} />
+      <Route exact path="/" component={Orders} />
       <Route exact path="/receitas" component={Recipes} />
       <Route exact path="/receita/:recipeId" component={RecipeDetails}/>
       <Route exact path="/pedido/:orderId" component={OrderDetails}/>
       <Route exact path="/pedidos" component={Orders}/>
-      <Route exact path="/novo-pedido" component={CreateOrder}/>
+      <Route exact path="/criar-pedido" component={CreateOrder}/>
       <Route exact path="/notfound" component={NotFound}/>
       <Route component={NotFound}/>
     </Switch>

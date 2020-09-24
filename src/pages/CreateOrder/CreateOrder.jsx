@@ -1,17 +1,23 @@
 import React, {useState, useEffect} from 'react';
-
 import Form from 'react-bootstrap/Form'
-import {getAllRecipes, createOrder} from '../../services';
+import {Redirect} from "react-router-dom";
+
+import {getAllRecipes, getAllCustomers, createOrder} from '../../services';
 //import Loading from '../../components/Loading
 
 
 const CreateOrder = () => {
 
   const [recipeList, setRecipeList] = useState([]);
-  const [newOrder, setOrder] = useState([]);
+  const [customerList, setCustomerList] = useState([]);
+  const [orderReady, setOrderReady] = useState(false);
 
   useEffect(() => {
     getAllRecipes().then(resposta => setRecipeList(resposta));
+  },[]);
+
+  useEffect(() => {
+    getAllCustomers().then(resposta => setCustomerList(resposta));
   },[]);
 
 
@@ -38,31 +44,33 @@ const CreateOrder = () => {
           "order_total": "7.49",
           "notes" : notes
       }
-      
+
       createOrder(newOrder);
+      setOrderReady(true);
   }
 
-  return (
+  if (orderReady)
+      return <Redirect to="/pedidos"/>
+  else return (
       <div className="container">
         <h1>Cadastrar Pedido </h1> 
 
         <Form>
           <Form.Group controlId="customer">
-              <Form.Label> <h2>Selecionar Cliente</h2> </Form.Label>
+              <Form.Label> <h2>Selecione um cliente:</h2> </Form.Label>
               <Form.Control as="select">
-                <option value="100">Fulano</option>
-                <option value="200">Ciclano</option>
-                <option value="300">Beltrano</option>
-                <option value="400">Trajano</option>
-                <option value="500">Paula Tejano</option>
+                  {customerList.map((item, index) => {
+                      return <option key={index} value={`${item.id}`}> {item.name} </option>
+                    }
+                  )}
               </Form.Control>
           </Form.Group>
 
           <Form.Group controlId="product">
             <Form.Label> <h2>Selecione um produto:</h2> </Form.Label>
             <Form.Control as="select">
-              {recipeList.map((item) => {
-                  return <option value={`${item.id}`}> {item.description} </option>
+              {recipeList.map((item, index) => {
+                  return <option key={index} value={`${item.id}`}> {item.description} </option>
                 }
               )}
             </Form.Control>

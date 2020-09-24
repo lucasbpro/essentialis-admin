@@ -17,7 +17,6 @@ const App = () => {
         <ErrorBoundary>
           <Router>
             <Topbar/>
-            {/*isMenuSelected && <Menu/>*/}
             <Pages/>
           </Router>
         </ErrorBoundary>
