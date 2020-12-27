@@ -95,6 +95,10 @@ async function getCustomerById(customerId){
   return get(`${URL_CUSTOMERS}/${customerId}`);
 }
 
+async function createCustomer(newCustomer){
+  return axios.post(`${URL_CUSTOMERS}`,newCustomer).then(resposta => resposta); 
+}
+
 
 
 export {
@@ -110,5 +114,6 @@ export {
     deleteOrder,
     createOrder,
     getAllCustomers,
-    getCustomerById
+    getCustomerById,
+    createCustomer
 }

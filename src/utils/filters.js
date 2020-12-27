@@ -64,15 +64,6 @@ function filterOrdersByText(ordersList, text) {
     );     
 };
 
-function filterOrdersByCustomer(ordersList, customerName) {
-    return ordersList.filter(listItem => isStringInText(removeAccents(customerName), removeAccents(listItem.customerName)));     
-};
-
-function fsfdsfsd(ordersList, productDescription) {
-    return ordersList.filter(listItem => isStringInText(removeAccents(productDescription), removeAccents(listItem.productDescription)));     
-};
-
-
 function dateSort(string1,string2){
     const date1 = new Date(string1);
     const date2 = new Date(string2);
