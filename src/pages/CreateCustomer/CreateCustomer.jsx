@@ -1,10 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form'
 import {Redirect} from "react-router-dom";
 import {DateInput} from '@opuscapita/react-dates';
 
 import { createCustomer } from '../../services';
-//import Loading from '../../components/Loading
 
 
 const CreateCustomer = () => {

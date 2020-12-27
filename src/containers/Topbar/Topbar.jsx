@@ -1,5 +1,5 @@
 import React from 'react';
-import Menu from '../Menu/Menu'
+//import Menu from '../Menu/Menu'
 import LogoEssentialis from '../../assets/img/logo_essentialis.png';
 import './Topbar.scss';
 
@@ -21,7 +21,6 @@ const Topbar = ()=> {
 
 			<button className="menu-icon"> 
 				<i className="fa fa-bars" aria-hidden="true"/> 
-				<Menu/>
 			</button>
   		</header>
 	);
