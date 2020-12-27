@@ -7,7 +7,8 @@ import Col from 'react-bootstrap/Col';
 import ConfirmDialog from '../../components/ConfirmDialog';
 
 import {getOrderById, 
-        getRecipeById, 
+        getRecipeById,
+        getCustomerById, 
         updateOrder,
         deleteOrder   } from '../../services';
 
@@ -23,6 +24,7 @@ const OrderDetails = () => {
   const {orderId} = useParams();
   const [productInfo, setProduct] = useState([]);
   const [orderInfo, setOrder] = useState([]);
+  const [customerInfo, setCustomer] = useState([]);
   const [loading, setLoaded] = useState(true);
 
   const [dialog, setDialog] = useState(false);
@@ -35,10 +37,11 @@ const OrderDetails = () => {
 
   useEffect(() => {
     if(orderInfo.product_id!== undefined){
-      getRecipeById(orderInfo.product_id).then(resposta => setProduct(resposta))
+      getRecipeById(orderInfo.product_id).then(resposta => setProduct(resposta));
+      getCustomerById(orderInfo.customer_id).then(resposta => setCustomer(resposta));
       setLoaded(false);
     }
-  }, [orderInfo]); 
+  }, [orderInfo]);  
 
   const onConfirmDialog = () => {
     console.log("confirmou")
@@ -121,7 +124,7 @@ const OrderDetails = () => {
             </Row>
             <Row>
                 <Col sm={5}> <h2>Cliente:</h2> </Col>
-                <Col sm={7}> <h3>Fulano</h3> </Col>
+                <Col sm={7}> <h3>{customerInfo.name}</h3> </Col>
             </Row>      
             <Row>
                 <Col sm={5}> <h2>Status do Produto:</h2> </Col>

@@ -9,12 +9,6 @@ const Menu = () => {
 	return(
 		<div  className="menu-window">
 			{/* <WindowHeader title={SEARCH_WINDOW_TITLE} onClickReturn={handleClickReturn}/> */}
-
-			<Link> sdada </Link>
-			<Link> sdada </Link>
-			<Link> sdada </Link>
-			<Link> sdada </Link>
-			<Link> sdada </Link>
 		</div>
 	);
 };

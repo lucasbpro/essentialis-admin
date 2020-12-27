@@ -3,8 +3,8 @@ import React, {useState, useEffect} from 'react';
 //import Loading from '../../components/Loading';
 import OrderFilter from '../../components/OrderFilter'
 import OrderTable  from '../../containers/OrderTable';
-import {filterOrdersByStatus, sortOrdersByDate} from '../../utils/filters'
-import {getAllOrders, getAllRecipes} from '../../services';
+import {filterOrdersByText, sortOrdersByDate} from '../../utils/filters'
+import {getAllOrders, getAllRecipes, getAllCustomers} from '../../services';
 
 const Orders = () => {
 
@@ -12,6 +12,7 @@ const Orders = () => {
   const [orderListComplete, setOrderListComplete] = useState([]);
 
   const [productList, setProductList] = useState([]);
+  const [customerList, setCustomerList] = useState([]);
   const [fetched, setFetched] = useState(false);
 
   const [filteredOrders, setFilteredOrders] = useState([]);
@@ -26,16 +27,28 @@ const Orders = () => {
   },[]);
 
   useEffect(() => {
+    getAllCustomers().then(resposta =>setCustomerList(resposta));
+  },[]);
+
+  useEffect(() => {
     setOrderListComplete(sortOrdersByDate(orderList.map(order => {
         const product = productList.find(item => item.id === order.product_id);
+        const customer = customerList.find(item => item.id === order.customer_id);
         return {...order, 
-                "productDescription": product? product.description : ""}
+                "productDescription": product? product.description : "",
+                "customerName" : customer? customer.name: ""
+              }
     })))
     setFetched(true);
-  },[orderList, productList]);
+  },[orderList, productList, customerList]);
+
+  useEffect(() => {
+    setFilteredOrders(orderListComplete);
+  },[orderListComplete]);
 
   const handleFilter = (event) => {
-      setFilteredOrders(filterOrdersByStatus(orderListComplete, event.target.value))
+      console.log(event.target.value)
+      setFilteredOrders(filterOrdersByText(orderListComplete, event.target.value))
       setFilterApplied(true);
   }
 
@@ -44,8 +57,8 @@ const Orders = () => {
     return (
       <div className="container">
         <OrderFilter handleFilter={handleFilter}/>
+        <OrderTable ordersList={filteredOrders}/>
         {(isFilterApplied && filteredOrders.length===0) && <h3> O filtro não retornou resultados </h3>}
-        {isFilterApplied && <OrderTable ordersList={filteredOrders}/>}
       </div>
     );
   else 

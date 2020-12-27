@@ -54,13 +54,24 @@ function filterMaterialsAmountByRecipeId(materialsRecipesList, recipeId) {
     })
 }
 
-function filterOrdersByStatus(ordersList, status) {
-    return ordersList.filter(listItem => isStringInText(removeAccents(status), removeAccents(listItem.status_fabrication)));     
+function filterOrdersByText(ordersList, text) {
+    const textWithNoAccents = removeAccents(text);
+    return ordersList.filter(listItem => {
+            return isStringInText(textWithNoAccents, removeAccents(listItem.status_fabrication)) ||
+                   isStringInText(textWithNoAccents, removeAccents(listItem.customerName)) ||
+                   isStringInText(textWithNoAccents, removeAccents(listItem.productDescription));
+        }
+    );     
 };
 
 function filterOrdersByCustomer(ordersList, customerName) {
     return ordersList.filter(listItem => isStringInText(removeAccents(customerName), removeAccents(listItem.customerName)));     
 };
+
+function fsfdsfsd(ordersList, productDescription) {
+    return ordersList.filter(listItem => isStringInText(removeAccents(productDescription), removeAccents(listItem.productDescription)));     
+};
+
 
 function dateSort(string1,string2){
     const date1 = new Date(string1);
@@ -88,7 +99,6 @@ export {
     filterListByText,
     filterMaterialsByRecipeId,
     filterMaterialsAmountByRecipeId,
-    filterOrdersByStatus,
-    filterOrdersByCustomer,
+    filterOrdersByText,
     sortOrdersByDate
 };
