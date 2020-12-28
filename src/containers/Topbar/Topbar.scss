@@ -31,18 +31,16 @@
     pointer-events: none;
   }
   
-  .menu-icon{
-    -webkit-tap-highlight-color: transparent;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    cursor: pointer;
-    pointer-events: none;
-    font-size: 2rem;
-    line-height: 0;
-    outline: none;
-    margin-right: 3%;
+  .menu {
     position: absolute;
     right: 0;
+    margin-right: 3%;
+    height: 45%;
+    width: 3vw;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    width: 2vw;
   }
   

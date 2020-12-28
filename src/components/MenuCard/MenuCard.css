@@ -1,0 +1,15 @@
+.menu-card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    margin-right: 0;
+}
+
+.card-options {
+    color: #383838;
+    font-size: 16px;
+    font-weight: 600;
+}

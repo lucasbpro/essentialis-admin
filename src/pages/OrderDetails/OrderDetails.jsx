@@ -48,26 +48,28 @@ const OrderDetails = () => {
     setDialog(false);
   }
 
-  const handleEntregue = (orderInfo) => {
+  const handleChangeStatus = (orderInfo, currentStatus) => {
     let newOrder = orderInfo;
-    newOrder.status_fabrication = DELIVERED;
+    
+    switch(currentStatus){
+        case(TO_MANUFACTURE):
+            newOrder.status_fabrication = MANUFACTURE_ONGOING; 
+            break;
+        case(MANUFACTURE_ONGOING):
+            newOrder.status_fabrication = READY_FOR_DELIVERY;
+            break;
+        case(READY_FOR_DELIVERY):
+            newOrder.status_fabrication = DELIVERED;
+            break;
+        case(PENDING_PAYMENT):
+            newOrder.status_payment = PAYMENT_COMPLETE;
+            break;
+        default:
+            break;
+    }
+  
     //setMessage("Tem certeza que deseja classificar esse produto como ENTREGUE?");
     //setDialog(true);
-    updateOrder(newOrder);
-  }
-
-  const handleFabricado = (orderInfo) => {
-    let newOrder = orderInfo;
-    newOrder.status_fabrication = READY_FOR_DELIVERY;
-    //setMessage("Tem certeza que deseja classificar esse produto como FABRICADO?");
-    //setDialog(true);
-    updateOrder(newOrder);
-  }
-
-  const handlePago = (orderInfo) => {
-    let newOrder = orderInfo;
-    newOrder.status_payment = PAYMENT_COMPLETE;
-    //setMessage("Tem certeza que deseja classificar esse produto como PAGO?");
     updateOrder(newOrder);
   }
 
@@ -75,33 +77,16 @@ const OrderDetails = () => {
     deleteOrder(orderId);
   }
 
-  const statusChangeButton = () => {
+  const statusChangeButton = (orderStatus) => {
     let statusChangeButton = undefined; 
-    switch(orderInfo.status_fabrication){
-      case TO_MANUFACTURE:
-        statusChangeButton =  <Link to={`/pedido/${orderInfo.id}`}> 
-                                  <button onClick={()=> handleFabricado(orderInfo)}> 
-                                      FABRICAR 
+    if(orderStatus!==DELIVERED)
+        statusChangeButton = <Link to={`/pedido/${orderInfo.id}`}> 
+                                  <button onClick={(e)=> handleChangeStatus(orderInfo, orderStatus)}> 
+                                      {orderStatus===TO_MANUFACTURE? "FABRICAR" :
+                                          (orderStatus===MANUFACTURE_ONGOING? "PRONTO" : "ENTREGUE")
+                                      }
                                   </button>
-                              </Link>
-        break;
-      case MANUFACTURE_ONGOING:
-        statusChangeButton =  <Link to={`/pedido/${orderInfo.id}`}> 
-                                  <button onClick={()=>handleEntregue(orderInfo)}> 
-                                      PRONTO
-                                  </button> 
-                              </Link>
-        break; 
-      case READY_FOR_DELIVERY: 
-        statusChangeButton =  <Link to={`/pedido/${orderInfo.id}`}> 
-                                  <button onClick={()=>handleEntregue(orderInfo)}> 
-                                      ENTREGUE
-                                  </button> 
-                              </Link>
-        break;
-      default:
-        statusChangeButton = undefined;
-    }
+                              </Link>;
     return statusChangeButton;
   }
 
@@ -149,12 +134,12 @@ const OrderDetails = () => {
         <Container fluid="true">
           <Row>
               <Col> 
-                {statusChangeButton()}
+                {statusChangeButton(orderInfo.status_fabrication)}
               </Col>
               <Col> 
                 {orderInfo.status_payment===PENDING_PAYMENT? 
                     <Link to={`/pedido/${orderInfo.id}`}> 
-                        <button onClick={()=>handlePago(orderInfo)}> 
+                        <button onClick={()=>handleChangeStatus(orderInfo,PENDING_PAYMENT)}> 
                             PAGO 
                         </button>
                     </Link>
