@@ -2,7 +2,11 @@ import React, {useState, useEffect} from 'react';
 import Form from 'react-bootstrap/Form'
 import {Redirect} from "react-router-dom";
 
-import {getAllRecipes, getAllCustomers, createOrder} from '../../services';
+import {  getAllRecipes, 
+          getAllCustomers, 
+          createOrder} from '../../services';
+
+import {sortCustomersByName} from '../../utils/filters'
 //import Loading from '../../components/Loading
 
 
@@ -17,7 +21,7 @@ const CreateOrder = () => {
   },[]);
 
   useEffect(() => {
-    getAllCustomers().then(resposta => setCustomerList(resposta));
+    getAllCustomers().then(resposta => setCustomerList(sortCustomersByName(resposta)));
   },[]);
 
 
@@ -35,13 +39,16 @@ const CreateOrder = () => {
       const month = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
       const year = today.getFullYear();
 
+      const selectedProduct = recipeList.find(item => item.id === productId);
+      const productPrice = selectedProduct? selectedProduct.product_price : null;
+
       const newOrder = {
           "customer_id": customerId,
           "product_id": productId,
           "status_fabrication": "Fabricação a iniciar",
           "status_payment": "Pagamento pendente",  
           "order_date": day + '/' + month + '/' + year,
-          "order_total": "7.49",
+          "order_total": productPrice,
           "notes" : notes
       }
 
@@ -56,39 +63,29 @@ const CreateOrder = () => {
         <h1>Cadastrar Pedido </h1> 
 
         <Form>
+
+          <Form.Group controlId="product">
+            <Form.Label> <h2>Qual é o produto?</h2> </Form.Label>
+            <Form.Control as="select">
+                {recipeList===undefined? null : recipeList.map((item, index) => {
+                    return <option key={index} value={`${item.id}`}> {item.description} </option>
+                  }
+                )}
+            </Form.Control>
+          </Form.Group>
+
           <Form.Group controlId="customer">
-              <Form.Label> <h2>Selecione um cliente:</h2> </Form.Label>
+              <Form.Label> <h2>Pra quem é o pedido?</h2> </Form.Label>
               <Form.Control as="select">
-                  {customerList.map((item, index) => {
+                  {customerList===undefined? null: customerList.map((item, index) => {
                       return <option key={index} value={`${item.id}`}> {item.name} </option>
                     }
                   )}
               </Form.Control>
           </Form.Group>
 
-          <Form.Group controlId="product">
-            <Form.Label> <h2>Selecione um produto:</h2> </Form.Label>
-            <Form.Control as="select">
-              {recipeList.map((item, index) => {
-                  return <option key={index} value={`${item.id}`}> {item.description} </option>
-                }
-              )}
-            </Form.Control>
-          </Form.Group>
-
-          <Form.Group controlId="amount">
-              <Form.Label> <h2>Quantidade:</h2> </Form.Label>
-              <Form.Control as="select">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-              </Form.Control>
-          </Form.Group>
-
           <Form.Group controlId="notes">
-            <Form.Label> <h2>Observações:</h2> </Form.Label>
+            <Form.Label> <h2>Se quiser, deixe uma observação abaixo:</h2> </Form.Label>
             <Form.Control as="textarea" rows="3" />
           </Form.Group>
         </Form>

@@ -1,9 +1,9 @@
 .menu-card {
     display: flex;
-    justify-content: center;
+    justify-content: top;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     background: white;
     margin-right: 0;
 }
@@ -12,4 +12,5 @@
     color: #383838;
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
 }

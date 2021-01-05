@@ -74,7 +74,7 @@ function sortOrdersByDate(orderList){
     return orderList.sort( (order1,order2) => dateSort(order2.order_date,order1.order_date) )
 }
 
-/* function alphabeticSort(string1,string2){
+function alphabeticSort(string1,string2){
     if(string1.charCodeAt(0) !== string2.charCodeAt(0)){
         return string1.charCodeAt(0) - string2.charCodeAt(0);
     }else{
@@ -82,14 +82,15 @@ function sortOrdersByDate(orderList){
     }
 }
 
-function orderByName(contacts){
-    return contacts.sort( (a,b) => alphabeticSort(a.name,b.name) )
-} */
+function sortCustomersByName(customerList){
+    return customerList.sort( (a,b) => alphabeticSort(a.name,b.name) )
+}
 
 export {
     filterListByText,
     filterMaterialsByRecipeId,
     filterMaterialsAmountByRecipeId,
     filterOrdersByText,
-    sortOrdersByDate
+    sortOrdersByDate,
+    sortCustomersByName
 };
