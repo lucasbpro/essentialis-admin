@@ -10,11 +10,10 @@ In the project directory, besides some standard scripts from [Create React App](
 
 ### `yarn develop` or `npm run develop`
 
-Runs the app in the development mode. Concomittantly, it runs a [JSON-Server] application which mocks a Rest-API for quick or prototyping and mocking.<br />
+They run the app in the development mode. Concomittantly, they run a [JSON-Server](https://www.npmjs.com/package/json-server) application which mocks a Rest-API for quick or prototyping and mocking.<br />
 
-Open [http://localhost:3000](http://localhost:3000) to view the React app in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view the React app in the browser. 
 Open [http://localhost:8000](http://localhost:8000) to access the JSON-Server.
-
 You might need to change the URL_API variable defined in the _index.js_ file within _services_ subfolder (located in /src folder) to match the JSON-Server address ([http://localhost:8000](http://localhost:8000)).
 
 ## Learn More
