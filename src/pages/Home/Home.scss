@@ -1,6 +1,10 @@
 .home {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+  padding: 3%;
+  margin: 0 auto;
 }
 
 .loading {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, 
          Switch } from 'react-router-dom';
 
-//import Home from './Home';
+import Home from './Home';
 import NotFound from './NotFound';
 import Recipes from './Recipes/Recipes';
 import RecipeDetails from './RecipeDetails';
@@ -13,7 +13,8 @@ import CreateCustomer from './CreateCustomer';
 
 const Pages = () => (
     <Switch>
-      <Route exact path="/" component={Orders} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/login" component={Home} />
       <Route exact path="/receitas" component={Recipes} />
       <Route exact path="/receita/:recipeId" component={RecipeDetails}/>
       <Route exact path="/pedido/:orderId" component={OrderDetails}/>

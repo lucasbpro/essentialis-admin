@@ -4,10 +4,23 @@ import './Home.scss';
 
 const Home = () => {
 
-  return (
-    <div className="container">
-        <h1> Esta é a página inicial </h1>
-    </div>
+  if(0){
+    return "larauê"
+  }
+  else return (
+      <form className="home">
+          <div class="mb-3">
+            <label class="form-label"><h2>Nome de Usuário</h2></label>
+            <input type="username" className="input-busca" placeholder="Digite o nome de usuário" />
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label"><h2>Senha</h2></label>
+            <input type="password" className="input-busca" placeholder="***********"/>
+          </div>
+          
+          <button type="submit"> Entrar </button>
+      </form>
   );
 };
 
