@@ -6,7 +6,7 @@ function MenuCard() {
     return (
       <div className="menu-card">
         <Link to={'/pedidos'}>
-          <p className="card-options"> Listar pedidos </p>
+          <p className="card-options"> Pesquisar pedidos </p>
         </Link>
         <Link to={'/criarCliente'}>
           <p className="card-options"> Cadastrar cliente </p>
