@@ -1,12 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './MenuCard.css';
 
 function MenuCard() {
     return (
       <div className="menu-card">
-        <p className="card-options"> BATATA </p>
-        <p className="card-options"> PÃO </p>
-        <p className="card-options"> DEPENDENCIA QUIMICA </p>
+        <Link to={'/pedidos'}>
+          <p className="card-options"> Listar pedidos </p>
+        </Link>
+        <Link to={'/criarCliente'}>
+          <p className="card-options"> Cadastrar cliente </p>
+        </Link>
+        <Link to={'/criarPedido'}>
+          <p className="card-options"> Cadastrar pedido </p>
+        </Link>
       </div>
     );
   }

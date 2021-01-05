@@ -14,15 +14,15 @@ const CreateCustomer = () => {
     const [selectedDate, setBirthDate] =  useState("");
 
     const handleSubmit = () => {
-
-        const day = String(selectedDate.getDate()).padStart(2, '0');
-        const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); //January is 0!
-        const year = selectedDate.getFullYear();
-
         const newCustomer = {
             "name": customerName,
             "email": customerEmail,
-            "birthDate": day + '/' + month + '/' + year,
+            "birthDate": selectedDate===undefined? null : ()=>{
+                const day = String(selectedDate.getDate()).padStart(2, '0');
+                const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+                const year = selectedDate.getFullYear();
+                return (day + '/' + month + '/' + year);
+            },
         }
 
         createCustomer(newCustomer);
@@ -37,17 +37,17 @@ const CreateCustomer = () => {
 
             <Form>
                 <Form.Group>
-                    <Form.Label> <h2>Nome:</h2> </Form.Label>
+                    <Form.Label> <h2>Digite o nome do novo cliente :)</h2> </Form.Label>
                     <Form.Control onChange={(e) => setName(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label> <h2>E-mail:</h2> </Form.Label>
+                    <Form.Label> <h2>Qual o e-mail dela(e)?</h2> </Form.Label>
                     <Form.Control type="email" onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group>
-                    <Form.Label> <h2>Data de Nascimento:</h2> </Form.Label>
+                    <Form.Label> <h2>Em que dia ela(e) nasceu?</h2> </Form.Label>
                     <DateInput
                         value={selectedDate}
                         dateFormat="dd/MM/yyyy"

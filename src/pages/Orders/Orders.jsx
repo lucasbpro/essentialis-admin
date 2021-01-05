@@ -19,35 +19,34 @@ const Orders = () => {
   const [isFilterApplied, setFilterApplied] = useState(false);
 
   useEffect(() => {
-    getAllOrders().then(resposta =>setOrderList(resposta));
+      getAllOrders().then(resposta =>setOrderList(resposta));
   },[]);
 
   useEffect(() => {
-    getAllRecipes().then(resposta =>setProductList(resposta));
+      getAllRecipes().then(resposta =>setProductList(resposta));
   },[]);
 
   useEffect(() => {
-    getAllCustomers().then(resposta =>setCustomerList(resposta));
+      getAllCustomers().then(resposta =>setCustomerList(resposta));
   },[]);
 
   useEffect(() => {
-    setOrderListComplete(sortOrdersByDate(orderList.map(order => {
-        const product = productList.find(item => item.id === order.product_id);
-        const customer = customerList.find(item => item.id === order.customer_id);
-        return {...order, 
-                "productDescription": product? product.description : "",
-                "customerName" : customer? customer.name: ""
-              }
-    })))
-    setFetched(true);
+      setOrderListComplete(sortOrdersByDate(orderList.map(order => {
+          const product = productList.find(item => item.id === order.product_id);
+          const customer = customerList.find(item => item.id === order.customer_id);
+          return {...order, 
+                  "productDescription": product? product.description : "",
+                  "customerName" : customer? customer.name: ""
+                }
+      })))
   },[orderList, productList, customerList]);
 
   useEffect(() => {
-    setFilteredOrders(orderListComplete);
+      setFilteredOrders(orderListComplete);
+      setFetched(true);
   },[orderListComplete]);
 
   const handleFilter = (event) => {
-      console.log(event.target.value)
       setFilteredOrders(filterOrdersByText(orderListComplete, event.target.value))
       setFilterApplied(true);
   }
