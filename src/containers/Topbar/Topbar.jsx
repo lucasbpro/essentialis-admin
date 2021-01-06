@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-//import Menu from '../Menu/Menu'
+import { useSelector } from 'react-redux';
 import LogoEssentialis from '../../assets/img/logo_essentialis.png';
-import Menu from '../../assets/img/menu.svg';
+import MenuIcon from '../../assets/img/menu.svg';
 import MenuCard from '../../components/MenuCard/MenuCard';
 import './Topbar.scss';
 
 const Topbar = ()=> {
 
+	const userLogged = useSelector(state => state.isUserLogged);
 	const [menuCard, toggleMenu] = useState(false);
 
 	return(
@@ -26,12 +27,12 @@ const Topbar = ()=> {
 			<div className="menu">
 				<img
 					className="menu-icon" 
-					src={Menu} 
-					alt="Menu" 
+					src={MenuIcon} 
+					alt="Menu-Icon" 
 					onClick={() => toggleMenu(!menuCard)}
 				/>
 
-				{ menuCard && <MenuCard /> }
+				{ (menuCard && userLogged) && <MenuCard /> }
 			</div>
   		</header>
 	);

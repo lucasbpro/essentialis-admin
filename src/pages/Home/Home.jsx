@@ -1,27 +1,19 @@
 import React from 'react';
+import {useSelector} from "react-redux";
+import {Redirect} from 'react-router-dom';
 
 import './Home.scss';
 
 const Home = () => {
 
-  if(0){
-    return "larauê"
-  }
-  else return (
-      <form className="home">
-          <div class="mb-3">
-            <label class="form-label"><h2>Nome de Usuário</h2></label>
-            <input type="username" className="input-busca" placeholder="Digite o nome de usuário" />
-          </div>
-
-          <div class="mb-3">
-            <label class="form-label"><h2>Senha</h2></label>
-            <input type="password" className="input-busca" placeholder="***********"/>
-          </div>
-          
-          <button type="submit"> Entrar </button>
-      </form>
-  );
+    const userLogged = useSelector(state => state.isUserLogged);
+  
+    if(userLogged){
+      return  <div className="home">
+                  <h2>Usuário Logado! :) Abra o menu superior para acessar as outras páginas.</h2>
+              </div> 
+    }
+    else return <Redirect to='/login'/>
 };
 
 export default Home;

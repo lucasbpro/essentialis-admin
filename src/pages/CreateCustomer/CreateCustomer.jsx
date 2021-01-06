@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useSelector } from 'react-redux';
 import Form from 'react-bootstrap/Form'
 import {Redirect} from "react-router-dom";
 import {DateInput} from '@opuscapita/react-dates';
@@ -7,6 +8,8 @@ import { createCustomer } from '../../services';
 
 
 const CreateCustomer = () => {
+
+    const userLogged = useSelector(state => state.isUserLogged);
 
     const [customerName, setName] = useState("");
     const [customerEmail, setEmail] = useState("");
@@ -29,7 +32,9 @@ const CreateCustomer = () => {
         setCustomerReady(true);
     }
 
-    if (customerReady)
+    if(!userLogged)
+        return <Redirect to='/login'/>
+    else if (customerReady)
         return <Redirect to="/pedidos"/>
     else return (
         <div className="container">

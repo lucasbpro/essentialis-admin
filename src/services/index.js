@@ -2,6 +2,7 @@
 //const URL_API = "http://localhost:8000"; // localhost API ()
 const URL_API = "https://essentialis-server.herokuapp.com"; // mock API
 
+const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
 const URL_RECIPE_MATERIALS = `${URL_API}/recipes_materials`;
@@ -16,6 +17,16 @@ async function get(URL){
         return await response.json();
       throw new Error(`Error when communicating with server at ${URL}`);
     });
+}
+
+/************************* AUTHENTICAION *******************************/
+async function login(username, password){
+  const userInfo = {
+              "username": username,
+              "passord" : password
+            };
+  
+  return axios.post(`${URL_AUTH}`, {...userInfo}).then(resposta => resposta); 
 }
 
 /****************************  RECIPES *********************************/ 
@@ -102,6 +113,7 @@ async function createCustomer(newCustomer){
 
 
 export {
+    login,
     getAllRecipes,
     getRecipeById,
     getAllMaterials,

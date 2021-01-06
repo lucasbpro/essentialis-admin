@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import {useParams, Link} from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import {useParams, Link, Redirect} from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -20,6 +21,8 @@ import {TO_MANUFACTURE,
         DELIVERED     } from '../../constants';
 
 const OrderDetails = () => {
+
+  const userLogged = useSelector(state => state.isUserLogged);
 
   const {orderId} = useParams();
   const [productInfo, setProduct] = useState([]);
@@ -90,7 +93,9 @@ const OrderDetails = () => {
     return statusChangeButton;
   }
 
-  if(loading)
+  if(!userLogged)
+    return <Redirect to='/login'/>
+  else if(loading)
     return <h2>Carregando...</h2>;
   else return (
     <div className="container">

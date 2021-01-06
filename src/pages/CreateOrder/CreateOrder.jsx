@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
-import Form from 'react-bootstrap/Form'
+import { useSelector } from 'react-redux';
+import Form from 'react-bootstrap/Form';
 import {Redirect} from "react-router-dom";
 
 import {  getAllRecipes, 
@@ -12,6 +13,8 @@ import {sortCustomersByName} from '../../utils/filters'
 
 const CreateOrder = () => {
 
+  const userLogged = useSelector(state => state.isUserLogged);
+  
   const [recipeList, setRecipeList] = useState([]);
   const [customerList, setCustomerList] = useState([]);
   const [orderReady, setOrderReady] = useState(false);
@@ -56,7 +59,9 @@ const CreateOrder = () => {
       setOrderReady(true);
   }
 
-  if (orderReady)
+  if(!userLogged)
+      return <Redirect to='/login'/>
+  else if (orderReady)
       return <Redirect to="/pedidos"/>
   else return (
       <div className="container">
