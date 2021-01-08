@@ -3,8 +3,8 @@ import {useParams} from 'react-router-dom';
 //import {Redirect} from 'react-router';
 //import Loading from '../../components/Loading';
 
-import {getRecipesMaterialsMap, getRecipeById, getMaterialsByIds} from '../../services';
-import {filterMaterialsByRecipeId} from '../../utils/filters';
+import { getRecipeById, getMaterialsByIds} from '../../services';
+//import {filterMaterialsByRecipeId} from '../../utils/filters';
 
 import Table from 'react-bootstrap/Table'
 
@@ -12,8 +12,6 @@ const RecipeDetails = () => {
 
   const {recipeId} = useParams();
   const [recipeInfo, setRecipe] = useState([]);
-  const [materialsIds, setMaterialsIds] = useState([]);
-  const [recipesMaterialsMap, setMap] = useState([]);
   const [materialsList, setMaterialsList] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -22,17 +20,9 @@ const RecipeDetails = () => {
   }, [recipeId]); 
 
   useEffect(() => {
-    getRecipesMaterialsMap().then(resposta => setMap(resposta))
-  }, [recipeInfo]);
-
-  useEffect(() => {
-      setMaterialsIds(filterMaterialsByRecipeId(recipesMaterialsMap, recipeId));
-  },[recipesMaterialsMap, recipeId]);
-
-  useEffect(() => {
-    getMaterialsByIds(materialsIds).then(resposta => setMaterialsList(resposta));
+    getMaterialsByIds(recipeInfo.materials).then(resposta => setMaterialsList(resposta));
     setLoading(false);
-  }, [materialsIds]);
+  }, [recipeInfo]);
 
   if(loading || recipeInfo.length===0 || materialsList.lenght===0)
     return <h2>Carregando...</h2>;
@@ -51,14 +41,15 @@ const RecipeDetails = () => {
           </thead>
 
           <tbody>
-            { materialsList && materialsList.map( (material,index) => {
+            { `TODO`/*materialsList && materialsList.map( (material,index) => {
               const mapItem = recipesMaterialsMap.find( item => 
                                     (item.recipe_id === recipeInfo.id) && (item.material_id === material.id));
+
               return <tr key={index}> 
                        <td>{material.description}</td>
                        <td>{mapItem && `${mapItem.amount} ${material.unit_material}`}</td>
                      </tr>
-            })}
+            })*/}
           </tbody>
         </Table>
     </div>

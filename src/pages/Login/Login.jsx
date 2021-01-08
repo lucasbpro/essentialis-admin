@@ -16,20 +16,22 @@ const Login = () => {
   const [accessAllowed,setAccessAllowed] = useState(false);
   const [loginButtonClicked, setLoginClicked] = useState(false);
 
-  const handleLogin = () => {
-      setLoginClicked(true)
-      login(username, password).then(response => setToken(response.token));
-  }
-
+  
   useEffect(() => {
-      if(token !== undefined && loginButtonClicked)
+      //console.log(token)
+      if(loginButtonClicked)
           setAccessAllowed(true);
   },[token, loginButtonClicked])
-
+  
   useEffect(() => {
     if(accessAllowed)
         dispatch(toggleUserLogged());
   },[dispatch, accessAllowed])
+
+  const handleLogin = () => {
+      setLoginClicked(true)
+      login(username, password).then(response => setToken(response.access_token));
+  }
 
   if(accessAllowed){
     return <Redirect to='/'/>

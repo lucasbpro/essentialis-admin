@@ -5,6 +5,11 @@ function isStringInText(string, text) {
 }
 
 function removeAccents (str) {
+
+    /* This was copied and maybe modified from the link below:
+    https://gist.github.com/marcelo-ribeiro/abd651b889e4a20e0bab558a05d38d77#file-javascript-remove-accents-js 
+    **** */ 
+
     if(str===undefined)
         return str;
     

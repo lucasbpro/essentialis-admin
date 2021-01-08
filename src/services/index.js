@@ -1,11 +1,10 @@
 //const URL_API = "https://essentialis-api-main.herokuapp.com"; // development API
-//const URL_API = "http://localhost:8000"; // localhost API ()
-const URL_API = "https://essentialis-server.herokuapp.com"; // mock API
+const URL_API = "http://localhost:5000"; // localhost API ()
+//const URL_API = "https://essentialis-server.herokuapp.com"; // mock API
 
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
-const URL_RECIPE_MATERIALS = `${URL_API}/recipes_materials`;
 const URL_ORDERS = `${URL_API}/orders`;
 const URL_CUSTOMERS = `${URL_API}/customers`;
 
@@ -20,13 +19,14 @@ async function get(URL){
 }
 
 /************************* AUTHENTICAION *******************************/
+
 async function login(username, password){
   const userInfo = {
               "username": username,
-              "passord" : password
+              "password" : password
             };
-  
-  return axios.post(`${URL_AUTH}`, {...userInfo}).then(resposta => resposta); 
+
+  return axios.post(`${URL_AUTH}`,userInfo).then(resposta => resposta); 
 }
 
 /****************************  RECIPES *********************************/ 
@@ -57,10 +57,6 @@ async function getMaterialsByIds(materialIds){
       materialsInfo.push(await getMaterialById(materialIds[i]));
  
   return materialsInfo; 
-}
-
-async function getRecipesMaterialsMap(){
-  return get(URL_RECIPE_MATERIALS);
 }
 
 /****************************  ORDERS *********************************/ 
@@ -119,7 +115,6 @@ export {
     getAllMaterials,
     getMaterialById,
     getMaterialsByIds,
-    getRecipesMaterialsMap,
     getAllOrders,
     getOrderById,
     updateOrder,

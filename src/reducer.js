@@ -10,7 +10,6 @@ const initialState = {
 export function reducer(state = initialState, action) {
     switch (action.type) {
         case TOGGLE_USER_LOGGED: {
-            console.log("chegou aqui")
             return {
                 ...state,
                 isUserLogged: !state.isUserLogged
