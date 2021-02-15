@@ -23,7 +23,8 @@ const Orders = () => {
 
   useEffect(() => {
       getAllOrders().then(resposta =>setOrderList(resposta));
-  },[]);
+      setFilteredOrders(orderList)
+  },[orderList]);
 
   useEffect(() => {
       getAllRecipes().then(resposta =>setProductList(resposta));
@@ -41,8 +42,11 @@ const Orders = () => {
                   "productDescription": product? product.description : "",
                   "customerName" : customer? customer.name: ""
                 }
-      })))
-  },[orderList, productList, customerList]);
+      })));
+
+      setFilteredOrders(orderListComplete);
+      
+  },[orderList, orderListComplete, productList, customerList]);
 
   useEffect(() => {
       setFilteredOrders(orderListComplete);

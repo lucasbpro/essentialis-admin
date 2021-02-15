@@ -47,7 +47,6 @@ const OrderDetails = () => {
   }, [orderInfo]);  
 
   const onConfirmDialog = () => {
-    console.log("confirmou")
     setDialog(false);
   }
 
@@ -70,9 +69,6 @@ const OrderDetails = () => {
         default:
             break;
     }
-  
-    //setMessage("Tem certeza que deseja classificar esse produto como ENTREGUE?");
-    //setDialog(true);
     updateOrder(newOrder);
   }
 

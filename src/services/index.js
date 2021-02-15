@@ -1,5 +1,5 @@
-//const URL_API = "https://essentialis-api-main.herokuapp.com"; // development API
-const URL_API = "http://localhost:5000"; // localhost API ()
+const URL_API = "https://essentialis-api-main.herokuapp.com"; // development API
+//const URL_API = "http://localhost:5000"; // localhost API ()
 //const URL_API = "https://essentialis-server.herokuapp.com"; // mock API
 
 const URL_AUTH = `${URL_API}/auth`;
@@ -37,6 +37,14 @@ async function getAllRecipes(){
 
 async function getRecipeById(recipeId){
   return get(`${URL_RECIPES}/${recipeId}`);
+}
+
+async function createRecipe(newRecipe){
+  return axios.post(`${URL_RECIPES}`,newRecipe).then(resposta => resposta); 
+}
+
+async function deleteRecipe(recipeId){
+  return axios.delete(`${URL_RECIPES}/${recipeId}`).then(resposta => resposta); 
 }
 
 /****************************  MATERIALS *********************************/ 
@@ -81,15 +89,16 @@ async function updateOrder(orderInfo){
                     "notes" : orderInfo.notes
                     };
   
+  console.log(newOrder);
   return axios.put(`${URL_ORDERS}/${orderId}`, {...newOrder}).then(resposta => resposta); 
-}
-
-async function deleteOrder(orderId){
-  return axios.delete(`${URL_ORDERS}/${orderId}`).then(resposta => resposta); 
 }
 
 async function createOrder(newOrder){
   return axios.post(`${URL_ORDERS}`,newOrder).then(resposta => resposta); 
+}
+
+async function deleteOrder(orderId){
+  return axios.delete(`${URL_ORDERS}/${orderId}`).then(resposta => resposta); 
 }
 
 /****************************  CUSTOMERS *********************************/ 
@@ -106,21 +115,28 @@ async function createCustomer(newCustomer){
   return axios.post(`${URL_CUSTOMERS}`,newCustomer).then(resposta => resposta); 
 }
 
+async function deleteCustomer(customerId){
+  return axios.delete(`${URL_CUSTOMERS}/${customerId}`).then(resposta => resposta); 
+}
+
 
 
 export {
     login,
     getAllRecipes,
     getRecipeById,
+    createRecipe,
+    deleteRecipe,
     getAllMaterials,
     getMaterialById,
     getMaterialsByIds,
     getAllOrders,
     getOrderById,
     updateOrder,
-    deleteOrder,
     createOrder,
+    deleteOrder,
     getAllCustomers,
     getCustomerById,
-    createCustomer
+    createCustomer,
+    deleteCustomer
 }
