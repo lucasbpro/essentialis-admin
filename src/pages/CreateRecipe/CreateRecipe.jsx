@@ -17,18 +17,20 @@ const CreateRecipe = () => {
 
     const userLogged = useSelector(state => state.isUserLogged);
     const [recipeReady, setRecipeReady] = useState(false);
+    const [allMaterials, setAllMaterialsList] = useState([]);
+    const [selectedOption, setOptionMaterial] = useState();
+    const [amount, setAmount] = useState(0);
     const [materialsList, setMaterialsList] = useState([]);
-    const [optionMaterial, setOptionMaterial] = useState();
-    const [selectedMaterialsList, setSelectedMaterials] = useState([]);
     const [supplyCost, setSupplyCost] = useState(0);
 
+    const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
+      
     useEffect(() => {
-        getAllMaterials().then(resposta => setMaterialsList(resposta));
+        getAllMaterials().then(resposta => setAllMaterialsList(resposta));
     },[]);
 
     useEffect(() => {
-        
-    },[selectedMaterialsList]);
+    },[materialsList]);
 
     const handleSubmit = () => {
         const recipeDescription = document.getElementById("recipe").value;
@@ -37,21 +39,35 @@ const CreateRecipe = () => {
             "description": recipeDescription,
             "labor_cost" : 0,
             "supply_cost" : supplyCost,
-            "materials" : selectedMaterialsList
+            "materials" : materialsList.map( material => material.id)
         }
-
         console.log(newRecipe);
-
-        createRecipe(newRecipe).then(setRecipeReady(true));
+        createRecipe(newRecipe, materialsList).then(setRecipeReady(true));
     }
 
     const handleAddMaterial = () => {
-        const newMaterialList = selectedMaterialsList;
-        newMaterialList.push(optionMaterial);
-        setSelectedMaterials(newMaterialList);
-        console.log(selectedMaterialsList)
-        //setSupplyCost( supplyCost + materialsList.find(item => item.id === optionMaterial). )
+        const newMaterialList = materialsList;
+        let newMaterial = {}; 
+
+        // if option is not in the current list and fields are filled
+        if(selectedOption!==undefined && amount>0)
+            // include new Id in list
+            newMaterial = {
+                id: selectedOption,
+                amount
+            };
+            newMaterialList.push(newMaterial);
+
+            // updates cost of recipe
+            const materialInfo = allMaterials.find(item => item.id === selectedOption);
+            if(materialInfo)
+                setSupplyCost( supplyCost + amount*materialInfo.package_price/materialInfo.package_amt );
+
+        // updates selected materials Ids
+        setMaterialsList(newMaterialList);
     }
+
+    console.log(materialsList)
 
     if(!userLogged)
         return <Redirect to='/login'/>
@@ -75,8 +91,8 @@ const CreateRecipe = () => {
                                 <Col className="no-gutters"> Material   </Col>
                                 <Col className="no-gutters">
                                     Quantidade 
-                                    {materialsList.find(item => item.id === optionMaterial)? 
-                                        " (" + materialsList.find(item => item.id === optionMaterial).unit_material + ")"
+                                    {allMaterials.find(item => item.id === selectedOption)? 
+                                        " (" + allMaterials.find(item => item.id === selectedOption).unit_material + ")"
                                         : null
                                     }
                                 </Col>
@@ -84,8 +100,10 @@ const CreateRecipe = () => {
                             </Row>
                             <Row>
                                 <Col className="no-gutters">
-                                    <Form.Control onChange={(e)=>setOptionMaterial(parseInt(e.target.value))} as="select">
-                                        {materialsList===undefined? null: materialsList.map((item, index) => {
+                                    <Form.Control   onChange={(e)=>setOptionMaterial(parseInt(e.target.value))} 
+                                                    as="select"
+                                    >
+                                        {allMaterials===undefined? null: allMaterials.map((item, index) => {
                                                 return <option key={index} value={`${item.id}`}>
                                                             {item.description} 
                                                        </option>
@@ -94,7 +112,10 @@ const CreateRecipe = () => {
                                     </Form.Control>
                                 </Col>
                                 <Col className="no-gutters"> 
-                                    <Form.Control as="textarea" rows="1" />
+                                    <Form.Control   as="textarea" 
+                                                    rows="1" 
+                                                    onChange={(e)=>setAmount(parseInt(e.target.value))}
+                                    />
                                 </Col>
                                 <Col className="no-gutters"> 
                                     <button 
@@ -109,13 +130,30 @@ const CreateRecipe = () => {
                         </Container>
 
                         <ul>
-                            { (selectedMaterialsList===[])? null : 
-                                selectedMaterialsList.map((id, index) => {
-                                    const material = materialsList.find(material => material.id === id)
-                                    return <li key={index}> {material? material.description : null} </li>
+                            { (materialsList===[])? null : 
+                                materialsList.map((material, index) => {
+                                    const materialInfo = allMaterials.find(item => item.id === material.id)
+                                    return <li key={index}> 
+                                                {materialInfo? `${materialInfo.description + " (" + material.amount + ")"}`
+                                                : null} 
+                                            </li>
                                 })
                             }
                         </ul>
+
+                        { materialsList.length>0 &&
+                                <button type="button"
+                                className="buttonClearList" 
+                                onClick={()=>{ setMaterialsList([]);
+                                               setSupplyCost(0);
+                                            }
+                                        }
+                                > 
+                                    Limpar lista 
+                                </button>
+                        }
+
+                        <h4> {"Custo dos Materiais: "+ formatter.format(supplyCost)} </h4>
                     </Form.Group>
                 </Form>
 
