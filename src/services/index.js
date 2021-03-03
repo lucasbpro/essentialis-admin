@@ -76,6 +76,10 @@ async function getMaterialsByIds(materialIds){
   return materialsInfo; 
 }
 
+async function createMaterial(newMaterial){
+  return axios.post(`${URL_MATERIALS}`,newMaterial).then(r => r); 
+}
+
 /****************************  ORDERS *********************************/ 
 
 async function getAllOrders(){
@@ -139,6 +143,7 @@ export {
     getAllMaterials,
     getMaterialById,
     getMaterialsByIds,
+    createMaterial,
     getAllOrders,
     getOrderById,
     updateOrder,

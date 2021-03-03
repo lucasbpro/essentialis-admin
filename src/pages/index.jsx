@@ -12,6 +12,7 @@ import OrderDetails from './OrderDetails';
 import CreateOrder from './CreateOrder';
 import CreateCustomer from './CreateCustomer';
 import CreateRecipe from './CreateRecipe';
+import CreateMaterial from './CreateMaterial';
 
 const Pages = () => (
     <Switch>
@@ -21,6 +22,7 @@ const Pages = () => (
       <Route exact path="/receita/:recipeId" component={RecipeDetails}/>
       <Route exact path="/pedido/:orderId" component={OrderDetails}/>
       <Route exact path="/pedidos" component={Orders}/>
+      <Route exact path="/criarMaterial" component={CreateMaterial}/>
       <Route exact path="/criarReceita" component={CreateRecipe}/>
       <Route exact path="/criarPedido" component={CreateOrder}/>
       <Route exact path="/criarCliente" component={CreateCustomer}/>
