@@ -1,6 +1,7 @@
 import React from 'react';
-//import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
+import TrashButton from "../TrashButton"
 import {TableItem} from './styles'
 
 function RecipeItem({recipeId, recipeDescription, materialsDescription, modificationDate}){
@@ -8,7 +9,8 @@ function RecipeItem({recipeId, recipeDescription, materialsDescription, modifica
     return(recipeDescription === undefined? null :
         <TableItem key={recipeId}>
             <td>
-                {recipeDescription}
+                <Link to={`/receita/${recipeId}`}>{recipeDescription}</Link>
+                <TrashButton/>
             </td>
             <td>
                 <ul>
@@ -22,5 +24,3 @@ function RecipeItem({recipeId, recipeDescription, materialsDescription, modifica
 }
 
 export default RecipeItem;
-
-//<Link to={`/receita/${recipeId}`}>{recipeDescription}</Link>

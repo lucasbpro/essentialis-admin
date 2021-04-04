@@ -16,6 +16,7 @@ const CreateMaterial = () => {
     const userLogged = useSelector(state => state.isUserLogged);
     const [materialReady, setMaterialReady] = useState(false);
     const [materialDescription, setMaterialDescription] = useState("");
+    const [supplier, setMaterialSupplier] = useState("");
     const [price, setPrice] = useState(0);
     const [unit, setOptionUnit] = useState('g');
     const [amount, setAmount] = useState(0);
@@ -26,7 +27,7 @@ const CreateMaterial = () => {
             document.getElementById("button-create-material").disabled = true;
         else 
             document.getElementById("button-create-material").disabled = false;
-    },[materialDescription, price, amount]);
+    },[materialDescription, supplier, price, amount]);
 
     const handleSubmit = () => {
         const newMaterial = {
@@ -35,9 +36,7 @@ const CreateMaterial = () => {
             "package_price" : price, 
             "unit_material": unit
         }
-        console.log(newMaterial);
-        //createMaterial(newMaterial).then(setMaterialReady(true));
-        setMaterialReady(true);
+        createMaterial(newMaterial).then(setMaterialReady(true));
     }
 
     if(!userLogged)
@@ -54,6 +53,14 @@ const CreateMaterial = () => {
                         <Form.Control  as="textarea" 
                                        rows="1" 
                                        onChange={(e)=>setMaterialDescription(e.target.value)} 
+                        />
+                    </Form.Group>
+
+                    <Form.Group controlId="material">
+                        <Form.Label> <h2>Qual o nome do fornecedor?</h2> </Form.Label>
+                        <Form.Control  as="textarea" 
+                                       rows="1" 
+                                       onChange={(e)=>setMaterialSupplier(e.target.value)} 
                         />
                     </Form.Group>
 

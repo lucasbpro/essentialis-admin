@@ -69,7 +69,7 @@ async function getMaterialById(materialId){
 async function getMaterialsByIds(materialIds){
   let materialsInfo = [];
 
-  if(materialIds.length>0)
+  if( materialIds &&  materialIds.length>0)
     for(let i=1; i<materialIds.length; i++)
       materialsInfo.push(await getMaterialById(materialIds[i]));
  

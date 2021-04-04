@@ -11,21 +11,21 @@ import Table from 'react-bootstrap/Table'
 const RecipeDetails = () => {
 
   const {recipeId} = useParams();
-  const [recipeInfo, setRecipe] = useState([]);
+  const [recipeInfo, setRecipe] = useState({});
   const [materialsList, setMaterialsList] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    getRecipeById(recipeId).then(receita => setRecipe(receita))
-  }, [recipeId]); 
+    getRecipeById(recipeId).then(recipe => {
+        setRecipe(recipe);
+        getMaterialsByIds(recipe.materials);
+      }).then(materialsInfo => setMaterialsList(materialsInfo));
 
-  useEffect(() => {
-    getMaterialsByIds(recipeInfo.materials).then(resposta => setMaterialsList(resposta));
     setLoading(false);
-  }, [recipeInfo]);
+  }, [recipeId]);
 
-  if(loading || recipeInfo.length===0 || materialsList.lenght===0)
-    return <h2>Carregando...</h2>;
+  if(loading )
+    return <h2> Carregando... </h2>;
   else return (
     <div className="container">
         <h2>{recipeInfo.description}</h2>
@@ -41,15 +41,12 @@ const RecipeDetails = () => {
           </thead>
 
           <tbody>
-            { `TODO`/*materialsList && materialsList.map( (material,index) => {
-              const mapItem = recipesMaterialsMap.find( item => 
-                                    (item.recipe_id === recipeInfo.id) && (item.material_id === material.id));
-
+            { materialsList && materialsList.map( (material,index) => {
               return <tr key={index}> 
                        <td>{material.description}</td>
-                       <td>{mapItem && `${mapItem.amount} ${material.unit_material}`}</td>
+                       <td>{material.unit_material}</td>
                      </tr>
-            })*/}
+            })}
           </tbody>
         </Table>
     </div>
