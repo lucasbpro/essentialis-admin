@@ -32,6 +32,7 @@ const CreateMaterial = () => {
     const handleSubmit = () => {
         const newMaterial = {
             "description": materialDescription,
+            "supplier_name" : supplier,
             "package_amt" : amount, 
             "package_price" : price, 
             "unit_material": unit
@@ -56,7 +57,7 @@ const CreateMaterial = () => {
                         />
                     </Form.Group>
 
-                    <Form.Group controlId="material">
+                    <Form.Group controlId="supplier-name">
                         <Form.Label> <h2>Qual o nome do fornecedor?</h2> </Form.Label>
                         <Form.Control  as="textarea" 
                                        rows="1" 

@@ -1,16 +1,22 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
+import {deleteRecipe} from '../../services'
 import TrashButton from "../TrashButton"
 import {TableItem} from './styles'
 
 function RecipeItem({recipeId, recipeDescription, materialsDescription, modificationDate}){
 
+    const deletarReceita = (recipeId) =>{
+        deleteRecipe(recipeId);
+        return <Redirect to='/receitas'/>
+    }
+
     return(recipeDescription === undefined? null :
         <TableItem key={recipeId}>
             <td>
                 <Link to={`/receita/${recipeId}`}>{recipeDescription}</Link>
-                <TrashButton/>
+                <TrashButton onClick = {() => deletarReceita(recipeId)}/>
             </td>
             <td>
                 <ul>

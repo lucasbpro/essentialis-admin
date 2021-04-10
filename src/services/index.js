@@ -1,5 +1,5 @@
-const URL_API = "https://essentialis-api-main.herokuapp.com"; // development API
-//const URL_API = "http://localhost:5000"; // localhost API ()
+//const URL_API = "https://essentialis-api-main.herokuapp.com"; // development API
+const URL_API = "http://localhost:5000"; // localhost API ()
 //const URL_API = "https://essentialis-server.herokuapp.com"; // mock API
 
 const URL_AUTH = `${URL_API}/auth`;
