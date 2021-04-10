@@ -4,7 +4,7 @@ export const TOGGLE_USER_LOGGED = "toggle_user_logged";
 
 /************ Reducer ********************************************************/
 const initialState = {
-    isUserLogged: true
+    isUserLogged: false
 };
 
 export function reducer(state = initialState, action) {

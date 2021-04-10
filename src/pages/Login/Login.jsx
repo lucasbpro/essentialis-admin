@@ -10,27 +10,28 @@ import './Login.scss';
 const Login = () => {
 
   const dispatch = useDispatch();
-  const [username,setUsername] = useState("");
-  const [password,setPassword] = useState("");
-  const [token,setToken] = useState(undefined);
-  const [accessAllowed,setAccessAllowed] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [token, setToken] = useState(undefined);
+  const [accessAllowed, setAccessAllowed] = useState(false);
   const [loginButtonClicked, setLoginClicked] = useState(false);
-
-  
+ 
   useEffect(() => {
-      //console.log(token)
-      if(loginButtonClicked)
-          setAccessAllowed(true);
-  },[token, loginButtonClicked])
-  
-  useEffect(() => {
-    if(accessAllowed)
-        dispatch(toggleUserLogged());
+      if(accessAllowed)
+          dispatch(toggleUserLogged());
   },[dispatch, accessAllowed])
 
   const handleLogin = () => {
+      login(username, password).then(response => {
+          if(response.access_token){
+              setToken(response.access_token)
+              setAccessAllowed(true)
+          }
+          else 
+              setAccessAllowed(false)
+      });
+      
       setLoginClicked(true)
-      login(username, password).then(response => setToken(response.access_token));
   }
 
   if(accessAllowed){
@@ -38,25 +39,25 @@ const Login = () => {
   }
   else return (
       <form className="login-form">
-          <div className="mb-3">
-            <label className="form-label"><h2>Nome de Usuário</h2></label>
-            <input  type="username"
-                    className="input-busca" 
-                    onChange={(event)=>setUsername(event.target.value)}
-                    placeholder="Digite o nome de usuário" />
-          </div>
+        <div className="mb-3">
+          <label className="form-label"><h2>Nome de Usuário</h2></label>
+          <input  type="username"
+                  className="input-busca" 
+                  onChange={(event)=>setUsername(event.target.value)}
+                  placeholder="Digite o nome de usuário" />
+        </div>
 
-          <div className="mb-3">
-            <label className="form-label"><h2>Senha</h2></label>
-            <input  type="password"
-                    className="input-busca"
-                    onChange={(event)=>setPassword(event.target.value)}
-                    placeholder="***********"/>
-          </div>
-          
-          <button onClick={handleLogin}> Entrar </button>
+        <div className="mb-3">
+          <label className="form-label"><h2>Senha</h2></label>
+          <input  type="password"
+                  className="input-busca"
+                  onChange={(event)=>setPassword(event.target.value)}
+                  placeholder="***********"/>
+        </div>
+        
+        <button onClick={handleLogin}> Entrar </button>
 
-          {(!accessAllowed && loginButtonClicked) && <h3>Usuário ou senha não conferem.</h3>}
+        {loginButtonClicked && <h3> Usuário ou senha não conferem. </h3>}
       </form>
   );
 };
