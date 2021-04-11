@@ -1,0 +1,31 @@
+.buttonAdd {
+  background-color: #A2228F;
+  font-size: 15px;
+  color: white;
+  width: auto;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+.buttonClearList {
+  background-color: gray;
+  font-size: 10px;
+  color: white;
+  width: auto;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  padding-right: 15px;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

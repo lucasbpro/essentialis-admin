@@ -5,7 +5,7 @@ const RecipesFilter = ({handleFilter}) => {
 
 	return (
 		<div className="container-filter">
-			<h1> Pesquisar Receita </h1>
+			<h1> Pesquisar Receitas </h1>
 			<input 
 				id="text"
 				type="text" 

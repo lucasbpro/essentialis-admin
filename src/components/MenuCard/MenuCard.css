@@ -5,7 +5,9 @@
     height: auto;
     width: 100%;
     background: white;
-    margin-right: 0;
+    margin-top: 23px;
+    border: 1px solid #A2228F;
+    border-radius: 0.5em;
 }
 
 .card-options {

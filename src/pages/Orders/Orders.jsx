@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react';
-
+import { Redirect } from 'react-router-dom';
 //import Loading from '../../components/Loading';
 import OrderFilter from '../../components/OrderFilter'
 import OrderTable  from '../../containers/OrderTable';
 import {filterOrdersByText, sortOrdersByDate} from '../../utils/filters'
 import {getAllOrders, getAllRecipes, getAllCustomers} from '../../services';
+import { useSelector } from 'react-redux';
 
 const Orders = () => {
+
+  const userLogged = useSelector(state => state.isUserLogged);
 
   const [orderList, setOrderList] = useState([]);
   const [orderListComplete, setOrderListComplete] = useState([]);
@@ -20,7 +23,8 @@ const Orders = () => {
 
   useEffect(() => {
       getAllOrders().then(resposta =>setOrderList(resposta));
-  },[]);
+      setFilteredOrders(orderList)
+  },[orderList]);
 
   useEffect(() => {
       getAllRecipes().then(resposta =>setProductList(resposta));
@@ -38,8 +42,11 @@ const Orders = () => {
                   "productDescription": product? product.description : "",
                   "customerName" : customer? customer.name: ""
                 }
-      })))
-  },[orderList, productList, customerList]);
+      })));
+
+      setFilteredOrders(orderListComplete);
+      
+  },[orderList, orderListComplete, productList, customerList]);
 
   useEffect(() => {
       setFilteredOrders(orderListComplete);
@@ -51,8 +58,9 @@ const Orders = () => {
       setFilterApplied(true);
   }
 
-     
-  if (fetched)
+  if(!userLogged)
+    return <Redirect to='/login'/>
+  else if (fetched)
     return (
       <div className="container">
         <OrderFilter handleFilter={handleFilter}/>

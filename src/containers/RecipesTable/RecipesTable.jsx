@@ -1,17 +1,8 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import RecipeItem from '../../components/RecipeItem';
 import Table from 'react-bootstrap/Table'
 
-import {getRecipesMaterialsMap} from '../../services';
-import {filterMaterialsByRecipeId} from '../../utils/filters';
-
 const RecipesTable = ({recipesList, allMaterials}) => { 
-
-      const [materialsRecipesMap, setMap] = useState([]);
-
-      useEffect(() => {
-         getRecipesMaterialsMap().then(resposta => setMap(resposta));
-      }, [])
 
       if (recipesList.length===0)
          return null;
@@ -27,7 +18,7 @@ const RecipesTable = ({recipesList, allMaterials}) => {
                <tbody>
                   {recipesList && recipesList.map((recipe, index)  => {
                      
-                     const materialsIds = filterMaterialsByRecipeId(materialsRecipesMap, recipe.id);
+                     const materialsIds = recipe.materials;
                      const materialsList = allMaterials.filter(item => materialsIds.includes(item.id));
                      const materialsDescription = materialsList.map(item => item.description);
 

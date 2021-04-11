@@ -58,6 +58,10 @@ span{
   height: 30px;
 }
 
+p{
+  padding-left: 10px;
+}
+
 .App {
   text-align: center;
 }
@@ -95,11 +99,6 @@ span{
   to {
     transform: rotate(360deg);
   }
-}
-
-.home {
-  display: flex;
-  justify-content: center;
 }
 
 .loading {
