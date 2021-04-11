@@ -12,7 +12,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState(undefined);
+  //const [token, setToken] = useState(undefined);
   const [accessAllowed, setAccessAllowed] = useState(false);
   const [loginButtonClicked, setLoginClicked] = useState(false);
  
@@ -24,7 +24,7 @@ const Login = () => {
   const handleLogin = () => {
       login(username, password).then(response => {
           if(response.access_token){
-              setToken(response.access_token)
+              // setToken(response.access_token)
               setAccessAllowed(true)
           }
           else 
