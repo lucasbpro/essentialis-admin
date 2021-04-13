@@ -11,8 +11,11 @@
 # production
 /build
 
+<<<<<<< HEAD
 #inserts 
 /inserts
+=======
+>>>>>>> develop
 /data
 
 # misc
