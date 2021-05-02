@@ -1,4 +1,4 @@
-const URL_API = "https://essentialis-api.herokuapp.com"; // Production API
+const URL_API = "https://essentialis-api-main.herokuapp.com"; // Production API
 
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
