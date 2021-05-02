@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import {Redirect} from 'react-router-dom';
 
 import {login} from '../../services';
-import {toggleUserLogged} from '../../reducer';
+import {toggleUserLogged, setUserToken} from '../../reducer';
 
 import './Login.scss';
 
@@ -12,7 +12,6 @@ const Login = () => {
   const dispatch = useDispatch();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [token, setToken] = useState(undefined);
   const [accessAllowed, setAccessAllowed] = useState(false);
   const [loginButtonClicked, setLoginClicked] = useState(false);
  
@@ -23,10 +22,13 @@ const Login = () => {
 
   const handleLogin = () => {
       login(username, password).then(response => {
-          if(response.access_token){
-              setToken(response.access_token)
+          const token = response.data.access_token; 
+          // in case token is provided (user is authorized)
+          if(token){
+              dispatch(setUserToken(token))
               setAccessAllowed(true)
           }
+          // in case token is not provided (user not authorized)
           else 
               setAccessAllowed(false)
       });
@@ -55,7 +57,7 @@ const Login = () => {
                   placeholder="***********"/>
         </div>
         
-        <button onClick={handleLogin}> Entrar </button>
+        <button type="button" onClick={handleLogin}> Entrar </button>
 
         {loginButtonClicked && <h3> Usuário ou senha não conferem. </h3>}
       </form>

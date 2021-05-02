@@ -1,1234 +1,1464 @@
 {
-    "raw_materials": [
-        {
-            "id": "1",
-            "description": "A\u00e7afr\u00e3o",
-            "supplier_name":"",
-            "package_price": "7.49",
-            "package_amt": "50",
-            "unit_material": "g",
-            "stock_amt": "50",
-            "sell_by_date": ""
-        },
-        {
-            "id": "2",
-            "description": "Ácido C\u00edtrico",
-            "supplier_name":"",
-            "package_price": "5.5",
-            "package_amt": "200",
-            "unit_material": "g",
-            "stock_amt": "90",
-            "sell_by_date": "30/03/2020"
-        },
-        {
-            "id": "3",
-            "description": "Água Desmineralizada",
-            "supplier_name":"",
-            "package_price": "3.5",
-            "package_amt": "1000",
-            "unit_material": "mL",
-            "stock_amt": "3000",
-            "sell_by_date": ""
-        },
-        {
-            "id": "4",
-            "description": "Álcool de Cereais",
-            "supplier_name":"",
-            "package_price": "35",
-            "package_amt": "5000",
-            "unit_material": "mL",
-            "stock_amt": "4500",
-            "sell_by_date": "16/05/2022"
-        },
-        {
-            "id": "5",
-            "description": "Amida 80",
-            "supplier_name":"",
-            "package_price": "7.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "80",
-            "sell_by_date": "30/12/2019"
-        },
-        {
-            "id": "6",
-            "description": "Amida 90",
-            "supplier_name":"",
-            "package_price": "9.5",
-            "package_amt": "10",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "7",
-            "description": "Amido de Milho",
-            "supplier_name":"",
-            "package_price": "10",
-            "package_amt": "500",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "8",
-            "description": "AnfÓtero",
-            "supplier_name":"",
-            "package_price": "20.64",
-            "package_amt": "1000",
-            "unit_material": "mL",
-            "stock_amt": "2000",
-            "sell_by_date": "01/09/2021"
-        },
-        {
-            "id": "9",
-            "description": "Argila Branca",
-            "supplier_name":"",
-            "package_price": "3.5",
-            "package_amt": "100",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "10",
-            "description": "Argila Verde",
-            "supplier_name":"",
-            "package_price": "3.5",
-            "package_amt": "100",
-            "unit_material": "g",
-            "stock_amt": "40",
-            "sell_by_date": "30/07/2020"
-        },
+   "raw_materials": [
+        {
+           "id":"1",
+           "description":"A\u00e7afr\u00e3o",
+           "package_amt":"50",
+           "package_price":"7.49",
+           "unit_material":"g",
+           "stock_amt":"50",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"2",
+           "description":"\u00c1cido C\u00edtrico",
+           "package_amt":"200",
+           "package_price":"5.50",
+           "unit_material":"g",
+           "stock_amt":"90",
+           "sell_by_date":"01/03/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"3",
+           "description":"\u00c1gua Desmineralizada",
+           "package_amt":"6000",
+           "package_price":"8.00",
+           "unit_material":"mL",
+           "stock_amt":"1000",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"4",
+           "description":"\u00c1lcool de Cereais",
+           "package_amt":"5000",
+           "package_price":"62.00",
+           "unit_material":"mL",
+           "stock_amt":"7500",
+           "sell_by_date":"16/05/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"5",
+           "description":"Alecrim",
+           "package_amt":"20",
+           "package_price":"2.00",
+           "unit_material":"g",
+           "stock_amt":"10",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"6",
+           "description":"Alfazema Azul",
+           "package_amt":"30",
+           "package_price":"11.97",
+           "unit_material":"g",
+           "stock_amt":"25",
+           "sell_by_date":"01/08/2022",
+           "supplier_name":"Loja Erva Doce - Produtos Naturais"
+        },
+        {
+           "id":"7",
+           "description":"Amida 80",
+           "package_amt":"100",
+           "package_price":"8.73",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"8",
+           "description":"Amida 90",
+           "package_amt":"100",
+           "package_price":"5.70",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/08/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"9",
+           "description":"Amido de Milho",
+           "package_amt":"1000",
+           "package_price":"6.59",
+           "unit_material":"g",
+           "stock_amt":"1000",
+           "sell_by_date":"NA",
+           "supplier_name":"Rold\u00e3o"
+        },
+        {
+           "id":"10",
+           "description":"Amostra Ess\u00eancia Alfazema",
+           "package_amt":"4",
+           "package_price":"3.53",
+           "unit_material":"mL",
+           "stock_amt":"4",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
         {
-            "id": "11",
-            "description": "Aroeira",
-            "supplier_name":"",
-            "package_price": "1.8",
-            "package_amt": "40",
-            "unit_material": "g",
-            "stock_amt": "40",
-            "sell_by_date": ""
-        },
-        {
-            "id": "12",
-            "description": "Aveia",
-            "supplier_name":"",
-            "package_price": "7.74",
-            "package_amt": "500",
-            "unit_material": "g",
-            "stock_amt": "300",
-            "sell_by_date": "30/12/2020"
-        },
-        {
-            "id": "13",
-            "description": "Base Branca 100% Vegetal",
-            "supplier_name":"",
-            "package_price": "18.5",
-            "package_amt": "1000",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "14",
-            "description": "Base Croda",
-            "supplier_name":"",
-            "package_price": "15.9",
-            "package_amt": "200",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "15",
-            "description": "Base L\u00edquida Glitter",
-            "supplier_name":"",
-            "package_price": "19.8",
-            "package_amt": "1000",
-            "unit_material": "mL",
-            "stock_amt": "1200",
-            "sell_by_date": "30/08/2020"
-        },
-        {
-            "id": "16",
-            "description": "Base L\u00edquida Neutra",
-            "supplier_name":"",
-            "package_price": "25",
-            "package_amt": "1000",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "17",
-            "description": "Base L\u00edquida Perolada",
-            "supplier_name":"",
-            "package_price": "25.9",
-            "package_amt": "1000",
-            "unit_material": "mL",
-            "stock_amt": "900",
-            "sell_by_date": "30/06/2021"
-        },
-        {
-            "id": "18",
-            "description": "Base para Álcool Gel",
-            "supplier_name":"",
-            "package_price": "15.5",
-            "package_amt": "1000",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": "30/07/2021"
-        },
-        {
-            "id": "19",
-            "description": "Base Transparente 100% Vegetal",
-            "supplier_name":"",
-            "package_price": "18.5",
-            "package_amt": "1000",
-            "unit_material": "g",
-            "stock_amt": "1000",
-            "sell_by_date": "30/07/2020"
-        },
-        {
-            "id": "20",
-            "description": "Bicarbonato de SÓdio",
-            "supplier_name":"",
-            "package_price": "3",
-            "package_amt": "80",
-            "unit_material": "g",
-            "stock_amt": "50",
-            "sell_by_date": "30/01/2020"
-        },
-        {
-            "id": "21",
-            "description": "Biofort",
-            "supplier_name":"",
-            "package_price": "5",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "80",
-            "sell_by_date": "30/05/2020"
-        },
-        {
-            "id": "22",
-            "description": "Caf\u00e9 Mo\u00eddo",
-            "supplier_name":"",
-            "package_price": "0",
-            "package_amt": "100",
-            "unit_material": "g",
-            "stock_amt": "50",
-            "sell_by_date": "30/04/2020"
-        },
-        {
-            "id": "23",
-            "description": "Canela em Pó",
-            "supplier_name":"",
-            "package_price": "2.1",
-            "package_amt": "20",
-            "unit_material": "g",
-            "stock_amt": "25",
-            "sell_by_date": ""
-        },
-        {
-            "id": "24",
-            "description": "C\u00e2nfora",
-            "supplier_name":"",
-            "package_price": "10.5",
-            "package_amt": "100",
-            "unit_material": "g",
-            "stock_amt": "60",
-            "sell_by_date": "30/08/2020"
-        },
-        {
-            "id": "25",
-            "description": "Chocolate",
-            "supplier_name":"",
-            "package_price": "60",
-            "package_amt": "1000",
-            "unit_material": "g",
-            "stock_amt": "50",
-            "sell_by_date": ""
-        },
-        {
-            "id": "26",
-            "description": "Confrei",
-            "supplier_name":"",
-            "package_price": "4.9",
-            "package_amt": "20",
-            "unit_material": "g",
-            "stock_amt": "5",
-            "sell_by_date": "30/02/2020"
-        },
-        {
-            "id": "27",
-            "description": "Corante  Verde Neon",
-            "supplier_name":"",
-            "package_price": "8",
-            "package_amt": "120",
-            "unit_material": "mL",
-            "stock_amt": "10",
-            "sell_by_date": ""
-        },
-        {
-            "id": "28",
-            "description": "Corante Amarelo",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": ""
-        },
-        {
-            "id": "29",
-            "description": "Corante Azul",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "5",
-            "sell_by_date": ""
-        },
-        {
-            "id": "30",
-            "description": "Corante Cosmético Amarelo",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "20",
-            "unit_material": "mL",
-            "stock_amt": "20",
-            "sell_by_date": ""
-        },
-        {
-            "id": "31",
-            "description": "Corante Cosmético Verde",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "20",
-            "unit_material": "mL",
-            "stock_amt": "20",
-            "sell_by_date": ""
-        },
-        {
-            "id": "32",
-            "description": "Corante Laranja",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": ""
-        },
-        {
-            "id": "33",
-            "description": "Corante Laranja Neon",
-            "supplier_name":"",
-            "package_price": "8",
-            "package_amt": "120",
-            "unit_material": "mL",
-            "stock_amt": "50",
-            "sell_by_date": ""
-        },
-        {
-            "id": "34",
-            "description": "Corante Marrom",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "50",
-            "sell_by_date": ""
-        },
-        {
-            "id": "35",
-            "description": "Corante Rosa",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "50",
-            "sell_by_date": ""
-        },
-        {
-            "id": "36",
-            "description": "Corante Turquesa",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": ""
-        },
-        {
-            "id": "37",
-            "description": "Corante Verde Folha",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "20",
-            "sell_by_date": ""
-        },
-        {
-            "id": "38",
-            "description": "Corante Vermelho",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "10",
-            "sell_by_date": ""
-        },
-        {
-            "id": "39",
-            "description": "Corante Violeta",
-            "supplier_name":"",
-            "package_price": "6.1",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "10",
-            "sell_by_date": ""
-        },
-        {
-            "id": "40",
-            "description": "Emuls\u00e3o de Silcone para Shampoo",
-            "supplier_name":"",
-            "package_price": "7.2",
-            "package_amt": "20",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "41",
-            "description": "Enxofre",
-            "supplier_name":"",
-            "package_price": "1.5",
-            "package_amt": "50",
-            "unit_material": "g",
-            "stock_amt": "20",
-            "sell_by_date": "30/12/2020"
-        },
-        {
-            "id": "42",
-            "description": "Ess\u00eancia Bamboo New",
-            "supplier_name":"",
-            "package_price": "24",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "43",
-            "description": "Ess\u00eancia de Alecrim",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "44",
-            "description": "Ess\u00eancia de Algod\u00e3o ",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "45",
-            "description": "Ess\u00eancia de Aveia",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "46",
-            "description": "Ess\u00eancia de Bamboo",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "30",
-            "sell_by_date": "30/03/2020"
-        },
-        {
-            "id": "47",
-            "description": "Essencia de Caf\u201a",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "48",
-            "description": "Ess\u00eancia de Camomila",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "49",
-            "description": "Ess\u00eancia de Campim Lim\u00e3o",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "50",
-            "description": "Ess\u00eancia de Canela",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "51",
-            "description": "Ess\u00eancia de Capim Cidreira",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "30",
-            "sell_by_date": "30/01/2020"
-        },
-        {
-            "id": "52",
-            "description": "Ess\u00eancia de Castanha do Par\u00a0",
-            "supplier_name":"",
-            "package_price": "6.5",
-            "package_amt": "20",
-            "unit_material": "mL",
-            "stock_amt": "10",
-            "sell_by_date": "30/07/2020"
-        },
-        {
-            "id": "53",
-            "description": "Ess\u00eancia de Cereja e Avel\u00e3",
-            "supplier_name":"",
-            "package_price": "24",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "54",
-            "description": "Ess\u00eancia de Chantily",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "55",
-            "description": "Ess\u00eancia de Chocolate",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "150",
-            "sell_by_date": "30/05/2020"
-        },
-        {
-            "id": "56",
-            "description": "Ess\u00eancia de Coco",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "57",
-            "description": "Essencia de Flor de Lotus",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "58",
-            "description": "Ess\u00eancia de Lavanda ",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "200",
-            "sell_by_date": "30/08/2020"
-        },
-        {
-            "id": "59",
-            "description": "Ess\u00eancia de Ma\u00e7\u00e3 com Avel\u00e3",
-            "supplier_name":"",
-            "package_price": "24",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": "30/10/2020"
-        },
-        {
-            "id": "60",
-            "description": "Ess\u00eancia de Morango com Champagne",
-            "supplier_name":"",
-            "package_price": "18",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": "30/09/2020"
-        },
-        {
-            "id": "61",
-            "description": "Ess\u00eancia de Tutti Frutti",
-            "supplier_name":"",
-            "package_price": "16",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "30",
-            "sell_by_date": "30/11/2020"
-        },
-        {
-            "id": "62",
-            "description": "Ess\u00eancia de Verbena",
-            "supplier_name":"",
-            "package_price": "24",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "63",
-            "description": "Ess\u00eancia Gentlemen",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "90",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "64",
-            "description": "Ess\u00eancia Groselha Negra",
-            "supplier_name":"",
-            "package_price": "24",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "65",
-            "description": "Ess\u00eancia Loccitane",
-            "supplier_name":"",
-            "package_price": "20",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "80",
-            "sell_by_date": "30/08/2020"
-        },
-        {
-            "id": "66",
-            "description": "Ess\u00eancia Martan Fragance",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "67",
-            "description": "Ess\u00eancia Orqu\u00eddea",
-            "supplier_name":"",
-            "package_price": "22",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": "30/11/2020"
-        },
-        {
-            "id": "68",
-            "description": "Ess\u00eancia Provence",
-            "supplier_name":"",
-            "package_price": "18",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "50",
-            "sell_by_date": "30/07/2020"
-        },
-        {
-            "id": "69",
-            "description": "Ess\u00eancia Vanila Spice",
-            "supplier_name":"",
-            "package_price": "24",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "70",
-            "description": "Ess\u00eancia Vinho Cabernet",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": "30/07/2020"
-        },
-        {
-            "id": "71",
-            "description": "Extrato de Alecrim e Arnica",
-            "supplier_name":"",
-            "package_price": "5",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "72",
-            "description": "Extrato de Camomila ",
-            "supplier_name":"",
-            "package_price": "11",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "73",
-            "description": "Extrato de PrÓpolis com Capim Lim\u00e3o",
-            "supplier_name":"",
-            "package_price": "5",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "10",
-            "sell_by_date": "30/02/2020"
-        },
-        {
-            "id": "74",
-            "description": "Extrato Glicólico de Aloe Vera",
-            "supplier_name":"",
-            "package_price": "27",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "400",
-            "sell_by_date": "24/06/2021"
-        },
-        {
-            "id": "75",
-            "description": "Extrato Glicólico de Arnica ",
-            "supplier_name":"",
-            "package_price": "5",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "76",
-            "description": "Extrato Glicólico de Aveia",
-            "supplier_name":"",
-            "package_price": "5",
-            "package_amt": "100",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "77",
-            "description": "Extrato Glicólico de Barbatim\u00e3o",
-            "supplier_name":"",
-            "package_price": "27",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "500",
-            "sell_by_date": "14/11/2020"
-        },
-        {
-            "id": "78",
-            "description": "Extrato Glicólico de Caf\u201a",
-            "supplier_name":"",
-            "package_price": "30",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "250",
-            "sell_by_date": "30/07/2020"
-        },
-        {
-            "id": "79",
-            "description": "Extrato Glicólico de Calêndula",
-            "supplier_name":"",
-            "package_price": "5",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "80",
-            "description": "Extrato Glicólico de G\u201armen de Trigo ",
-            "supplier_name":"",
-            "package_price": "27",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "400",
-            "sell_by_date": "14/03/2021"
-        },
-        {
-            "id": "81",
-            "description": "Extrato Glicólico de Leite de Cabra",
-            "supplier_name":"",
-            "package_price": "27",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "350",
-            "sell_by_date": "30/04/2021"
-        },
-        {
-            "id": "82",
-            "description": "Extrato Glicólico de Mam\u00e3o Papaia",
-            "supplier_name":"",
-            "package_price": "30",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "380",
-            "sell_by_date": "08/05/2020"
-        },
-        {
-            "id": "83",
-            "description": "Extrato Glicólico de Pepino",
-            "supplier_name":"",
-            "package_price": "27",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "400",
-            "sell_by_date": "03/07/2021"
-        },
-        {
-            "id": "84",
-            "description": "Extrato Glicólico de PrÓpolis",
-            "supplier_name":"",
-            "package_price": "11",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "50",
-            "sell_by_date": "30/04/2021"
-        },
-        {
-            "id": "85",
-            "description": "Extrato Glicólico de Uva",
-            "supplier_name":"",
-            "package_price": "27",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "450",
-            "sell_by_date": "30/02/2021"
-        },
-        {
-            "id": "86",
-            "description": "Farinha de Arroz",
-            "supplier_name":"",
-            "package_price": "3.99",
-            "package_amt": "1000",
-            "unit_material": "g",
-            "stock_amt": "600",
-            "sell_by_date": "30/08/2020"
-        },
-        {
-            "id": "87",
-            "description": "Fixador Almiscar",
-            "supplier_name":"",
-            "package_price": "24.9",
-            "package_amt": "100",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "88",
-            "description": "Fixador de Ess\u00eancia",
-            "supplier_name":"",
-            "package_price": "18",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "30",
-            "sell_by_date": "30/04/2020"
-        },
-        {
-            "id": "89",
-            "description": "Flores de Camomila",
-            "supplier_name":"",
-            "package_price": "3",
-            "package_amt": "50",
-            "unit_material": "g",
-            "stock_amt": "50",
-            "sell_by_date": ""
-        },
-        {
-            "id": "90",
-            "description": "Glicerina Bidestilada",
-            "supplier_name":"",
-            "package_price": "7.15",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": "30/12/2020"
-        },
-        {
-            "id": "91",
-            "description": "Lauril em Pó",
-            "supplier_name":"",
-            "package_price": "15.8",
-            "package_amt": "250",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "92",
-            "description": "Lauril L\u00edquido",
-            "supplier_name":"",
-            "package_price": "17.94",
-            "package_amt": "1000",
-            "unit_material": "mL",
-            "stock_amt": "1000",
-            "sell_by_date": "30/07/2020"
-        },
-        {
-            "id": "93",
-            "description": "Leite de Magn\u201asia",
-            "supplier_name":"",
-            "package_price": "0",
-            "package_amt": "120",
-            "unit_material": "mL",
-            "stock_amt": "20",
-            "sell_by_date": "30/12/2020"
-        },
-        {
-            "id": "94",
-            "description": "Manteiga de Karit\u201a ",
-            "supplier_name":"",
-            "package_price": "15.9",
-            "package_amt": "100",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "95",
-            "description": "Manteiga Vegetal de Cacau",
-            "supplier_name":"",
-            "package_price": "13.4",
-            "package_amt": "100",
-            "unit_material": "g",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "96",
-            "description": "Mel",
-            "supplier_name":"",
-            "package_price": "16.7",
-            "package_amt": "260",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": ""
-        },
-        {
-            "id": "97",
-            "description": "Mentol",
-            "supplier_name":"",
-            "package_price": "2.5",
-            "package_amt": "5",
-            "unit_material": "g",
-            "stock_amt": "15",
-            "sell_by_date": "30/04/2020"
-        },
-        {
-            "id": "98",
-            "description": "Nipagim",
-            "supplier_name":"",
-            "package_price": "3.84",
-            "package_amt": "10",
-            "unit_material": "g",
-            "stock_amt": "15",
-            "sell_by_date": "30/04/2022"
-        },
-        {
-            "id": "99",
-            "description": "Óleo de Camomila",
-            "supplier_name":"",
-            "package_price": "4.95",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "100",
-            "description": "Óleo de G\u00e9rmen de Trigo",
-            "supplier_name":"",
-            "package_price": "4.95",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "101",
-            "description": "Óleo de Rosa Mosqueta",
-            "supplier_name":"",
-            "package_price": "12",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "30",
-            "sell_by_date": "30/07/2020"
-        },
-        {
-            "id": "102",
-            "description": "Óleo de Semente de Uva",
-            "supplier_name":"",
-            "package_price": "3.6",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "80",
-            "sell_by_date": "30/04/2020"
-        },
-        {
-            "id": "103",
-            "description": "Óleo de Silicone",
-            "supplier_name":"",
-            "package_price": "19.55",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "104",
-            "description": "Óleo Mineral",
-            "supplier_name":"",
-            "package_price": "22.8",
-            "package_amt": "1000",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "105",
-            "description": "Óleo Vegetal de Abacate",
-            "supplier_name":"",
-            "package_price": "10.34",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "40",
-            "sell_by_date": "30/10/2020"
-        },
-        {
-            "id": "106",
-            "description": "Óleo Vegetal de Amêndoas",
-            "supplier_name":"",
-            "package_price": "8.24",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": "30/10/2020"
-        },
-        {
-            "id": "107",
-            "description": "Óleo Vegetal de Coco de Baba\u00e7u",
-            "supplier_name":"",
-            "package_price": "29.84",
-            "package_amt": "500",
-            "unit_material": "g",
-            "stock_amt": "450",
-            "sell_by_date": "30/02/2021"
-        },
-        {
-            "id": "108",
-            "description": "Óleo Vegetal de Girassol ",
-            "supplier_name":"",
-            "package_price": "6.54",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "40",
-            "sell_by_date": "30/12/2020"
-        },
-        {
-            "id": "109",
-            "description": "Pigmento Cosmético Amarelo",
-            "supplier_name":"",
-            "package_price": "11.9",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "80",
-            "sell_by_date": ""
-        },
-        {
-            "id": "110",
-            "description": "Pigmento Cosmético Azul",
-            "supplier_name":"",
-            "package_price": "11.9",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "80",
-            "sell_by_date": ""
-        },
-        {
-            "id": "111",
-            "description": "Pigmento Cosmético Branco",
-            "supplier_name":"",
-            "package_price": "11.9",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "100",
-            "sell_by_date": ""
-        },
-        {
-            "id": "112",
-            "description": "Pigmento Cosmético Marrom",
-            "supplier_name":"",
-            "package_price": "11.9",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "80",
-            "sell_by_date": ""
-        },
-        {
-            "id": "113",
-            "description": "Pigmento Cosmético Preto",
-            "supplier_name":"",
-            "package_price": "11.9",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "60",
-            "sell_by_date": ""
-        },
-        {
-            "id": "114",
-            "description": "Pigmento Cosmetico Vermelho",
-            "supplier_name":"",
-            "package_price": "11.9",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "80",
-            "sell_by_date": ""
-        },
-        {
-            "id": "115",
-            "description": "Renex",
-            "supplier_name":"",
-            "package_price": "20.6",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "450",
-            "sell_by_date": "30/03/2020"
-        },
-        {
-            "id": "116",
-            "description": "Sagu para Sach\u00ea",
-            "supplier_name":"",
-            "package_price": "15.5",
-            "package_amt": "500",
-            "unit_material": "g",
-            "stock_amt": "1200",
-            "sell_by_date": ""
-        },
-        {
-            "id": "117",
-            "description": "Sementes de Maracuj\u00a0",
-            "supplier_name":"",
-            "package_price": "1.2",
-            "package_amt": "80",
-            "unit_material": "g",
-            "stock_amt": "60",
-            "sell_by_date": ""
-        },
-        {
-            "id": "118",
-            "description": "Sulfato de Magn\u201asio",
-            "supplier_name":"",
-            "package_price": "7.9",
-            "package_amt": "500",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "119",
-            "description": "Triclosan",
-            "supplier_name":"",
-            "package_price": "5",
-            "package_amt": "100",
-            "unit_material": "mL",
-            "stock_amt": "10",
-            "sell_by_date": "30/04/2020"
-        },
-        {
-            "id": "120",
-            "description": "Ur\u00e9ia",
-            "supplier_name":"",
-            "package_price": "23",
-            "package_amt": "500",
-            "unit_material": "g",
-            "stock_amt": "180",
-            "sell_by_date": "30/08/2020"
-        },
-        {
-            "id": "121",
-            "description": "Vitamina A + E (B5 + Keratina)",
-            "supplier_name":"",
-            "package_price": "1.9",
-            "package_amt": "10",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "122",
-            "description": "Álcool em Gel",
-            "supplier_name":"",
-            "package_price": "0",
-            "package_amt": "0",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
-        },
-        {
-            "id": "123",
-            "description": "Ess\u00eancia de Rosas",
-            "supplier_name":"",
-            "package_price": "0",
-            "package_amt": "0",
-            "unit_material": "mL",
-            "stock_amt": "0",
-            "sell_by_date": ""
+           "id":"11",
+           "description":"Amostra Ess\u00eancia Boutique Fragrance Gold",
+           "package_amt":"4",
+           "package_price":"3.53",
+           "unit_material":"mL",
+           "stock_amt":"4",
+           "sell_by_date":"02/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"12",
+           "description":"Amostra Ess\u00eancia Ervas do Mediterr\u00e2neo",
+           "package_amt":"4",
+           "package_price":"3.53",
+           "unit_material":"mL",
+           "stock_amt":"4",
+           "sell_by_date":"03/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"13",
+           "description":"Amostra Ess\u00eancia Fresh Kiss Gold",
+           "package_amt":"4",
+           "package_price":"3.53",
+           "unit_material":"mL",
+           "stock_amt":"4",
+           "sell_by_date":"04/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"14",
+           "description":"Amostra Ess\u00eancia Ozonio",
+           "package_amt":"4",
+           "package_price":"3.53",
+           "unit_material":"mL",
+           "stock_amt":"4",
+           "sell_by_date":"06/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"15",
+           "description":"Amostra Ess\u00eancia Vanilla Home",
+           "package_amt":"4",
+           "package_price":"3.53",
+           "unit_material":"mL",
+           "stock_amt":"4",
+           "sell_by_date":"05/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"16",
+           "description":"Anf\u00f3tero",
+           "package_amt":"1000",
+           "package_price":"26.84",
+           "unit_material":"mL",
+           "stock_amt":"2500",
+           "sell_by_date":"01/09/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"17",
+           "description":"Argila Branca",
+           "package_amt":"100",
+           "package_price":"3.90",
+           "unit_material":"g",
+           "stock_amt":"100",
+           "sell_by_date":"01/04/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"18",
+           "description":"Argila Verde",
+           "package_amt":"100",
+           "package_price":"3.90",
+           "unit_material":"g",
+           "stock_amt":"100",
+           "sell_by_date":"01/04/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"19",
+           "description":"Aroeira",
+           "package_amt":"40",
+           "package_price":"1.80",
+           "unit_material":"g",
+           "stock_amt":"30",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"20",
+           "description":"Aveia",
+           "package_amt":"500",
+           "package_price":"7.74",
+           "unit_material":"g",
+           "stock_amt":"300",
+           "sell_by_date":"30/12/2020",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"21",
+           "description":"Base Branca Glicerinada",
+           "package_amt":"1000",
+           "package_price":"25.40",
+           "unit_material":"g",
+           "stock_amt":"10000",
+           "sell_by_date":"01/01/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"22",
+           "description":"Base Croda",
+           "package_amt":"200",
+           "package_price":"19.00",
+           "unit_material":"g",
+           "stock_amt":"300",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"23",
+           "description":"Base L\u00edquida Neutra",
+           "package_amt":"1000",
+           "package_price":"29.20",
+           "unit_material":"mL",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Limne"
+        },
+        {
+           "id":"24",
+           "description":"Base L\u00edquida Perolada",
+           "package_amt":"1000",
+           "package_price":"29.20",
+           "unit_material":"mL",
+           "stock_amt":"3800",
+           "sell_by_date":"30/06/2021",
+           "supplier_name":"Limne"
+        },
+        {
+           "id":"25",
+           "description":"Base para \u00c1lcool Gel",
+           "package_amt":"1000",
+           "package_price":"15.50",
+           "unit_material":"mL",
+           "stock_amt":"1800",
+           "sell_by_date":"01/10/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"26",
+           "description":"Base Transparente Glicerinada",
+           "package_amt":"1000",
+           "package_price":"27.00",
+           "unit_material":"g",
+           "stock_amt":"4000",
+           "sell_by_date":"01/01/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"27",
+           "description":"Beterraba em P\u00f3",
+           "package_amt":"50",
+           "package_price":"7.60",
+           "unit_material":"g",
+           "stock_amt":"50",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"28",
+           "description":"Bicarbonato de S\u00f3dio",
+           "package_amt":"500",
+           "package_price":"6.19",
+           "unit_material":"g",
+           "stock_amt":"400",
+           "sell_by_date":"01/08/2021",
+           "supplier_name":"Rold\u00e3o"
+        },
+        {
+           "id":"29",
+           "description":"Biofort",
+           "package_amt":"100",
+           "package_price":"10.00",
+           "unit_material":"mL",
+           "stock_amt":"180",
+           "sell_by_date":"01/08/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"30",
+           "description":"Caf\u00e9 Mo\u00eddo",
+           "package_amt":"300",
+           "package_price":"8.54",
+           "unit_material":"g",
+           "stock_amt":"20",
+           "sell_by_date":"01/04/2021",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"31",
+           "description":"Canela em P\u00f3",
+           "package_amt":"20",
+           "package_price":"2.10",
+           "unit_material":"g",
+           "stock_amt":"10",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"32",
+           "description":"C\u00e2nfora",
+           "package_amt":"20",
+           "package_price":"4.20",
+           "unit_material":"g",
+           "stock_amt":"40",
+           "sell_by_date":"01/05/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"33",
+           "description":"Carbopol",
+           "package_amt":"10",
+           "package_price":"2.40",
+           "unit_material":"g",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"34",
+           "description":"Carv\u00e3o Ativado",
+           "package_amt":"100",
+           "package_price":"3.90",
+           "unit_material":"g",
+           "stock_amt":"100",
+           "sell_by_date":"01/06/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"35",
+           "description":"Chocolate Melken",
+           "package_amt":"3000",
+           "package_price":"60.00",
+           "unit_material":"g",
+           "stock_amt":"250",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"36",
+           "description":"Confrei",
+           "package_amt":"20",
+           "package_price":"4.90",
+           "unit_material":"g",
+           "stock_amt":"20",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"37",
+           "description":"Corante Amarelo",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"38",
+           "description":"Corante Azul",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"5",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"39",
+           "description":"Corante Laranja",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"40",
+           "description":"Corante Laranja Neon",
+           "package_amt":"120",
+           "package_price":"8.00",
+           "unit_material":"mL",
+           "stock_amt":"50",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"41",
+           "description":"Corante Marrom",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"50",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"42",
+           "description":"Corante Rosa",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"50",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"43",
+           "description":"Corante Turquesa",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"44",
+           "description":"Corante Verde Folha",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"20",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"45",
+           "description":"Corante Verde Neon",
+           "package_amt":"120",
+           "package_price":"8.00",
+           "unit_material":"mL",
+           "stock_amt":"10",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"46",
+           "description":"Corante Vermelho",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"10",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"47",
+           "description":"Corante Violeta",
+           "package_amt":"100",
+           "package_price":"6.10",
+           "unit_material":"mL",
+           "stock_amt":"10",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"48",
+           "description":"Cravo",
+           "package_amt":"20",
+           "package_price":"2.00",
+           "unit_material":"g",
+           "stock_amt":"10",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"49",
+           "description":"Emuls\u00e3o de Silcone para Shampoo",
+           "package_amt":"20",
+           "package_price":"7.20",
+           "unit_material":"mL",
+           "stock_amt":"30",
+           "sell_by_date":"01/05/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"50",
+           "description":"Enxofre",
+           "package_amt":"50",
+           "package_price":"1.50",
+           "unit_material":"g",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"51",
+           "description":"Erva Doce",
+           "package_amt":"20",
+           "package_price":"2.00",
+           "unit_material":"g",
+           "stock_amt":"10",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"52",
+           "description":"Ess\u00eancia Confort Home",
+           "package_amt":"100",
+           "package_price":"31.00",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"10/09/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"53",
+           "description":"Ess\u00eancia de Alecrim",
+           "package_amt":"100",
+           "package_price":"28.50",
+           "unit_material":"mL",
+           "stock_amt":"150",
+           "sell_by_date":"31/08/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"54",
+           "description":"Ess\u00eancia de Aveia",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"80",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"55",
+           "description":"Ess\u00eancia de Bamboo",
+           "package_amt":"100",
+           "package_price":"22.53",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"56",
+           "description":"Ess\u00eancia de Bamboo Dreams Gold",
+           "package_amt":"100",
+           "package_price":"26.06",
+           "unit_material":"mL",
+           "stock_amt":"70",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"57",
+           "description":"Essencia de Caf\u00e9 Torrado",
+           "package_amt":"100",
+           "package_price":"22.53",
+           "unit_material":"ml",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"58",
+           "description":"Ess\u00eancia de Camomila",
+           "package_amt":"100",
+           "package_price":"28.50",
+           "unit_material":"mL",
+           "stock_amt":"150",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"59",
+           "description":"Ess\u00eancia de Campim Lim\u00e3o",
+           "package_amt":"500",
+           "package_price":"101.20",
+           "unit_material":"mL",
+           "stock_amt":"400",
+           "sell_by_date":"01/07/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"60",
+           "description":"Ess\u00eancia de Canela",
+           "package_amt":"100",
+           "package_price":"22.53",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"61",
+           "description":"Ess\u00eancia de Capim Cidreira",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"80",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"62",
+           "description":"Ess\u00eancia de Cereja e Avel\u00e3",
+           "package_amt":"100",
+           "package_price":"28.50",
+           "unit_material":"mL",
+           "stock_amt":"40",
+           "sell_by_date":"08/09/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"63",
+           "description":"Ess\u00eancia de Chantily",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"64",
+           "description":"Ess\u00eancia de Chocolate",
+           "package_amt":"100",
+           "package_price":"23.86",
+           "unit_material":"mL",
+           "stock_amt":"160",
+           "sell_by_date":"01/02/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"65",
+           "description":"Ess\u00eancia de Chocolate Branco",
+           "package_amt":"100",
+           "package_price":"28.00",
+           "unit_material":"mL",
+           "stock_amt":"120",
+           "sell_by_date":"11/12/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"66",
+           "description":"Ess\u00eancia de C\u00f4co",
+           "package_amt":"100",
+           "package_price":"22.53",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"67",
+           "description":"Ess\u00eancia de Eucalipto",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"90",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"68",
+           "description":"Ess\u00eancia de Gentlemen",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"69",
+           "description":"Ess\u00eancia de Groselha Negra",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"70",
+           "sell_by_date":"01/01/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"70",
+           "description":"Ess\u00eancia de Infinity Love",
+           "package_amt":"100",
+           "package_price":"28.50",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"71",
+           "description":"Ess\u00eancia de Inoc\u00eancia",
+           "package_amt":"100",
+           "package_price":"22.53",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"72",
+           "description":"Ess\u00eancia de L'occitane",
+           "package_amt":"100",
+           "package_price":"22.00",
+           "unit_material":"mL",
+           "stock_amt":"120",
+           "sell_by_date":"01/12/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"73",
+           "description":"Ess\u00eancia de Laranja Lima",
+           "package_amt":"100",
+           "package_price":"28.50",
+           "unit_material":"mL",
+           "stock_amt":"140",
+           "sell_by_date":"18/01/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"74",
+           "description":"Ess\u00eancia de Lavanda",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"30",
+           "sell_by_date":"01/12/2020",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"75",
+           "description":"Ess\u00eancia de Lavanda Provence",
+           "package_amt":"100",
+           "package_price":"22.53",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"76",
+           "description":"Ess\u00eancia de LemonGrass",
+           "package_amt":"100",
+           "package_price":"28.00",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"15/01/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"77",
+           "description":"Ess\u00eancia de Martan Fragance",
+           "package_amt":"100",
+           "package_price":"20.60",
+           "unit_material":"mL",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"78",
+           "description":"Ess\u00eancia de Morango com Champagne",
+           "package_amt":"100",
+           "package_price":"22.53",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"79",
+           "description":"Ess\u00eancia de Orqu\u00eddea",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"ml",
+           "stock_amt":"100",
+           "sell_by_date":"01/03/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"80",
+           "description":"Ess\u00eancia de Sakura Gold",
+           "package_amt":"100",
+           "package_price":"31.50",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"81",
+           "description":"Ess\u00eancia de Tabaco com Baunilha",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"70",
+           "sell_by_date":"01/08/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"82",
+           "description":"Ess\u00eancia de Tutti Frutti",
+           "package_amt":"100",
+           "package_price":"20.25",
+           "unit_material":"mL",
+           "stock_amt":"20",
+           "sell_by_date":"01/12/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"83",
+           "description":"Ess\u00eancia de Vanila Spice",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"84",
+           "description":"Ess\u00eancia de Vanila Sugar",
+           "package_amt":"100",
+           "package_price":"28.50",
+           "unit_material":"mL",
+           "stock_amt":"130",
+           "sell_by_date":"11/01/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"85",
+           "description":"Ess\u00eancia de Verbena",
+           "package_amt":"100",
+           "package_price":"22.53",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"86",
+           "description":"Ess\u00eancia de Vinho Cabernet",
+           "package_amt":"100",
+           "package_price":"23.87",
+           "unit_material":"mL",
+           "stock_amt":"70",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"87",
+           "description":"Eucalipto",
+           "package_amt":"20",
+           "package_price":"3.00",
+           "unit_material":"g",
+           "stock_amt":"20",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"88",
+           "description":"Extrato de Alecrim e Arnica",
+           "package_amt":"100",
+           "package_price":"5.00",
+           "unit_material":"mL",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Home Made"
+        },
+        {
+           "id":"89",
+           "description":"Extrato de Pr\u00f3polis com Capim Lim\u00e3o",
+           "package_amt":"100",
+           "package_price":"5.00",
+           "unit_material":"mL",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Home Made"
+        },
+        {
+           "id":"90",
+           "description":"Extrato Glic\u00f3lico de Alecrim",
+           "package_amt":"250",
+           "package_price":"15.73",
+           "unit_material":"mL",
+           "stock_amt":"250",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"91",
+           "description":"Extrato Glic\u00f3lico de Aloe Vera",
+           "package_amt":"250",
+           "package_price":"15.73",
+           "unit_material":"mL",
+           "stock_amt":"250",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"92",
+           "description":"Extrato Glic\u00f3lico de Arnica",
+           "package_amt":"250",
+           "package_price":"15.73",
+           "unit_material":"mL",
+           "stock_amt":"250",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"93",
+           "description":"Extrato Glic\u00f3lico de Aveia",
+           "package_amt":"500",
+           "package_price":"30.80",
+           "unit_material":"ml",
+           "stock_amt":"350",
+           "sell_by_date":"01/11/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"94",
+           "description":"Extrato Glic\u00f3lico de Barbatim\u00e3o",
+           "package_amt":"500",
+           "package_price":"30.80",
+           "unit_material":"mL",
+           "stock_amt":"400",
+           "sell_by_date":"01/11/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"95",
+           "description":"Extrato Glic\u00f3lico de Caf\u00e9",
+           "package_amt":"500",
+           "package_price":"30.80",
+           "unit_material":"mL",
+           "stock_amt":"30",
+           "sell_by_date":"29/07/2020",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"96",
+           "description":"Extrato Glic\u00f3lico de Cal\u00eandula",
+           "package_amt":"250",
+           "package_price":"23.36",
+           "unit_material":"mL",
+           "stock_amt":"550",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"97",
+           "description":"Extrato Glic\u00f3lico de Camomila",
+           "package_amt":"250",
+           "package_price":"15.73",
+           "unit_material":"mL",
+           "stock_amt":"250",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"98",
+           "description":"Extrato Glic\u00f3lico de Cenoura",
+           "package_amt":"500",
+           "package_price":"30.80",
+           "unit_material":"mL",
+           "stock_amt":"300",
+           "sell_by_date":"01/12/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"99",
+           "description":"Extrato Glic\u00f3lico de G\u00e9rmen de Trigo",
+           "package_amt":"250",
+           "package_price":"20.00",
+           "unit_material":"mL",
+           "stock_amt":"290",
+           "sell_by_date":"14/03/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"100",
+           "description":"Extrato Glic\u00f3lico de Jaborandi",
+           "package_amt":"250",
+           "package_price":"20.00",
+           "unit_material":"mL",
+           "stock_amt":"250",
+           "sell_by_date":"26/01/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"101",
+           "description":"Extrato Glic\u00f3lico de Leite de Cabra",
+           "package_amt":"250",
+           "package_price":"23.36",
+           "unit_material":"mL",
+           "stock_amt":"450",
+           "sell_by_date":"01/04/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"102",
+           "description":"Extrato Glic\u00f3lico de Mam\u00e3o Papaia",
+           "package_amt":"500",
+           "package_price":"30.80",
+           "unit_material":"mL",
+           "stock_amt":"50",
+           "sell_by_date":"29/07/2020",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"103",
+           "description":"Extrato Glic\u00f3lico de Mel",
+           "package_amt":"100",
+           "package_price":"6.00",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"19/02/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"104",
+           "description":"Extrato Glic\u00f3lico de Pepino",
+           "package_amt":"250",
+           "package_price":"15.73",
+           "unit_material":"mL",
+           "stock_amt":"250",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"105",
+           "description":"Extrato Glic\u00f3lico de Pimenta Rosa",
+           "package_amt":"250",
+           "package_price":"20.00",
+           "unit_material":"mL",
+           "stock_amt":"250",
+           "sell_by_date":"17/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"106",
+           "description":"Extrato Glic\u00f3lico de Pr\u00f3polis",
+           "package_amt":"500",
+           "package_price":"60.60",
+           "unit_material":"mL",
+           "stock_amt":"500",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"107",
+           "description":"Extrato Glic\u00f3lico de Uva",
+           "package_amt":"500",
+           "package_price":"30.80",
+           "unit_material":"mL",
+           "stock_amt":"300",
+           "sell_by_date":"01/03/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"108",
+           "description":"Farinha de Arroz",
+           "package_amt":"1000",
+           "package_price":"3.99",
+           "unit_material":"g",
+           "stock_amt":"300",
+           "sell_by_date":"01/08/2021",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"109",
+           "description":"Fixador de Ess\u00eancia Nacional",
+           "package_amt":"100",
+           "package_price":"21.20",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"110",
+           "description":"Flores de Camomila",
+           "package_amt":"50",
+           "package_price":"3.00",
+           "unit_material":"g",
+           "stock_amt":"25",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"111",
+           "description":"Glicerina Bidestilada",
+           "package_amt":"500",
+           "package_price":"14.00",
+           "unit_material":"mL",
+           "stock_amt":"500",
+           "sell_by_date":"18/09/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"112",
+           "description":"Goma Xantana",
+           "package_amt":"200",
+           "package_price":"20.00",
+           "unit_material":"g",
+           "stock_amt":"160",
+           "sell_by_date":"12/09/2022",
+           "supplier_name":"Mercado Municipal"
+        },
+        {
+           "id":"113",
+           "description":"Laranja Desidratada",
+           "package_amt":"70",
+           "package_price":"3.29",
+           "unit_material":"g",
+           "stock_amt":"50",
+           "sell_by_date":"01/12/2020",
+           "supplier_name":"Loja Erva Doce - Produtos Naturais"
+        },
+        {
+           "id":"114",
+           "description":"Lauril em P\u00f3",
+           "package_amt":"100",
+           "package_price":"9.80",
+           "unit_material":"g",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"115",
+           "description":"Lauril L\u00edquido",
+           "package_amt":"1000",
+           "package_price":"50.40",
+           "unit_material":"mL",
+           "stock_amt":"3500",
+           "sell_by_date":"12/09/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"116",
+           "description":"Manteiga de Karit\u00e9",
+           "package_amt":"100",
+           "package_price":"18.73",
+           "unit_material":"g",
+           "stock_amt":"200",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"117",
+           "description":"Manteiga de Ucuuba",
+           "package_amt":"100",
+           "package_price":"27.50",
+           "unit_material":"g",
+           "stock_amt":"100",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"118",
+           "description":"Manteiga Vegetal de Cacau",
+           "package_amt":"100",
+           "package_price":"20.23",
+           "unit_material":"g",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"119",
+           "description":"Mel",
+           "package_amt":"250",
+           "package_price":"14.99",
+           "unit_material":"g",
+           "stock_amt":"250",
+           "sell_by_date":"31/01/2022",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"120",
+           "description":"Mentol",
+           "package_amt":"100",
+           "package_price":"29.00",
+           "unit_material":"g",
+           "stock_amt":"80",
+           "sell_by_date":"01/08/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"121",
+           "description":"Neutralizante Siliconado",
+           "package_amt":"20",
+           "package_price":"2.20",
+           "unit_material":"g",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"122",
+           "description":"Nipagim",
+           "package_amt":"10",
+           "package_price":"3.19",
+           "unit_material":"g",
+           "stock_amt":"20",
+           "sell_by_date":"01/07/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"123",
+           "description":"\u00d3leo de Rosa Mosqueta",
+           "package_amt":"100",
+           "package_price":"12.50",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/07/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"124",
+           "description":"\u00d3leo de Silicone",
+           "package_amt":"100",
+           "package_price":"15.00",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/07/2022",
+           "supplier_name":"Cantinho das Ess\u00eancias"
+        },
+        {
+           "id":"125",
+           "description":"\u00d3leo Vegetal de Abacate",
+           "package_amt":"100",
+           "package_price":"15.07",
+           "unit_material":"mL",
+           "stock_amt":"50",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"126",
+           "description":"\u00d3leo Vegetal de Am\u00eandoas",
+           "package_amt":"100",
+           "package_price":"10.80",
+           "unit_material":"mL",
+           "stock_amt":"115",
+           "sell_by_date":"01/10/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"127",
+           "description":"\u00d3leo Vegetal de Camomila",
+           "package_amt":"100",
+           "package_price":"15.23",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"128",
+           "description":"\u00d3leo Vegetal de Coco de Baba\u00e7u",
+           "package_amt":"500",
+           "package_price":"31.50",
+           "unit_material":"g",
+           "stock_amt":"700",
+           "sell_by_date":"01/07/2021",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"129",
+           "description":"\u00d3leo Vegetal de Coco de Palmiste",
+           "package_amt":"500",
+           "package_price":"27.60",
+           "unit_material":"g",
+           "stock_amt":"500",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"130",
+           "description":"\u00d3leo Vegetal de G\u00e9rmen de Trigo",
+           "package_amt":"100",
+           "package_price":"11.23",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"01/11/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"131",
+           "description":"\u00d3leo Vegetal de Girassol",
+           "package_amt":"500",
+           "package_price":"22.10",
+           "unit_material":"mL",
+           "stock_amt":"560",
+           "sell_by_date":"01/01/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"132",
+           "description":"\u00d3leo Vegetal de Semente de Uva",
+           "package_amt":"100",
+           "package_price":"10.70",
+           "unit_material":"mL",
+           "stock_amt":"115",
+           "sell_by_date":"01/02/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"133",
+           "description":"Pigmento Cosm\u00e9tico Amarelo",
+           "package_amt":"100",
+           "package_price":"11.90",
+           "unit_material":"mL",
+           "stock_amt":"80",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"134",
+           "description":"Pigmento Cosm\u00e9tico Azul",
+           "package_amt":"100",
+           "package_price":"11.90",
+           "unit_material":"mL",
+           "stock_amt":"80",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"135",
+           "description":"Pigmento Cosm\u00e9tico Branco",
+           "package_amt":"100",
+           "package_price":"11.90",
+           "unit_material":"mL",
+           "stock_amt":"100",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"136",
+           "description":"Pigmento Cosm\u00e9tico Marrom",
+           "package_amt":"100",
+           "package_price":"11.90",
+           "unit_material":"mL",
+           "stock_amt":"80",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"137",
+           "description":"Pigmento Cosm\u00e9tico Preto",
+           "package_amt":"100",
+           "package_price":"11.90",
+           "unit_material":"mL",
+           "stock_amt":"60",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"138",
+           "description":"Pigmento Cosmetico Vermelho",
+           "package_amt":"100",
+           "package_price":"11.90",
+           "unit_material":"mL",
+           "stock_amt":"80",
+           "sell_by_date":"NA",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"139",
+           "description":"Renex",
+           "package_amt":"500",
+           "package_price":"20.60",
+           "unit_material":"mL",
+           "stock_amt":"",
+           "sell_by_date":"",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"140",
+           "description":"Sagu para Sach\u00ea",
+           "package_amt":"500",
+           "package_price":"5.09",
+           "unit_material":"g",
+           "stock_amt":"1000",
+           "sell_by_date":"NA",
+           "supplier_name":"Rold\u00e3o"
+        },
+        {
+           "id":"141",
+           "description":"Sal",
+           "package_amt":"1000",
+           "package_price":"1.90",
+           "unit_material":"g",
+           "stock_amt":"1000",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"142",
+           "description":"Sal Grosso",
+           "package_amt":"1000",
+           "package_price":"1.53",
+           "unit_material":"g",
+           "stock_amt":"500",
+           "sell_by_date":"NA",
+           "supplier_name":"Rold\u00e3o"
+        },
+        {
+           "id":"143",
+           "description":"Sementes de Maracuj\u00e1",
+           "package_amt":"80",
+           "package_price":"1.20",
+           "unit_material":"g",
+           "stock_amt":"60",
+           "sell_by_date":"NA",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"144",
+           "description":"Sulfato de Magn\u00e9sio",
+           "package_amt":"200",
+           "package_price":"5.50",
+           "unit_material":"g",
+           "stock_amt":"180",
+           "sell_by_date":"01/08/2021",
+           "supplier_name":"Mercado"
+        },
+        {
+           "id":"145",
+           "description":"Ur\u00e9ia",
+           "package_amt":"500",
+           "package_price":"23.00",
+           "unit_material":"g",
+           "stock_amt":"300",
+           "sell_by_date":"01/10/2022",
+           "supplier_name":"Peter Paiva"
+        },
+        {
+           "id":"146",
+           "description":"Vitamina A + E (B5 + Keratina)",
+           "package_amt":"10",
+           "package_price":"1.90",
+           "unit_material":"mL",
+           "stock_amt":"20",
+           "sell_by_date":"NA",
+           "supplier_name":"Cosm\u00e9ticos"
         }
     ]
 }
