@@ -7,7 +7,6 @@
     background: white;
     margin-top: 23px;
     border: 1px solid #A2228F;
-    border-radius: 0.5em;
 }
 
 .card-options {
@@ -15,4 +14,9 @@
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
+}
+
+a:hover {
+    background-color: #ffbef5;
+    text-decoration: none;
 }
