@@ -22,6 +22,9 @@ const CreateRecipe = () => {
     const [amount, setAmount] = useState(0);
     const [materialsList, setMaterialsList] = useState([]);
     const [supplyCost, setSupplyCost] = useState(0);
+    const [recipeName, setRecipeName] = useState("");
+    const [laborCost, setLaborCost] = useState(5.0);
+    const [productivity, setProductivity] = useState(1);
 
     const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
       
@@ -32,18 +35,19 @@ const CreateRecipe = () => {
     useEffect(() => {
     },[materialsList]);
 
-    const handleSubmit = () => {
-        const recipeDescription = document.getElementById("recipe").value;
 
-        const newRecipe = {
-            "description": recipeDescription,
-            "labor_cost" : 0,
+    const handleSubmit = () => {
+         const newRecipe = {
+            "description": recipeName,
+            "labor_cost" : laborCost,
             "supply_cost" : supplyCost,
-            "materials" : materialsList.map( material => material.id)
+            "productivity" : productivity,
+            "materials" : materialsList.map( material => material.id),
         }
         console.log(newRecipe);
         createRecipe(newRecipe, materialsList).then(setRecipeReady(true));
     }
+
 
     const handleAddMaterial = () => {
         const newMaterialList = materialsList;
@@ -67,7 +71,7 @@ const CreateRecipe = () => {
         setMaterialsList(newMaterialList);
     }
 
-    console.log(materialsList)
+
 
     if(!userLogged)
         return <Redirect to='/login'/>
@@ -80,7 +84,14 @@ const CreateRecipe = () => {
                 <Form>
                     <Form.Group controlId="recipe">
                         <Form.Label> <h2>Qual o nome da nova receita?</h2> </Form.Label>
-                        <Form.Control as="textarea" rows="1" />
+                        <Form.Control as="textarea" rows="1" 
+                                      onChange={(e)=>setRecipeName(e.target.value)}/>
+                    </Form.Group>
+
+                    <Form.Group controlId="recipe">
+                        <Form.Label> <h2>Qual o custo de mão-de-obra + energia?</h2> </Form.Label>
+                        <Form.Control as="textarea" rows="1" placeholder={`${laborCost}`}
+                                      onChange={(e)=>setLaborCost(parseFloat(e.target.value))}/>
                     </Form.Group>
 
                     <Form.Group controlId="materials">
@@ -154,6 +165,13 @@ const CreateRecipe = () => {
                         }
 
                         <h4> {"Custo dos Materiais: "+ formatter.format(supplyCost)} </h4>
+                        <h4> {"Custo Total: "+ formatter.format(supplyCost + laborCost)} </h4>
+                    </Form.Group>
+
+                    <Form.Group controlId="recipe">
+                        <Form.Label> <h2>Qual o rendimento da receita?</h2> </Form.Label>
+                        <Form.Control as="textarea" rows="1" placeholder={`${productivity}`}
+                                      onChange={(e)=>setProductivity(e.target.value)}/>
                     </Form.Group>
                 </Form>
 

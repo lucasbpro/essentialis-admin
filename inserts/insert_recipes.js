@@ -1,5 +1,4 @@
 // constants 
-//const URL_API = "http://localhost:5000";
 const URL_API = 'https://essentialis-api-main.herokuapp.com'; 
 const URL_RECIPES = `${URL_API}/recipes`;
 
