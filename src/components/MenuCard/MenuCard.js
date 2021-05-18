@@ -6,22 +6,16 @@ function MenuCard() {
     return (
       <div className="menu-card">
         <Link to={'/pedidos'}>
-          <p className="card-options"> Pesquisar pedidos </p>
+          <p className="card-options"> Pedidos </p>
         </Link>
         <Link to={'/receitas'}>
-          <p className="card-options"> Pesquisar receitas </p>
+          <p className="card-options"> Receitas </p>
+        </Link>
+        <Link to={'/materiais'}>
+          <p className="card-options"> Materiais </p>
         </Link>
         <Link to={'/criarCliente'}>
-          <p className="card-options"> Cadastrar cliente </p>
-        </Link>
-        <Link to={'/criarPedido'}>
-          <p className="card-options"> Cadastrar pedido </p>
-        </Link>
-        <Link to={'/criarReceita'}>
-          <p className="card-options"> Cadastrar receita </p>
-        </Link>
-        <Link to={'/criarMaterial'}>
-          <p className="card-options"> Cadastrar material </p>
+          <p className="card-options"> Clientes </p>
         </Link>
       </div>
     );

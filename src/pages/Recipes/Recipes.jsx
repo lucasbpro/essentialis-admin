@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 
 import {getAllRecipes, getAllMaterials} from '../../services';
 
-import RecipeFilter from '../../components/RecipeFilter'
+import Filter from '../../components/Filter'
 import RecipesTable from '../../containers/RecipesTable';
 
 import {filterListByText} from '../../utils/filters'
@@ -40,7 +40,8 @@ const Recipes = () => {
       return <Redirect to='/login'/>
   else return (
     <div className="container">
-        <RecipeFilter handleFilter={handleFilter}/>
+        <h1> Receitas </h1>
+        <Filter handleFilter={handleFilter} placeholder="Filtrar por nome da receita"/>
         <RecipesTable recipesList={filteredRecipes} allMaterials={allMaterials}/>
         {(isFilterApplied && filteredRecipes.length===0) && <h3> O filtro não retornou resultados </h3>}
     </div>

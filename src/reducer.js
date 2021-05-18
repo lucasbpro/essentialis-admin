@@ -4,6 +4,7 @@ export const SET_USER_TOKEN = "set_user_token";
 export const SET_RECIPE_LIST = "set_recipe_list";
 export const SET_CUSTOMERS_LIST = "set_customers_list";
 export const SET_ORDERS_LIST = "set_orders_list";
+export const SET_MATERIALS_LIST = "set_materials_list";
 
 
 /************ Reducer ********************************************************/
@@ -12,7 +13,8 @@ const initialState = {
     userToken: "",
     recipeList: [],
     customerList: [],
-    orderList: []
+    orderList: [],
+    materialsList: []
 };
 
 export function reducer(state = initialState, action) {
@@ -49,6 +51,13 @@ export function reducer(state = initialState, action) {
             return {
                 ...state,
                 orderList: action.payload
+            };
+        }
+
+        case SET_MATERIALS_LIST: {
+            return {
+                ...state,
+                materialsList: action.payload
             };
         }
 
@@ -89,5 +98,12 @@ export function setOrderList(orderList) {
     return {
         type: SET_ORDERS_LIST,
         payload: orderList
+    };
+}
+
+export function setMaterialsList(materialsList) {
+    return {
+        type: SET_MATERIALS_LIST,
+        payload: materialsList
     };
 }

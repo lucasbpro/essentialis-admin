@@ -1,9 +1,12 @@
 import React from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import {Redirect} from 'react-router-dom';
-import { setRecipeList, setCustomerList, setOrderList } from '../../reducer';
+import { setRecipeList, setCustomerList, setOrderList, setMaterialsList } from '../../reducer';
 
-import {getAllRecipes, getAllCustomers, getAllOrders} from '../../services';
+import {getAllRecipes, 
+        getAllCustomers,
+        getAllOrders,
+        getAllMaterials } from '../../services';
 
 import './Home.scss';
 
@@ -15,6 +18,7 @@ const Home = () => {
     getAllRecipes().then(resposta => dispatch(setRecipeList(resposta)));
     getAllCustomers().then(resposta => dispatch(setCustomerList(resposta)));
     getAllOrders().then(resposta => dispatch(setOrderList(resposta)));
+    getAllMaterials().then(resposta => dispatch(setMaterialsList(resposta)));
 
     if(userLogged){
       return  <div className="home">

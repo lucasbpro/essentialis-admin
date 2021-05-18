@@ -1,4 +1,4 @@
-const URL_API = "https://essentialis-api-main.herokuapp.com"; // Production API
+const URL_API = "https://essentialis-api-main.herokuapp.com"; // Development API
 
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
@@ -43,8 +43,6 @@ async function createRecipe(newRecipe,materialsAmount){
 }
 
 async function createRecipeMaterials(recipeId, materialsAmount){
-  console.log(recipeId)
-  console.log(materialsAmount)
   return materialsAmount.map( item => 
         axios.post(`${URL_RECIPE_MATERIALS}/${recipeId}/materials/${item.id}`,item.amount).then(r => r) 
     )

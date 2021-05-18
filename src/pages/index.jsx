@@ -6,6 +6,7 @@ import Home from './Home';
 import Login from './Login';
 import NotFound from './NotFound';
 import Recipes from './Recipes/Recipes';
+import Materials from './Materials';
 import RecipeDetails from './RecipeDetails';
 import Orders from './Orders';
 import OrderDetails from './OrderDetails';
@@ -19,6 +20,7 @@ const Pages = () => (
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/receitas" component={Recipes} />
+      <Route exact path="/materiais" component={Materials} />
       <Route exact path="/receita/:recipeId" component={RecipeDetails}/>
       <Route exact path="/pedido/:orderId" component={OrderDetails}/>
       <Route exact path="/pedidos" component={Orders}/>

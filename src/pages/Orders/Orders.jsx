@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Redirect } from 'react-router-dom';
 
 //import Loading from '../../components/Loading';
-import OrderFilter from '../../components/OrderFilter'
+import Filter from '../../components/Filter'
 import OrderTable  from '../../containers/OrderTable';
 import {filterOrdersByText, sortOrdersByDate} from '../../utils/filters'
 import { useSelector } from 'react-redux';
@@ -36,7 +36,8 @@ const Orders = () => {
     return <Redirect to='/login'/>
   else return (
       <div className="container">
-        <OrderFilter handleFilter={handleFilter}/>
+        <h1> Pedidos </h1>
+        <Filter handleFilter={handleFilter} placeholder="Filtrar por produto, cliente ou status"/>
         <OrderTable ordersList={filteredOrders}/>
         {(isFilterApplied && filteredOrders.length===0) && <h3> O filtro não retornou resultados </h3>}
       </div>
