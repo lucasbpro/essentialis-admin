@@ -1,22 +1,14 @@
 import React from 'react';
-import {Link, Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
-import {deleteRecipe} from '../../services'
-import TrashButton from "../TrashButton"
 import {TableItem} from './styles'
 
-function RecipeItem({recipeId, recipeDescription, materialsDescription, modificationDate}){
-
-    const deletarReceita = (recipeId) =>{
-        deleteRecipe(recipeId);
-        return <Redirect to='/receitas'/>
-    }
+function RecipeItem({recipeId, recipeDescription, materialsDescription}){
 
     return(recipeDescription === undefined? null :
         <TableItem key={recipeId}>
             <td>
                 <Link to={`/receita/${recipeId}`}>{recipeDescription}</Link>
-                <TrashButton onClick = {() => deletarReceita(recipeId)}/>
             </td>
             <td>
                 <ul>
@@ -24,6 +16,9 @@ function RecipeItem({recipeId, recipeDescription, materialsDescription, modifica
                         return <li key={index}>{item}</li> 
                     })}
                 </ul>
+            </td>
+            <td>
+                <input type="checkbox" onChange={()=>{}} />
             </td>
         </TableItem>
     );

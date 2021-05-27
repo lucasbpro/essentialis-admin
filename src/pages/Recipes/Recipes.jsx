@@ -6,6 +6,7 @@ import Filter from '../../components/Filter'
 import RecipesTable from '../../containers/RecipesTable';
 import ActionButtons from '../../containers/ActionButtons';
 import {filterListByText} from '../../utils/filters'
+//import {deleteRecipe} from '../../services';
 
 const Recipes = () => {
   
@@ -31,8 +32,10 @@ const Recipes = () => {
       return <Redirect to='/criarReceita'/>
   else if(modifyPressed)
       return <Redirect to='/criarReceita'/>
-  else if(deletePressed)
-      return <Redirect to='/criarReceita'/>
+  else if(deletePressed){
+      //deleteRecipe();
+      return <Redirect to='/receitas'/>
+  }
   else return (
     <div className="container">
         <h1> Receitas </h1>
@@ -42,10 +45,13 @@ const Recipes = () => {
         <ActionButtons  handleCreate={() => setCreatePressed(true)}
                         handleModify={() => setModifyPressed(true)}
                         handleDelete={() => setDeletePressed(true)}
+                        itemName="receita"
         />
 
         <RecipesTable recipesList={filteredRecipes} allMaterials={materialsList}/>
-        {(isFilterApplied && filteredRecipes.length===0) && <h3> O filtro não retornou resultados </h3>}
+
+        {(isFilterApplied && filteredRecipes.length===0) && 
+        <h3 className="filter-no-results"> O filtro não retornou resultados </h3>}
     </div>
   );
 };

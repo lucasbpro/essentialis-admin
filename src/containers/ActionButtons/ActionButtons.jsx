@@ -12,6 +12,11 @@ const ActionButtons = ({ 	selectedItem,
 						 	handleModify, 	
 							itemName				
 						})=> {
+
+    if(!itemName) {
+		itemName = "item"
+	}
+
 	return(
 		<div className="section" >
 			<Container fluid="true">
@@ -19,33 +24,33 @@ const ActionButtons = ({ 	selectedItem,
 					<Col> 
 						{ !selectedItem? 
 							<button  className="button-new-item" onClick={()=>handleCreate()} > 
-								Criar item
+								Criar {`${itemName}`}
 							</button>
 							:
 							<button  className="button-disabled" disabled > 
-								Criar item
+								Criar {`${itemName}`}
 							</button>							
 						}
 					</Col>
 					<Col> 
 						{ selectedItem? 
 							<button  className="button-modify-item" onClick={()=>handleModify(selectedItem.id)} > 
-								Modificar item
+								Modificar {`${itemName}`}
 							</button>
 							:
 							<button  className="button-disabled" disabled > 
-								Modificar item
+								Modificar {`${itemName}`}
 							</button>							
 						}
 					</Col>
 					<Col> 
 						{ selectedItem? 
 							<button  className="button-delete-item" onClick={()=>handleDelete(selectedItem.id)} > 
-								Deletar item
+								Deletar {`${itemName}`}
 							</button>
 							:
 							<button  className="button-disabled" disabled > 
-								Deletar item
+								Deletar {`${itemName}`}
 							</button>	
 						}
 					</Col>
