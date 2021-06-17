@@ -4,7 +4,6 @@ import { useSelector } from 'react-redux';
 
 import Filter from '../../components/Filter'
 import RecipesTable from '../../containers/RecipesTable';
-import ActionButtons from '../../containers/ActionButtons';
 import {filterListByText} from '../../utils/filters'
 //import {deleteRecipe} from '../../services';
 
@@ -14,8 +13,6 @@ const Recipes = () => {
   const [filteredRecipes, setFilteredRecipes] = useState([]);
   const [isFilterApplied, setFilterApplied] = useState(false);
   const [createPressed, setCreatePressed] = useState(false);
-  const [modifyPressed, setModifyPressed] = useState(false);
-  const [deletePressed, setDeletePressed] = useState(false);
   const recipeList = useSelector(state => state.recipeList);
   const materialsList = useSelector(state => state.materialsList);
 
@@ -30,23 +27,15 @@ const Recipes = () => {
       return <Redirect to='/login'/>
   else if(createPressed)
       return <Redirect to='/criarReceita'/>
-  else if(modifyPressed)
-      return <Redirect to='/criarReceita'/>
-  else if(deletePressed){
-      //deleteRecipe();
-      return <Redirect to='/receitas'/>
-  }
   else return (
     <div className="container">
         <h1> Receitas </h1>
 
         <Filter handleFilter={handleFilter} placeholder="Filtrar por nome da receita"/>
 
-        <ActionButtons  handleCreate={() => setCreatePressed(true)}
-                        handleModify={() => setModifyPressed(true)}
-                        handleDelete={() => setDeletePressed(true)}
-                        itemName="receita"
-        />
+        <button  className="button-new-item" onClick={()=>setCreatePressed(true)}>	
+            Nova Receita 
+        </button>
 
         <RecipesTable recipesList={filteredRecipes} allMaterials={materialsList}/>
 

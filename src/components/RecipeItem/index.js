@@ -1,9 +1,18 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
+import {deleteRecipe} from '../../services'
+import TrashButton from "../TrashButton"
+import EditButton from "../EditButton"
 import {TableItem} from './styles'
 
 function RecipeItem({recipeId, recipeDescription, materialsDescription}){
+
+    const deletarReceita = (recipeId) =>{
+        console.log(recipeId)
+        deleteRecipe(recipeId);
+        return <Redirect to='/receitas'/>
+    }
 
     return(recipeDescription === undefined? null :
         <TableItem key={recipeId}>
@@ -18,7 +27,10 @@ function RecipeItem({recipeId, recipeDescription, materialsDescription}){
                 </ul>
             </td>
             <td>
-                <input type="checkbox" onChange={()=>{}} />
+                <div>
+                    <TrashButton onClick = {() => deletarReceita(recipeId)}/>
+                    <EditButton onClick = {() => deletarReceita(recipeId)}/>
+                </div>
             </td>
         </TableItem>
     );

@@ -1,14 +1,12 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
-    margin-left: 10px;
+export const Trash = styled.button`
     background-color: white;
     width: auto;
-    border-radius: 2em;
+    border-radius: 0;
     box-shadow: none;
     outline: none;
     height: fit-content;
-
     svg {
         height: 15px
     }
