@@ -2,8 +2,7 @@ import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
 
 import {deleteRecipe} from '../../services'
-import TrashButton from "../TrashButton"
-import EditButton from "../EditButton"
+import ActionButtons from "../ActionButtons"
 import {TableItem} from './styles'
 
 function RecipeItem({recipeId, recipeDescription, materialsDescription}){
@@ -21,16 +20,13 @@ function RecipeItem({recipeId, recipeDescription, materialsDescription}){
             </td>
             <td>
                 <ul>
-                    {materialsDescription.map((item,index) => {
+                    {materialsDescription && materialsDescription.map((item,index) => {
                         return <li key={index}>{item}</li> 
                     })}
                 </ul>
             </td>
             <td>
-                <div>
-                    <TrashButton onClick = {() => deletarReceita(recipeId)}/>
-                    <EditButton onClick = {() => deletarReceita(recipeId)}/>
-                </div>
+                <ActionButtons handleDelete={()=>deletarReceita(recipeId)} handleEdit={(recipeId)=> {}}/>
             </td>
         </TableItem>
     );
