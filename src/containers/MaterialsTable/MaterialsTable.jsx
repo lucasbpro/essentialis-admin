@@ -2,35 +2,39 @@ import React from "react";
 import MaterialItem from '../../components/MaterialItem';
 import Table from 'react-bootstrap/Table'
 
+
 const MaterialsTable = ({materialsList}) => { 
 
-      if (materialsList.length===0)
-         return null;
-      else return (
-            <Table striped bordered hover>
-               <thead>
-                  <tr>
-                     <th> Material </th>
-                     <th> Detalhes </th>
-                  </tr>
-               </thead>
+   const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
 
-               <tbody>
-                  {materialsList && materialsList.map((material, index)  => {
+   if (materialsList.length===0)
+      return null;
+   else return (
+         <Table striped bordered hover>
+            <thead>
+               <tr>
+                  <th> Material </th>
+                  <th> Detalhes </th>
+                  <th>  </th>
+               </tr>
+            </thead>
 
-                     const materialDetails = {
-                        "Fornecedor" : material.supplier_name,
-                        "Preço": material.package_price,
-                        "Quantidade (pacote/frasco):": `${material.package_price}` + material.unit_material,
-                     }
+            <tbody>
+               {materialsList && materialsList.map((material, index)  => {
 
-                     return <MaterialItem key={index} 
-                                        id={material.id}
-                                        description={material.description} 
-                                        details = {materialDetails} />
-                  })} 
-               </tbody>
-            </Table>
+                  const materialDetails = {
+                     "Fornecedor" : material.supplier_name,
+                     "Preço": formatter.format(material.package_price),
+                     "Quantidade (pacote ou frasco)": `${material.package_amt} ` + material.unit_material,
+                  }
+
+                  return <MaterialItem key={index} 
+                                       id={material.id}
+                                       description={material.description} 
+                                       details = {materialDetails} />
+               })} 
+            </tbody>
+         </Table>
 		);
 }
 
