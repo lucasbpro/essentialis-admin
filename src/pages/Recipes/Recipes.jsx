@@ -23,8 +23,10 @@ const Recipes = () => {
       setFilterApplied(true);
   };
 
-  if(!userLogged)
+  if( !userLogged )
       return <Redirect to='/login'/>
+  else if( recipeList.length===0 || materialsList.length===0)
+    return <Redirect to="/"/>
   else if(createPressed)
       return <Redirect to='/criarReceita'/>
   else return (

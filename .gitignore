@@ -26,8 +26,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Essentialis data folder 
-/data
-
 # npm lock - Heroku deploy will use yarn-lock
 package-lock.json
