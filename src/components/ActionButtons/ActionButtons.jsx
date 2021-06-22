@@ -1,7 +1,7 @@
 import React from 'react';
 
-import TrashButton from "../TrashButton"
-import EditButton from "../EditButton"
+import TrashButton from "../TrashButton";
+import EditButton from "../EditButton";
 
 const ActionButtons = ({	handleDelete, 
 						 	handleEdit			
