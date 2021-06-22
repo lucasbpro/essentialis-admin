@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Trash = styled.button`
+export const PencilButton = styled.button`
     background-color: white;
     width: auto;
     border-radius: 0;

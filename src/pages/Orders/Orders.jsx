@@ -39,7 +39,8 @@ const Orders = () => {
         <h1> Pedidos </h1>
         <Filter handleFilter={handleFilter} placeholder="Filtrar por produto, cliente ou status"/>
         <OrderTable ordersList={filteredOrders}/>
-        {(isFilterApplied && filteredOrders.length===0) && <h3> O filtro não retornou resultados </h3>}
+        {(isFilterApplied && filteredOrders.length===0) &&
+         <h3 className="filter-no-results"> O filtro não retornou resultados. </h3>}
       </div>
     );
 };

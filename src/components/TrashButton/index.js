@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { Button } from './styles'
+import { Trash } from './styles'
 import { ReactComponent as TrashIcon } from "../../assets/img/trash_icon.svg";
 
 const TrashButton = ({onClick}) => {
     return(
-        <Button onClick={onClick} > 
-            <TrashIcon/> 
-        </Button>
+        <Trash className="trash-button"> 
+            <TrashIcon onClick={onClick}/> 
+        </Trash>
     )
 }
 

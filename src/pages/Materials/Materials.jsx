@@ -9,11 +9,11 @@ import {filterListByText} from '../../utils/filters'
 
 const Materials = () => {
 
-  const [isFilterApplied, setFilterApplied] = useState(false);
-  const [filteredMaterials, setFilteredMaterials] = useState([]);
-
   const userLogged = useSelector(state => state.isUserLogged);
   const allMaterials = useSelector(state => state.materialsList);
+
+  const [isFilterApplied, setFilterApplied] = useState(false);
+  const [filteredMaterials, setFilteredMaterials] = useState(allMaterials);
 
   useEffect(() => {
     setFilteredMaterials(allMaterials);
@@ -28,10 +28,16 @@ const Materials = () => {
       return <Redirect to='/login'/>
   else return (
     <div className="container">
+
         <h1> Materiais </h1>
+
         <Filter handleFilter={handleFilter} placeholder="Filtrar por nome do material"/>
+
         <MaterialsTable materialsList={filteredMaterials} />
-        {(isFilterApplied && filteredMaterials.length===0) && <h3> O filtro não retornou resultados </h3>}
+
+        {(isFilterApplied && filteredMaterials.length===0) && 
+        <h3 className="filter-no-results"> O filtro não retornou resultados </h3>}
+
     </div>
   );
 };
