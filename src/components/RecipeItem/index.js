@@ -8,7 +8,6 @@ import {TableItem} from './styles'
 function RecipeItem({recipeId, recipeDescription, materialsDescription}){
 
     const deletarReceita = (recipeId) =>{
-        console.log(recipeId)
         deleteRecipe(recipeId);
         return <Redirect to='/receitas'/>
     }
@@ -26,7 +25,7 @@ function RecipeItem({recipeId, recipeDescription, materialsDescription}){
                 </ul>
             </td>
             <td>
-                <ActionButtons handleDelete={()=>deletarReceita(recipeId)} handleEdit={(recipeId)=> {}}/>
+                <ActionButtons handleDelete={()=>deletarReceita(recipeId)} handleEdit={()=> {}}/>
             </td>
         </TableItem>
     );

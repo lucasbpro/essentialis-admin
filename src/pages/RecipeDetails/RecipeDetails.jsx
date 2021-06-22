@@ -1,36 +1,44 @@
 import React, {useState, useEffect} from 'react';
-import {useParams} from 'react-router-dom';
-//import {Redirect} from 'react-router';
-//import Loading from '../../components/Loading';
-
-import { getRecipeById, getMaterialsByIds} from '../../services';
-//import {filterMaterialsByRecipeId} from '../../utils/filters';
+import {Redirect, useParams} from 'react-router-dom';
+import {useSelector} from 'react-redux';
 
 import Table from 'react-bootstrap/Table'
+import { getRecipeById } from '../../services';
+
 
 const RecipeDetails = () => {
 
   const {recipeId} = useParams();
   const [recipeInfo, setRecipe] = useState({});
-  const [materialsList, setMaterialsList] = useState([]);
   const [loading, setLoading] = useState(true);
+  const allMaterials = useSelector(state => state.materialsList);
+  const [materialsInfo, setMaterialsInfo] = useState([]);
 
   useEffect(() => {
-    getRecipeById(recipeId).then(recipe => {
+     getRecipeById(recipeId).then(recipe => {
         setRecipe(recipe);
-        getMaterialsByIds(recipe.materials);
-      }).then(materialsInfo => setMaterialsList(materialsInfo));
+        const recipeMaterials = allMaterials.filter(item => Object.keys(recipe.materials).includes(item.id.toString()));
+        setMaterialsInfo(recipeMaterials.map( material => {
+            return {
+                "description":    material.description,
+                "amount":         recipe.materials[material.id.toString()],
+                "unit_material":  material.unit_material
+           };
+        }));
+      setLoading(false);
+      });
+  }, [recipeId, recipeInfo, allMaterials]);
 
-    setLoading(false);
-  }, [recipeId]);
-
-  if(loading )
+  if(loading)
     return <h2> Carregando... </h2>;
+  else if( allMaterials.length===0 ){
+    return <Redirect to="/"/>
+  }
   else return (
     <div className="container">
         <h2>{recipeInfo.description}</h2>
 
-        <p>Última atualização em {`${recipeInfo.modificada_em}`}</p>
+        <p>Última atualização em {`${recipeInfo.last_update}`}</p>
 
         <Table striped bordered hover>
           <thead>
@@ -41,10 +49,10 @@ const RecipeDetails = () => {
           </thead>
 
           <tbody>
-            { materialsList && materialsList.map( (material,index) => {
+            { materialsInfo && materialsInfo.map( (material,index) => {
               return <tr key={index}> 
                        <td>{material.description}</td>
-                       <td>{material.unit_material}</td>
+                       <td>{`${material.amount} ${material.unit_material}`}</td>
                      </tr>
             })}
           </tbody>
