@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
 
-import Filter from '../../components/Filter'
+import Filter from '../../components/Filter';
 import MaterialsTable from '../../containers/MaterialsTable';
-import {filterListByText} from '../../utils/filters'
+import {filterListByText} from '../../utils/filters';
 
 
 const Materials = () => {
