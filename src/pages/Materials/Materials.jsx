@@ -12,6 +12,7 @@ const Materials = () => {
   const userLogged = useSelector(state => state.isUserLogged);
   const allMaterials = useSelector(state => state.materialsList);
 
+  const [createPressed, setCreatePressed] = useState(false);
   const [isFilterApplied, setFilterApplied] = useState(false);
   const [filteredMaterials, setFilteredMaterials] = useState(allMaterials);
 
@@ -26,12 +27,20 @@ const Materials = () => {
 
   if(!userLogged)
       return <Redirect to='/login'/>
+  else if( allMaterials.length===0)
+      return <Redirect to="/"/>
+  else if(createPressed)
+      return <Redirect to='/criarMaterial'/>
   else return (
     <div className="container">
 
         <h1> Materiais </h1>
 
         <Filter handleFilter={handleFilter} placeholder="Filtrar por nome do material"/>
+
+        <button  className="button-new-item" onClick={()=>setCreatePressed(true)}>	
+            Novo Material 
+        </button>
 
         <MaterialsTable materialsList={filteredMaterials} />
 

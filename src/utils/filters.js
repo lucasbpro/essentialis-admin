@@ -69,6 +69,13 @@ function filterOrdersByText(ordersList, text) {
     );     
 };
 
+function filterOrdersByStatus(ordersList, status) {
+    return ordersList.filter(listItem => {
+            return isStringInText(removeAccents(status), removeAccents(listItem.status_fabrication));
+        }
+    );     
+};
+
 function dateSort(string1,string2){
     const date1 = new Date(string1);
     const date2 = new Date(string2);
@@ -96,6 +103,7 @@ export {
     filterMaterialsByRecipeId,
     filterMaterialsAmountByRecipeId,
     filterOrdersByText,
+    filterOrdersByStatus,
     sortOrdersByDate,
     sortCustomersByName
 };
