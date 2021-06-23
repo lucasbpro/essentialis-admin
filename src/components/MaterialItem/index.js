@@ -1,15 +1,24 @@
 import React from 'react';
 import {Redirect} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import ActionButtons from "../ActionButtons"
 import {deleteMaterial} from '../../services'
 import {TableItem} from './styles'
+import { toggleThrowModal } from '../../reducer';
 
-function MaterialItem({id, description, details}){
+
+function MaterialItem({id, description, details, recipes}){
+
+    const dispatch = useDispatch();
 
     const deletarMaterial = (materialId) =>{
-        deleteMaterial(materialId);
-        return <Redirect to='/materiais'/>
+        if(recipes.length > 0)
+            dispatch(toggleThrowModal()); //console.log("não pode");
+        else{
+            deleteMaterial(materialId);
+            return <Redirect to='/materiais'/>
+        }
     }
 
     return(description === undefined? null :
@@ -20,7 +29,7 @@ function MaterialItem({id, description, details}){
             <td>
                 <ul>
                     { Object.keys(details).map( (key) => {
-                        return <li> {`${key}: ${details[key]}`} </li>
+                        return <li key={key}> {`${key}: ${details[key]}`} </li>
                       })
                     }
                 </ul>

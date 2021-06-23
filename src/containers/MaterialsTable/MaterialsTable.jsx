@@ -31,7 +31,8 @@ const MaterialsTable = ({materialsList}) => {
                   return <MaterialItem key={index} 
                                        id={material.id}
                                        description={material.description} 
-                                       details = {materialDetails} />
+                                       details = {materialDetails} 
+                                       recipes = {material.recipes}/>
                })} 
             </tbody>
          </Table>

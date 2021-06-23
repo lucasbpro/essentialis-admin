@@ -48,13 +48,13 @@
         "productivity": 3
     },
     {
-        "description": "Sabonete Revitalizante e Adstringente de Capim-Lim\ufffdo - 06 unidades",
+        "description": "Sabonete Revitalizante e Adstringente de Capim-Limão - 06 unidades",
         "materials": {"21":300,"26":300,"128":35,"115":80,"89":20,"107":10,"59":10},
         "labor_cost": 5,
         "productivity": 6
     },
     {
-        "description": "Sabonete Revitalizante e Adstringente de Capim-Lim\ufffdo - 03 unidades",
+        "description": "Sabonete Revitalizante e Adstringente de Capim-Limão - 03 unidades",
         "materials": {"21":150,"26":150,"128":20,"115":40,"89":10,"107":5,"59":5},
         "labor_cost": 5,
         "productivity": 3
@@ -126,37 +126,37 @@
         "productivity": 3
     },
     {
-        "description": "Sabonete Esfoliante Limpeza Profunda de Carv\ufffdo Ativado - 06 unidades",
+        "description": "Sabonete Esfoliante Limpeza Profunda de Carvão Ativado - 06 unidades",
         "materials": {"21":600,"131":30,"115":80,"104":20,"96":30,"34":30,"137":2,"84":40},
         "labor_cost": 5,
         "productivity": 6
     },
     {
-        "description": "Sabonete Esfoliante Limpeza Profunda de Carv\ufffdo Ativado - 03 unidades",
+        "description": "Sabonete Esfoliante Limpeza Profunda de Carvão Ativado - 03 unidades",
         "materials": {"21":300,"131":15,"115":40,"104":10,"96":15,"34":15,"137":1,"84":20},
         "labor_cost": 5,
         "productivity": 3
     },
     {
-        "description": "Sabonete Esfoliante e Revitalizante de Caf\ufffd - 06 unidades",
+        "description": "Sabonete Esfoliante e Revitalizante de Café - 06 unidades",
         "materials": {"21":600,"128":35,"95":20,"99":10,"131":20,"57":15,"64":5,"30":10,"31":5,"115":80},
         "labor_cost": 5,
         "productivity": 6
     },
     {
-        "description": "Sabonete Esfoliante e Revitalizante de Caf\ufffd - 03 unidades",
+        "description": "Sabonete Esfoliante e Revitalizante de Café - 03 unidades",
         "materials": {"21":300,"128":17,"95":10,"99":5,"131":10,"57":8,"64":3,"30":5,"31":3,"115":40},
         "labor_cost": 5,
         "productivity": 3
     },
     {
-        "description": "Sabonete Hidratante e Cicatrizante de A\ufffdafr\ufffdo - 06 unidades",
+        "description": "Sabonete Hidratante e Cicatrizante de Açafrão - 06 unidades",
         "materials": {"21":450,"26":150,"1":30,"119":10,"128":70,"91":10,"99":15,"93":15,"58":10,"115":80},
         "labor_cost": 5,
         "productivity": 6
     },
     {
-        "description": "Sabonete Hidratante e Cicatrizante de A\ufffdafr\ufffdo - 03 unidades",
+        "description": "Sabonete Hidratante e Cicatrizante de Açafrão - 03 unidades",
         "materials": {"21":250,"26":50,"1":15,"119":5,"128":35,"91":5,"99":5,"93":10,"58":5,"115":40},
         "labor_cost": 5,
         "productivity": 3
@@ -186,31 +186,31 @@
         "productivity": 3
     },
     {
-        "description": "Sabonete L\ufffdquido Facial de Pepino com Aloe Vera - 300 ml",
+        "description": "Sabonete Líquido Facial de Pepino com Aloe Vera - 300 ml",
         "materials": {"23":120,"3":200,"104":10,"91":10,"55":5,"115":40,"45":5},
         "labor_cost": 5,
         "productivity": 1
     },
     {
-        "description": "Sabonete \ufffdntimo Perolado - 300 mL",
+        "description": "Sabonete Íntimo Perolado - 300 mL",
         "materials": {"24":400,"4":2,"3":700,"94":10,"106":10,"96":5,"91":10,"53":10,"32":5,"29":5,"115":150,"120":10},
         "labor_cost": 5,
         "productivity": 4 
     },
     {
-        "description": "Sabonete \ufffdntimo Perolado Infantil - 300 mL p/01",
+        "description": "Sabonete Íntimo Perolado Infantil - 300 mL p/01",
         "materials": {"24":125,"3":250,"94":5,"96":5,"103":5,"91":5,"82":5,"42":1,"29":2,"115":30},
         "labor_cost": 5,
         "productivity": 1
     },
     {
-        "description": "Sabonete de Camomila L\ufffdquido - 300 ml",
+        "description": "Sabonete de Camomila Líquido - 300 ml",
         "materials": {"24":100,"3":200,"115":30,"93":20,"110":10},
         "labor_cost": 5,
         "productivity": 1
     },
     {
-        "description": "Sabonete L\ufffdquido de \ufffdgua de Arroz - 300 ml",
+        "description": "Sabonete Líquido de Água de Arroz - 300 ml",
         "materials": {"24":70,"3":240,"60":2,"65":3,"101":10,"98":10,"108":20,"115":40},
         "labor_cost": 5,
         "productivity": 1
