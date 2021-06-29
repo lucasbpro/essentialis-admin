@@ -87,7 +87,7 @@ const CreateOrder = () => {
                     }
                   )}
               </Form.Control>
-              <Link to="/criarCliente">Clique neste link se o cliente não estiver na lista aqui de cima ;)</Link>
+              <Link to="/criarCliente">Clique aqui se o cliente não estiver na lista acima ;)</Link>
           </Form.Group>
 
           <Form.Group controlId="notes">

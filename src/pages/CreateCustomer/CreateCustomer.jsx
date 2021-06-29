@@ -17,19 +17,20 @@ const CreateCustomer = () => {
     const [selectedDate, setBirthDate] =  useState("");
 
     const handleSubmit = () => {
-        const newCustomer = {
-            "name": customerName,
-            "email": customerEmail,
-            "birthDate": selectedDate===undefined? null : ()=>{
-                const day = String(selectedDate.getDate()).padStart(2, '0');
-                const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); //January is 0!
-                const year = selectedDate.getFullYear();
-                return (day + '/' + month + '/' + year);
-            },
-        }
+        if(selectedDate){
+            const day = String(selectedDate.getDate()).padStart(2, '0');
+            const month = String(selectedDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+            const year = selectedDate.getFullYear();
 
-        createCustomer(newCustomer);
-        setCustomerReady(true);
+            const newCustomer = {
+                "name": customerName,
+                "email": customerEmail,
+                "birth_date": day + '/' + month + '/' + year
+            };
+
+            createCustomer(newCustomer);
+            setCustomerReady(true);
+        }
     }
 
     if(!userLogged)

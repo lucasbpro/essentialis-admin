@@ -1,7 +1,6 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Redirect } from 'react-router-dom';
 
-//import Loading from '../../components/Loading';
 import Filter from '../../components/Filter'
 import OrderTable  from '../../containers/OrderTable';
 import {filterOrdersByText, sortOrdersByDate} from '../../utils/filters'
@@ -16,25 +15,34 @@ const Orders = () => {
 
   const [createPressed, setCreatePressed] = useState(false);
   const [isFilterApplied, setFilterApplied] = useState(false);
+  const [ordersComplete, setOrdersComplete] = useState([]);
+  const [filteredOrders, setFilteredOrders] = useState([]);
 
-  const orderListComplete = sortOrdersByDate(orderList.map(order => {
-      const product = productList.find(item => item.id === order.product_id);
-      const customer = customerList.find(item => item.id === order.customer_id);
-      return {...order, 
-              "productDescription": product? product.description : "",
-              "customerName" : customer? customer.name: ""
-            }
-  }));
 
-  const [filteredOrders, setFilteredOrders] = useState(orderListComplete);
+  useEffect(() => {
+    const orderListComplete = sortOrdersByDate(orderList.map(order => {
+        const product = productList.find(item => item.id === order.product_id);
+        const customer = customerList.find(item => item.id === order.customer_id);
+        return {...order, 
+                "productDescription": product? product.description : "",
+                "customerName" : customer? customer.name: ""
+              }
+        }));
+    
+    setOrdersComplete(orderListComplete);
+    setFilteredOrders(orderListComplete);
+  }, [orderList, productList, customerList]);
+
       
   const handleFilter = (event) => {
-      setFilteredOrders(filterOrdersByText(orderListComplete, event.target.value))
+      setFilteredOrders(filterOrdersByText(ordersComplete, event.target.value))
       setFilterApplied(true);
   }
 
   if(!userLogged)
       return <Redirect to='/login'/>
+  else if( productList.length===0 || customerList.length===0 || orderList.length===0)
+      return <Redirect to="/"/>
   else if(createPressed)
       return <Redirect to='/criarPedido'/>
   else return ( 
@@ -50,8 +58,8 @@ const Orders = () => {
 
         <OrderTable ordersList={filteredOrders}/>
 
-        {(isFilterApplied && filteredOrders.length===0) &&
-         <h3 className="filter-no-results"> O filtro não retornou resultados. </h3>}
+        {(isFilterApplied && filteredOrders.length===0) && 
+            <h3 className="filter-no-results"> O filtro não retornou resultados. </h3>}
       </div>
     );
 };

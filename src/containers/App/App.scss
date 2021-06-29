@@ -24,20 +24,6 @@ a {
   font-weight: bold;
 }
 
-button {
-  background-color: #A2228F;
-  font-size: 15px;
-  color: white;
-  width: auto;
-  border-radius: 1em;
-  box-shadow: none;
-  outline: none;
-}
-
-.button-red {
-  background-color: #d60e0e;
-}
-
 h1 {
   margin-block-start: 0px;
   margin-block-end: 15px;
@@ -60,6 +46,39 @@ span{
 
 p{
   padding-left: 10px;
+}
+
+button {
+  background-color: #A2228F;
+  font-size: 15px;
+  color: white;
+  margin-right: 20px;
+  width: auto;
+  border-radius: 1em;
+  box-shadow: none;
+  outline: none;
+}
+
+.button-red {
+  background-color: #d60e0e;
+}
+
+.button-update {
+  background-color: #A7CD39;
+}
+
+.button-update-disabled {
+  background-color: #A7CD39;
+  opacity: 0.5;
+}
+
+.button-restore {
+  background-color: blue;
+}
+
+.button-restore-disabled {
+  background-color: blue;
+  opacity: 0.5;
 }
 
 .App {
