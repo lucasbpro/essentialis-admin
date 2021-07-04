@@ -1,8 +1,8 @@
-const URL_API = "https://essentialis-api-main.herokuapp.com"; // Development API
+const URL_API = "http://localhost:5000";
+//"https://essentialis-api-main.herokuapp.com"; // Development API
 
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
-const URL_RECIPE_MATERIALS = `${URL_API}/recipe`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
 const URL_ORDERS = `${URL_API}/orders`;
 const URL_CUSTOMERS = `${URL_API}/customers`;
@@ -38,15 +38,9 @@ async function getRecipeById(recipeId){
   return get(`${URL_RECIPES}/${recipeId}`);
 }
 
-async function createRecipe(newRecipe,materialsAmount){
-  return axios.post(`${URL_RECIPES}`,newRecipe).then(resp => createRecipeMaterials(resp.id, materialsAmount)); 
+async function createRecipe(newRecipe){
+  return axios.post(`${URL_RECIPES}`,newRecipe).then(resp => resp); 
 }
-
-async function createRecipeMaterials(recipeId, materialsAmount){
-  return materialsAmount.map( item => 
-        axios.post(`${URL_RECIPE_MATERIALS}/${recipeId}/materials/${item.id}`,item.amount).then(r => r) 
-    )
-};
 
 async function updateRecipe(recipeInfo){
   const recipeId = recipeInfo.id;

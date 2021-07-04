@@ -45,7 +45,7 @@ const RecipeDetails = () => {
 
   
   const modifyMaterial = (materialId, newAmount) => {
-    let materialsAmount = newRecipeMaterials;
+    let materialsAmount = {...newRecipeMaterials};
     materialsAmount[materialId] = parseFloat(newAmount);
     setNewMaterials(materialsAmount);
     setModified(true);
@@ -68,6 +68,7 @@ const RecipeDetails = () => {
     });
     setMaterialsInfo(originalMaterials);
     setNewMaterials(recipeInfo.materials);
+    setModified(false);
   };
 
   if(loading)
@@ -104,18 +105,21 @@ const RecipeDetails = () => {
             })}
           </tbody>
         </Table>
+        
+        <div style={{"display": "flex", "flexDirection":"row"}}>
+          <button  className={recipeModified? "button-update":"button-update-disabled"} 
+                  disabled={recipeModified? false : true}
+                  onClick = {()=>updateRecipeMaterials()}>	
+              Atualizar
+          </button>
 
-        <button  className={recipeModified? "button-update":"button-update-disabled"} 
-                 disabled={recipeModified? false : true}
-                 onClick = {()=>updateRecipeMaterials()}>	
-            Atualizar
-        </button>
+          <button  className={recipeModified? "button-restore":"button-restore-disabled"} 
+                  disabled={recipeModified? false : true}
+                  onClick = {()=>restoreOriginalValues()}>	
+              Cancelar alterações
+          </button>
+        </div>
 
-        <button  className={recipeModified? "button-restore":"button-restore-disabled"} 
-                 disabled={recipeModified? false : true}
-                 onClick = {()=>restoreOriginalValues()}>	
-            Cancelar alterações
-        </button>
 
     </div>
   );

@@ -1,16 +1,10 @@
 import React from 'react';
-import {Link, Redirect} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import {deleteRecipe} from '../../services'
 import ActionButtons from "../ActionButtons"
 import {TableItem} from './styles'
 
-function RecipeItem({recipeId, recipeDescription, materialsDescription}){
-
-    const deletarReceita = (recipeId) =>{
-        deleteRecipe(recipeId);
-        return <Redirect to='/receitas'/>
-    }
+function RecipeItem({recipeId, recipeDescription, materialsDescription, handleDelete, handleEdit}){
 
     return(recipeDescription === undefined? null :
         <TableItem key={recipeId}>
@@ -25,7 +19,9 @@ function RecipeItem({recipeId, recipeDescription, materialsDescription}){
                 </ul>
             </td>
             <td>
-                <ActionButtons handleDelete={()=>deletarReceita(recipeId)} handleEdit={()=> {}}/>
+                <ActionButtons  handleDelete={handleDelete} 
+                                handleEdit={handleEdit}
+                />
             </td>
         </TableItem>
     );

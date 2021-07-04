@@ -88,6 +88,7 @@ const CreateMaterial = () => {
                                 <Col className="no-gutters"> 
                                     <Form.Control   as="input" 
                                                     type="number"
+                                                    min={0}
                                                     onChange={(e)=>setAmount(parseInt(e.target.value))}
                                     />
                                 </Col>

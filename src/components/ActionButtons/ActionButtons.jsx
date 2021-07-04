@@ -3,9 +3,7 @@ import React from 'react';
 import TrashButton from "../TrashButton";
 import EditButton from "../EditButton";
 
-const ActionButtons = ({	handleDelete, 
-						 	handleEdit			
-						})=> {
+const ActionButtons = ({ handleDelete, handleEdit })=> {
 
 	return(
 		<div style={{display: 'flex', flexDirection: 'column'}}>
