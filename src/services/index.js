@@ -1,5 +1,4 @@
-const URL_API = "http://localhost:5000";
-//"https://essentialis-api-main.herokuapp.com"; // Development API
+const URL_API = "https://essentialis-api-main.herokuapp.com"; // Development API
 
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;

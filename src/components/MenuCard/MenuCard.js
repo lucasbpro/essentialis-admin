@@ -14,9 +14,6 @@ function MenuCard() {
         <Link to={'/materiais'}>
           <p className="card-options"> Materiais </p>
         </Link>
-        <Link to={'/criarCliente'}>
-          <p className="card-options"> Clientes </p>
-        </Link>
       </div>
     );
   }

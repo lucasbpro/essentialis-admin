@@ -8,8 +8,6 @@ import {getAllRecipes,
         getAllOrders,
         getAllMaterials } from '../../services';
 
-import './Home.scss';
-
 const Home = () => {
 
     const [recipesFetched, setRecipesFetched] = useState(false);
@@ -30,12 +28,12 @@ const Home = () => {
     if(!userLogged)
         return <Redirect to='/login'/>
     else if(materialsFetched && recipesFetched && customersFetched && ordersFetched)
-        return <div className="home">
+        return <div className="container">
                     <h2>Usuário Logado! :)</h2>
                     <h2>Tudo pronto! Abra o menu superior para acessar as páginas.</h2>
                 </div>
     else
-        return <div className="home">
+        return <div className="container">
                     <h2>Usuário Logado! :)</h2>
                     <h2>Aguarde um momento... Estamos nos comunicando com o banco de dados.</h2>
                 </div>

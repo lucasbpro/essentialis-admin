@@ -54,18 +54,18 @@ const CreateCustomer = () => {
 
                 <Form.Group>
                     <Form.Label> <h2>Em que dia ela(e) nasceu?</h2> </Form.Label>
-                    <DateInput
+                    <DateInput 
                         value={selectedDate}
                         dateFormat="dd/MM/yyyy"
-                        disabled={false}
                         locale="pt-br"
                         onChange={(e) => setBirthDate(e)}
+                        style={{"width":"100%"}}
                     />
                 </Form.Group>
             </Form>
 
             <button onClick={()=>handleSubmit()}> 
-                Cadastar Cliente!
+                Cadastar Cliente
             </button>
         </div>
     );
