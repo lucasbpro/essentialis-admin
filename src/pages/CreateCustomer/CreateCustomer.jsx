@@ -64,7 +64,7 @@ const CreateCustomer = () => {
                 </Form.Group>
             </Form>
 
-            <button onClick={()=>handleSubmit()}> 
+            <button classname="button-new-item" onClick={()=>handleSubmit()}> 
                 Cadastar Cliente
             </button>
         </div>

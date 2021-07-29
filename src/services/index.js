@@ -1,5 +1,4 @@
-const URL_API = "https://essentialis-api-main.herokuapp.com"; // Development API
-
+const URL_API = "http://localhost:5000"; //https://essentialis-api-main.herokuapp.com"; // Development API
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
@@ -18,12 +17,7 @@ async function get(URL){
 
 /************************* AUTHENTICAION *******************************/
 
-async function login(username, password){
-  const userInfo = {
-              "username": username,
-              "password" : password
-            };
-
+async function login(userInfo){
   return axios.post(`${URL_AUTH}`,userInfo).then(resposta => resposta); 
 }
 
@@ -90,16 +84,8 @@ async function getOrderById(orderId){
 
 async function updateOrder(orderInfo){
   const orderId = orderInfo.id;
-
-  const newOrder = {"product_id": orderInfo.product_id,
-                    "customer_id": orderInfo.customer_id,
-                    "order_total": orderInfo.order_total,
-                    "status_fabrication": orderInfo.status_fabrication,
-                    "status_payment": orderInfo.status_payment,         
-                    "order_date": orderInfo.order_date,
-                    "notes" : orderInfo.notes
-                    };
-  
+  const removeKey = (key, {[key]: _, ...rest}) => rest;
+  const newOrder = removeKey('id',orderInfo);
   console.log(newOrder);
   return axios.put(`${URL_ORDERS}/${orderId}`, {...newOrder}).then(resposta => resposta); 
 }
@@ -130,7 +116,7 @@ async function deleteCustomer(customerId){
   return axios.delete(`${URL_CUSTOMERS}/${customerId}`).then(resposta => resposta); 
 }
 
-
+/****************************  EXPORT CLAUSE *********************************/ 
 
 export {
     login,

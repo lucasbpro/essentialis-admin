@@ -1,50 +1,74 @@
 import React, {useState, useEffect} from 'react';
 import { Redirect } from 'react-router-dom'
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch} from 'react-redux';
 
 import Filter from '../../components/Filter'
 import RecipesTable from '../../containers/RecipesTable';
-import {filterListByText} from '../../utils/filters'
-//import {deleteRecipe} from '../../services';
+import Loading from '../../components/Loading';
+import {filterListByText} from '../../utils/filters';
+import { setRecipeList, setMaterialsList } from '../../reducer';
+
+import {getAllRecipes, 
+        getAllMaterials } from '../../services';
 
 const Recipes = () => {
-  
-  const userLogged = useSelector(state => state.isUserLogged);
-  const [filteredRecipes, setFilteredRecipes] = useState([]);
-  const [isFilterApplied, setFilterApplied] = useState(false);
-  const [createPressed, setCreatePressed] = useState(false);
-  const recipeList = useSelector(state => state.recipeList);
-  const materialsList = useSelector(state => state.materialsList);
 
-  useEffect(() => setFilteredRecipes(recipeList), [recipeList]);
+    const [filteredRecipes, setFilteredRecipes] = useState([]);
+    const [isFilterApplied, setFilterApplied] = useState(false);
+    const [createPressed, setCreatePressed] = useState(false);
 
-  const handleFilter = (event) => {
-      setFilteredRecipes(filterListByText(recipeList, event.target.value));
-      setFilterApplied(true);
-  };
+    const userLogged = useSelector(state => state.isUserLogged);
+    let recipeList = useSelector(state => state.recipeList);
+    let materialsList = useSelector(state => state.materialsList);
 
-  if( !userLogged )
-      return <Redirect to='/login'/>
-  else if( recipeList.length===0 || materialsList.length===0)
-    return <Redirect to="/"/>
-  else if(createPressed)
-      return <Redirect to='/criarReceita'/>
-  else return (
-    <div className="container">
-        <h1> Receitas </h1>
+    const dispatch = useDispatch();
+    
+    // if recipes list in global state is empty, fetch the API for recipes data
+    if(recipeList.length=== 0) {
+        getAllRecipes().then(resposta => {
+            recipeList = resposta;
+            dispatch(setRecipeList(resposta));
+        });
+    }
 
-        <Filter handleFilter={handleFilter} placeholder="Filtrar por nome da receita"/>
+    // if materials list in global state is empty, fetch the API for materials data
+    if(materialsList.length=== 0) {
+        getAllMaterials().then(resposta => {
+            materialsList = resposta;
+            dispatch(setMaterialsList(resposta));
+        });
+    }
 
-        <button  className="button-new-item" onClick={()=>setCreatePressed(true)}>	
-            Nova Receita 
-        </button>
+    // re-render page in case recipeList is updated
+    useEffect(() => setFilteredRecipes(recipeList), [recipeList]);
 
-        <RecipesTable recipesList={filteredRecipes} allMaterials={materialsList}/>
+    const handleFilter = (event) => {
+        setFilteredRecipes(filterListByText(recipeList, event.target.value));
+        setFilterApplied(true);
+    };
 
-        {(isFilterApplied && filteredRecipes.length===0) && 
-        <h3 className="filter-no-results"> O filtro não retornou resultados </h3>}
-    </div>
-  );
-};
+    if( !userLogged )
+        return <Redirect to='/login'/>
+    else if(createPressed)
+        return <Redirect to='/criarReceita'/>
+    else return (
+        <div className="container">
+            <h1> Receitas </h1>
 
-export default Recipes;
+            <Filter handleFilter={handleFilter} placeholder="Filtrar por nome da receita"/>
+
+            <button  className="button-new-item" onClick={()=>setCreatePressed(true)}>	
+                Nova Receita 
+            </button>
+
+            { recipeList.length===0 || materialsList.length===0 ? <Loading/> :
+                <RecipesTable recipesList={filteredRecipes} allMaterials={materialsList}/>
+            }
+
+            {(isFilterApplied && filteredRecipes.length===0) && 
+            <h3 className="filter-no-results"> O filtro não retornou resultados </h3>}
+        </div>
+    );
+    };
+
+    export default Recipes;
