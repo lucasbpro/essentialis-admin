@@ -7,9 +7,7 @@ import RecipesTable from '../../containers/RecipesTable';
 import Loading from '../../components/Loading';
 import {filterListByText} from '../../utils/filters';
 import { setRecipeList, setMaterialsList } from '../../reducer';
-
-import {getAllRecipes, 
-        getAllMaterials } from '../../services';
+import { getAllRecipes, getAllMaterials } from '../../services';
 
 const Recipes = () => {
 
