@@ -23,10 +23,10 @@ function MaterialItem({id, description, details, recipes}){
 
     return(description === undefined? null :
         <TableItem key={id}>
-            <td>
+            <td width="47%">
                 {description}
             </td>
-            <td>
+            <td width="47%">
                 <ul>
                     { Object.keys(details).map( (key) => {
                         return <li key={key}> {`${key}: ${details[key]}`} </li>
@@ -34,7 +34,7 @@ function MaterialItem({id, description, details, recipes}){
                     }
                 </ul>
             </td>
-            <td>
+            <td width="6%">
                 <ActionButtons handleDelete={()=>deletarMaterial(id)} handleEdit={()=> {}}/>
             </td>
         </TableItem>

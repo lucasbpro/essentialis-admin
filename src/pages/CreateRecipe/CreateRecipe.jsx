@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector } from 'react-redux';
-import Form from 'react-bootstrap/Form';
 import {Redirect} from "react-router-dom";
-
+import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Table from 'react-bootstrap/Table';
+
+import CustomModal from '../../components/CustomModal';
 
 import {  getAllMaterials, 
-          createRecipe} from '../../services';
-//import Loading from '../../components/Loading
+          createRecipe     } from '../../services';
 
 import './CreateRecipe.scss';
 
@@ -18,13 +19,14 @@ const CreateRecipe = () => {
     const userLogged = useSelector(state => state.isUserLogged);
     const [recipeReady, setRecipeReady] = useState(false);
     const [allMaterials, setAllMaterialsList] = useState([]);
-    const [selectedOption, setOptionMaterial] = useState();
+    const [selectedOption, setOptionMaterial] = useState(1);
     const [amount, setAmount] = useState(0);
     const [materialsList, setMaterialsList] = useState([]);
     const [supplyCost, setSupplyCost] = useState(0);
     const [recipeName, setRecipeName] = useState("");
     const [laborCost, setLaborCost] = useState(5.0);
     const [productivity, setProductivity] = useState(1);
+    const [enableCreateRecipe, setEnable] = useState(false);
 
     const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
       
@@ -35,42 +37,45 @@ const CreateRecipe = () => {
     useEffect(() => {
     },[materialsList]);
 
-
     const handleSubmit = () => {
-         const newRecipe = {
-            "description": recipeName,
-            "labor_cost" : laborCost,
-            "supply_cost" : supplyCost,
-            "productivity" : productivity,
-            "materials" : materialsList.map( material => material.id),
+        const newRecipe = {
+            "description":      recipeName,
+            "labor_cost" :      laborCost,
+            "supply_cost" :     supplyCost,
+            "productivity" :    productivity,
+            "materials" :       materialsList.reduce((dict,material) => ({...dict, 
+                                                 [material.id]: material.amount}), {})
         }
-        console.log(newRecipe);
-        createRecipe(newRecipe, materialsList).then(setRecipeReady(true));
+        createRecipe(newRecipe).then(setRecipeReady(true));
     }
-
 
     const handleAddMaterial = () => {
         const newMaterialList = materialsList;
-        let newMaterial = {}; 
+        const materialIds = materialsList.map( item => item.id );
 
-        // if option is not in the current list and fields are filled
-        if(selectedOption!==undefined && amount>0)
-            // include new Id in list
-            newMaterial = {
-                id: selectedOption,
-                amount
+        // if option is not in the current material list and amount is not empty
+        if( !materialIds.includes(selectedOption) && amount>0){
+            // include new material in list of materials
+            let newMaterial = {
+                    id: selectedOption,
+                    amount, 
+                    unit: allMaterials.find(item => item.id === selectedOption).unit_material 
             };
             newMaterialList.push(newMaterial);
+            setEnable(true);
 
-            // updates cost of recipe
+            // update cost of recipe accordingly
             const materialInfo = allMaterials.find(item => item.id === selectedOption);
             if(materialInfo)
                 setSupplyCost( supplyCost + amount*materialInfo.package_price/materialInfo.package_amt );
 
-        // updates selected materials Ids
-        setMaterialsList(newMaterialList);
-    }
+            // update recipe's materials
+            setMaterialsList(newMaterialList);
+        }
+        else{
 
+        }
+    }
 
 
     if(!userLogged)
@@ -82,24 +87,48 @@ const CreateRecipe = () => {
                 <h1>Cadastrar Receita</h1> 
 
                 <Form>
-                    <Form.Group controlId="recipe">
-                        <Form.Label> <h2>Qual o nome da nova receita?</h2> </Form.Label>
-                        <Form.Control as="textarea" rows="1" 
+                    <Container fluid="true"  className="container-form">
+                        <Row>
+                            <Col xs={7}>
+                                <h3> Qual o nome da nova receita? </h3>
+                            </Col>
+                            <Col xs={5} style={{"padding":"0"}}>
+                                <Form.Control as="textarea" rows="1" 
                                       onChange={(e)=>setRecipeName(e.target.value)}/>
-                    </Form.Group>
+                            </Col>
+                        </Row>
+                    </Container>
 
-                    <Form.Group controlId="recipe">
-                        <Form.Label> <h2>Qual o custo de mão-de-obra + energia?</h2> </Form.Label>
-                        <Form.Control as="textarea" rows="1" placeholder={`${laborCost}`}
-                                      onChange={(e)=>setLaborCost(parseFloat(e.target.value))}/>
-                    </Form.Group>
+                    <Container fluid="true" className="container-form">
+                        <Row>
+                            <Col xs={7}>
+                                <h3> Qual o rendimento da receita? </h3>
+                            </Col>
+                            <Col xs={5} style={{"padding":"0"}}>
+                                <Form.Control as="input" type="number" placeholder={`${productivity}`}
+                                        onChange={(e)=>setProductivity(e.target.value)}/>
+                            </Col>
+                        </Row>
+                    </Container>
+
+                    <Container fluid="true"  className="container-form">
+                        <Row>
+                            <Col xs={7}>
+                                <h3> Qual o custo de produção? </h3>
+                            </Col>
+                            <Col xs={5} style={{"padding":"0"}}>
+                                <Form.Control as="input" type="number" min={0.1} placeholder={`${laborCost}`}
+                                            onChange={(e)=>setLaborCost(parseFloat(e.target.value))}/>                       
+                            </Col>  
+                        </Row>
+                    </Container>
 
                     <Form.Group controlId="materials">
-                        <Form.Label> <h2>Qual a lista de materiais da receita?</h2> </Form.Label>
+                        <h3> Quais são os ingredientes da receita? </h3>
 
                         <Container fluid="true">
                             <Row>
-                                <Col className="no-gutters"> Material   </Col>
+                                <Col className="no-gutters"> Material </Col>
                                 <Col className="no-gutters">
                                     Quantidade 
                                     {allMaterials.find(item => item.id === selectedOption)? 
@@ -107,7 +136,6 @@ const CreateRecipe = () => {
                                         : null
                                     }
                                 </Col>
-                                <Col className="no-gutters"> </Col>
                             </Row>
                             <Row>
                                 <Col className="no-gutters">
@@ -123,61 +151,83 @@ const CreateRecipe = () => {
                                     </Form.Control>
                                 </Col>
                                 <Col className="no-gutters"> 
-                                    <Form.Control   as="textarea" 
-                                                    rows="1" 
+                                    <Form.Control   as="input" type="number"  min={0.1} 
                                                     onChange={(e)=>setAmount(parseInt(e.target.value))}
                                     />
                                 </Col>
+                            </Row>
+                            <Row>
                                 <Col className="no-gutters"> 
-                                    <button 
-                                        type="button"
-                                        className="buttonAdd" 
-                                        onClick={()=>handleAddMaterial()}
-                                    > 
+                                    <button type="button"
+                                            className={amount>0? "button-update" : "button-update-disabled"}
+                                            onClick={()=>handleAddMaterial()}
+                                            disabled={amount>0? false : true}> 
                                         Adicionar 
                                     </button>
                                 </Col>
+                                <Col className="no-gutters">
+                                    { materialsList.length>0 &&
+                                        <button type="button"
+                                                className="button-restore" 
+                                                onClick={()=>{  setMaterialsList([]);
+                                                                setEnable(false);
+                                                                setSupplyCost(0);
+                                                        }}> 
+                                            Limpar lista 
+                                        </button>
+                                    }
+                                </Col>
                             </Row>
                         </Container>
-
-                        <ul>
-                            { (materialsList===[])? null : 
-                                materialsList.map((material, index) => {
-                                    const materialInfo = allMaterials.find(item => item.id === material.id)
-                                    return <li key={index}> 
-                                                {materialInfo? `${materialInfo.description + " (" + material.amount + ")"}`
-                                                : null} 
-                                            </li>
-                                })
-                            }
-                        </ul>
-
-                        { materialsList.length>0 &&
-                                <button type="button"
-                                className="buttonClearList" 
-                                onClick={()=>{ setMaterialsList([]);
-                                               setSupplyCost(0);
-                                            }
-                                        }
-                                > 
-                                    Limpar lista 
-                                </button>
-                        }
-
-                        <h4> {"Custo dos Materiais: "+ formatter.format(supplyCost)} </h4>
-                        <h4> {"Custo Total: "+ formatter.format(supplyCost + laborCost)} </h4>
-                    </Form.Group>
-
-                    <Form.Group controlId="recipe">
-                        <Form.Label> <h2>Qual o rendimento da receita?</h2> </Form.Label>
-                        <Form.Control as="textarea" rows="1" placeholder={`${productivity}`}
-                                      onChange={(e)=>setProductivity(e.target.value)}/>
                     </Form.Group>
                 </Form>
 
-                <button onClick={()=>handleSubmit()}> 
+                <Container fluid="true"  className="container-form">
+                    { materialsList.length>0 && 
+                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                            <h2> Detalhes da Receita: </h2> 
+                            <h3> {recipeName} </h3>
+                        </div>
+                    }
+
+                    { materialsList.length>0 && 
+                        <Table striped bordered hover size="sm">
+                            <thead>
+                                <tr>
+                                    <th> Materiais </th>
+                                    <th> Quantidade </th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                {(materialsList===[])? null : materialsList.map((material, index) => {
+                                    const materialInfo = allMaterials.find(item => item.id === material.id)
+                                    return  <tr key={index}> 
+                                                <th>{materialInfo? `${materialInfo.description}`: null}</th>
+                                                <th>{materialInfo? material.amount + " " + material.unit : null}</th> 
+                                            </tr>
+                                })}
+
+                                <tr style={{"background":"gray"}}>
+                                    <th> Custo Total </th>
+                                    <th style={{"color":"green"}}> 
+                                        {formatter.format(supplyCost + laborCost)}
+                                    </th>
+                                </tr>
+                            </tbody>
+                        </Table>
+                }
+                </Container>
+
+                <button className={enableCreateRecipe? null : "button-disabled"}
+                        onClick={()=>handleSubmit()} 
+                        disabled={!enableCreateRecipe}> 
                     Criar Receita
                 </button>
+
+                <CustomModal props={{isOpen: true, 
+                                     message:"Teste de mensagem",
+                                     toggleModal: true}} />
             </div>
     );
 };

@@ -1,20 +1,30 @@
 import React, {useState, useEffect} from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 
 import Filter from '../../components/Filter';
 import MaterialsTable from '../../containers/MaterialsTable';
+import Loading from '../../components/Loading';
 import {filterListByText} from '../../utils/filters';
-
+import { setMaterialsList } from '../../reducer';
+import { getAllMaterials } from '../../services';
 
 const Materials = () => {
 
   const userLogged = useSelector(state => state.isUserLogged);
-  const allMaterials = useSelector(state => state.materialsList);
+  let allMaterials = useSelector(state => state.materialsList);
+  const dispatch = useDispatch();
 
   const [createPressed, setCreatePressed] = useState(false);
   const [isFilterApplied, setFilterApplied] = useState(false);
   const [filteredMaterials, setFilteredMaterials] = useState(allMaterials);
+
+  if(allMaterials.length=== 0) {
+    getAllMaterials().then(resposta => {
+        allMaterials = resposta;
+        dispatch(setMaterialsList(resposta));
+    });
+  }
 
   useEffect(() => {
     setFilteredMaterials(allMaterials);
@@ -27,8 +37,6 @@ const Materials = () => {
 
   if(!userLogged)
       return <Redirect to='/login'/>
-  else if( allMaterials.length===0)
-      return <Redirect to="/"/>
   else if(createPressed)
       return <Redirect to='/criarMaterial'/>
   else return (
@@ -42,7 +50,7 @@ const Materials = () => {
             Novo Material 
         </button>
 
-        <MaterialsTable materialsList={filteredMaterials} />
+        {allMaterials.length===0 ? <Loading/> : <MaterialsTable materialsList={filteredMaterials}/>}
 
         {(isFilterApplied && filteredMaterials.length===0) && 
         <h3 className="filter-no-results"> O filtro não retornou resultados </h3>}
