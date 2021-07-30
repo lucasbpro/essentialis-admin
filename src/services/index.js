@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 const URL_API = "https://essentialis-api.herokuapp.com"; // Production API
 
-=======
-const URL_API = "http://localhost:5000"; //https://essentialis-api-main.herokuapp.com"; // Development API
->>>>>>> develop
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
