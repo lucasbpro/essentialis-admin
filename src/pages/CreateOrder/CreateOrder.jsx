@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import Form from 'react-bootstrap/Form';
-import {Redirect} from "react-router-dom";
+import {Redirect, Link} from "react-router-dom";
 
 import {  getAllRecipes, 
           getAllCustomers, 
@@ -87,6 +87,7 @@ const CreateOrder = () => {
                     }
                   )}
               </Form.Control>
+              <Link to="/criarCliente">Clique aqui se o cliente não estiver na lista acima ;)</Link>
           </Form.Group>
 
           <Form.Group controlId="notes">

@@ -1,28 +1,41 @@
 import React from "react";
-import RecipeItem from '../../components/RecipeItem';
+import MaterialItem from '../../components/MaterialItem';
 import Table from 'react-bootstrap/Table'
 
-const MaterialsTable = ({materialsList, allMaterials}) => { 
 
-      if (materialsList.length===0)
-         return null;
-      else return (
-            <Table striped bordered hover>
-               <thead>
-                  <tr>
-                     <th> Nome da Receita </th>
-                     <th> Materiais Utilizados </th>
-                  </tr>
-               </thead>
+const MaterialsTable = ({materialsList}) => { 
 
-               <tbody>
-                  {materialsList && materialsList.map((material, index)  => {
-                     return <RecipeItem key={index} 
-                                        recipeId={material.id}
-                                        recipeDescription={material.description} />
-                  })} 
-               </tbody>
-            </Table>
+   const formatter = new Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'});
+
+   if (materialsList.length===0)
+      return null;
+   else return (
+         <Table striped bordered hover>
+            <thead>
+               <tr>
+                  <th> Material </th>
+                  <th> Detalhes </th>
+                  <th>  </th>
+               </tr>
+            </thead>
+
+            <tbody>
+               {materialsList && materialsList.map((material, index)  => {
+
+                  const materialDetails = {
+                     "Fornecedor" : material.supplier_name,
+                     "Preço": formatter.format(material.package_price),
+                     "Quantidade (pacote ou frasco)": `${material.package_amt} ` + material.unit_material,
+                  }
+
+                  return <MaterialItem key={index} 
+                                       id={material.id}
+                                       description={material.description} 
+                                       details = {materialDetails} 
+                                       recipes = {material.recipes}/>
+               })} 
+            </tbody>
+         </Table>
 		);
 }
 

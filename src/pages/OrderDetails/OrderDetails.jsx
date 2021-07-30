@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 import ConfirmDialog from '../../components/ConfirmDialog';
+import Loading from '../../components/Loading';
 
 import {getOrderById, 
         getRecipeById,
@@ -29,7 +30,6 @@ const OrderDetails = () => {
   const [orderInfo, setOrder] = useState([]);
   const [customerInfo, setCustomer] = useState([]);
   const [loading, setLoaded] = useState(true);
-
   const [dialog, setDialog] = useState(false);
   //const [confirm, setConfirm] = useState(false);
   //const [message, setMessage] = useState("");
@@ -91,77 +91,79 @@ const OrderDetails = () => {
 
   if(!userLogged)
     return <Redirect to='/login'/>
-  else if(loading)
-    return <h2>Carregando...</h2>;
   else return (
     <div className="container">
 
       <h1>Detalhes do Pedido</h1>
 
-      <div className="section" >
-        <Container fluid="true">
-            <Row>
-                <Col sm={5}> <h2>Produto:</h2> </Col>
-                <Col sm={7}> <h3>{productInfo.description}</h3> </Col>
-            </Row>
-            <Row>
-                <Col sm={5}> <h2>Data do Pedido:</h2> </Col>
-                <Col sm={7}> <h3>{orderInfo.order_date} </h3> </Col>
-            </Row>
-            <Row>
-                <Col sm={5}> <h2>Cliente:</h2> </Col>
-                <Col sm={7}> <h3>{customerInfo.name}</h3> </Col>
-            </Row>      
-            <Row>
-                <Col sm={5}> <h2>Status do Produto:</h2> </Col>
-                <Col sm={7}> <h3>{orderInfo.status_fabrication}</h3> </Col>
-            </Row>     
-            <Row>
-                <Col sm={5}> <h2>Status do Pagamento:</h2> </Col>
-                <Col sm={7}> <h3>{orderInfo.status_payment}</h3> </Col>
-            </Row>   
-            <Row>
-                <Col sm={5}> <h2>Valor:</h2> </Col>
-                <Col sm={7}> <h3>{`R$ ${orderInfo.order_total}`}</h3> </Col>
-            </Row>
-            <Row>
-                <Col sm={5}> <h2>Observações:</h2> </Col>
-                <Col sm={7}> <h3>{orderInfo.notes} </h3> </Col>
-            </Row>
-        </Container>
-      </div>
+      {loading? <Loading/> : 
+          <div className="section" >
+            <Container fluid="true">
+                <Row>
+                    <Col sm={5}> <h2>Produto:</h2> </Col>
+                    <Col sm={7}> <h3>{productInfo.description}</h3> </Col>
+                </Row>
+                <Row>
+                    <Col sm={5}> <h2>Data do Pedido:</h2> </Col>
+                    <Col sm={7}> <h3>{orderInfo.order_date} </h3> </Col>
+                </Row>
+                <Row>
+                    <Col sm={5}> <h2>Cliente:</h2> </Col>
+                    <Col sm={7}> <h3>{customerInfo.name}</h3> </Col>
+                </Row>      
+                <Row>
+                    <Col sm={5}> <h2>Status do Produto:</h2> </Col>
+                    <Col sm={7}> <h3>{orderInfo.status_fabrication}</h3> </Col>
+                </Row>     
+                <Row>
+                    <Col sm={5}> <h2>Status do Pagamento:</h2> </Col>
+                    <Col sm={7}> <h3>{orderInfo.status_payment}</h3> </Col>
+                </Row>   
+                <Row>
+                    <Col sm={5}> <h2>Valor:</h2> </Col>
+                    <Col sm={7}> <h3>{`R$ ${orderInfo.order_total}`}</h3> </Col>
+                </Row>
+                <Row>
+                    <Col sm={5}> <h2>Observações:</h2> </Col>
+                    <Col sm={7}> <h3>{orderInfo.notes} </h3> </Col>
+                </Row>
+            </Container>
+          </div>
+      }
 
-      <div className="section" >
-        <Container fluid="true">
-          <Row>
-              <Col> 
-                {statusChangeButton(orderInfo.status_fabrication)}
-              </Col>
-              <Col> 
-                {orderInfo.status_payment===PENDING_PAYMENT? 
-                    <Link to={`/pedido/${orderInfo.id}`}> 
-                        <button onClick={()=>handleChangeStatus(orderInfo,PENDING_PAYMENT)}> 
-                            PAGO 
-                        </button>
-                    </Link>
-                    : null 
-                }
-              </Col>
-              <Col> 
-                {orderInfo.status_fabrication!==DELIVERED? 
-                    <Link to="/pedidos"> 
-                        <button onClick={()=>handleDelete(orderInfo.id)}
-                                className="button-red"> 
-                          DELETAR
-                        </button>
-                    </Link>
-                    :
-                    null
-                }
-              </Col>
-            </Row>
-        </Container>
-      </div>
+      {loading? null : 
+        <div className="section" >
+          <Container fluid="true">
+            <Row>
+                <Col> 
+                  {statusChangeButton(orderInfo.status_fabrication)}
+                </Col>
+                <Col> 
+                  {orderInfo.status_payment===PENDING_PAYMENT? 
+                      <Link to={`/pedido/${orderInfo.id}`}> 
+                          <button onClick={()=>handleChangeStatus(orderInfo,PENDING_PAYMENT)}> 
+                              PAGO 
+                          </button>
+                      </Link>
+                      : null 
+                  }
+                </Col>
+                <Col> 
+                  {orderInfo.status_fabrication!==DELIVERED? 
+                      <Link to="/pedidos"> 
+                          <button onClick={()=>handleDelete(orderInfo.id)}
+                                  className="button-red"> 
+                            DELETAR
+                          </button>
+                      </Link>
+                      :
+                      null
+                  }
+                </Col>
+              </Row>
+          </Container>
+        </div>
+      }
         
       { dialog? <ConfirmDialog
                    // message={message}

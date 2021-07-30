@@ -6,11 +6,10 @@ const URL_RECIPES = `${URL_API}/recipes`;
 const axios = require('axios');
 
 // JSON data
-const recipesJSON = require('../data/db_recipes.json');
+const recipesJSON = require('../data/recipes.json');
 
 // Array
 const recipesData = Object.values(recipesJSON);
-k = parseInt(process.argv[2]) || 0;
-newRecipe = recipesData[k];
+const k = parseInt(process.argv[2]) || 0;
+const newRecipe = recipesData[k];
 axios.post(`${URL_RECIPES}`, newRecipe).then(resp => console.log(resp.data)).catch(error => console.log(error));
-

@@ -1,5 +1,6 @@
 /************ Action types ***************************************************/
 export const TOGGLE_USER_LOGGED = "toggle_user_logged";
+export const TOGGLE_MODAL = "toggle_throw_modal";
 export const SET_USER_TOKEN = "set_user_token";
 export const SET_RECIPE_LIST = "set_recipe_list";
 export const SET_CUSTOMERS_LIST = "set_customers_list";
@@ -14,7 +15,9 @@ const initialState = {
     recipeList: [],
     customerList: [],
     orderList: [],
-    materialsList: []
+    materialsList: [],
+    throwModal: false,
+    itemToDelete: {},
 };
 
 export function reducer(state = initialState, action) {
@@ -23,6 +26,13 @@ export function reducer(state = initialState, action) {
             return {
                 ...state,
                 isUserLogged: !state.isUserLogged
+            };
+        }
+
+        case TOGGLE_MODAL: {
+            return {
+                ...state,
+                throwModal: !state.throwModal
             };
         }
 
@@ -71,7 +81,13 @@ export function toggleUserLogged() {
     return {
       type: TOGGLE_USER_LOGGED
     };
-  }
+}
+
+export function toggleThrowModal() {
+    return {
+        type: TOGGLE_MODAL
+    };
+}
   
 export function setUserToken(token) {
     return {
