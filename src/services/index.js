@@ -13,7 +13,7 @@ const URL_CUSTOMERS = `${URL_API}/customers`;
 const axios = require('axios');
 
 
-export async function getEnvType() {
+async function getEnvType() {
   return process.env.ENVTYPE;
 }
 
@@ -129,6 +129,7 @@ async function deleteCustomer(customerId){
 /****************************  EXPORT CLAUSE *********************************/ 
 
 export {
+    getEnvType,
     login,
     getAllRecipes,
     getRecipeById,
