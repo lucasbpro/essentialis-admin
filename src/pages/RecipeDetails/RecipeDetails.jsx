@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import {Redirect, useParams} from 'react-router-dom';
-import {useSelector} from 'react-redux';
-
+import {useParams} from 'react-router-dom';
+import {useSelector, useDispatch} from 'react-redux';
 import Table from 'react-bootstrap/Table'
-import { getRecipeById, updateRecipe } from '../../services';
+
+import {  setMaterialsList } from '../../reducer';
+import {  getRecipeById, 
+          updateRecipe, 
+          getAllMaterials } from '../../services';
+import Loading from '../../components/Loading';
 
 
 const RecipeDetails = () => {
@@ -15,7 +19,16 @@ const RecipeDetails = () => {
   const [newRecipeMaterials, setNewMaterials] = useState({});
   const [materialsInfo, setMaterialsInfo] = useState([]);
 
-  const allMaterials = useSelector(state => state.materialsList);
+  let allMaterials = useSelector(state => state.materialsList);
+  const dispatch = useDispatch();
+
+  // if materials list in global state is empty, fetch the API for materials data
+  if(allMaterials.length === 0) {
+      getAllMaterials().then(resposta => {
+          allMaterials = resposta;
+          dispatch(setMaterialsList(resposta));
+      });
+  }
 
   useEffect(() => {
      getRecipeById(recipeId).then(recipe => {
@@ -71,56 +84,53 @@ const RecipeDetails = () => {
     setModified(false);
   };
 
-  if(loading)
-    return <h2> Carregando... </h2>;
-  else if( allMaterials.length===0 ){
-    return <Redirect to="/"/>
-  }
-  else return (
+  return (
     <div className="container">
         <h2>{recipeInfo.description}</h2>
 
         <p>Última atualização em {`${recipeInfo.last_update}`}</p>
 
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th> Material </th>
-              <th> Quantidade </th>
-            </tr>
-          </thead>
+        {loading? <Loading/> : 
+            <Table striped bordered hover>
+              <thead>
+                <tr>
+                  <th> Material </th>
+                  <th> Quantidade </th>
+                </tr>
+              </thead>
 
-          <tbody>
-            { materialsInfo && materialsInfo.map( (material,index) => {
-              return <tr key={index}> 
-                        <td>{material.description}</td>
-                        <td>
-                          <input  id={`material-${material.material_id}`}
-                                  type="number" 
-                                  min={0.1} 
-                                  onChange={(e)=>modifyMaterial(material.material_id, e.target.value)}/>
-                          {` ${material.unit_material}`}
-                        </td>
-                     </tr>
-            })}
-          </tbody>
-        </Table>
+              <tbody>
+                { materialsInfo && materialsInfo.map( (material,index) => {
+                  return <tr key={index}> 
+                            <td>{material.description}</td>
+                            <td>
+                              <input  id={`material-${material.material_id}`}
+                                      type="number" 
+                                      min={0.1} 
+                                      onChange={(e)=>modifyMaterial(material.material_id, e.target.value)}/>
+                              {` ${material.unit_material}`}
+                            </td>
+                        </tr>
+                })}
+              </tbody>
+            </Table>
+        }
         
-        <div style={{"display": "flex", "flexDirection":"row"}}>
-          <button  className={recipeModified? "button-update":"button-update-disabled"} 
-                  disabled={recipeModified? false : true}
-                  onClick = {()=>updateRecipeMaterials()}>	
-              Atualizar
-          </button>
+        {loading? <Loading/> : 
+            <div style={{"display": "flex", "flexDirection":"row"}}>
+              <button  className={recipeModified? "button-update":"button-update-disabled"} 
+                      disabled={recipeModified? false : true}
+                      onClick = {()=>updateRecipeMaterials()}>	
+                  Atualizar
+              </button>
 
-          <button  className={recipeModified? "button-restore":"button-restore-disabled"} 
-                  disabled={recipeModified? false : true}
-                  onClick = {()=>restoreOriginalValues()}>	
-              Cancelar alterações
-          </button>
-        </div>
-
-
+              <button  className={recipeModified? "button-restore":"button-restore-disabled"} 
+                      disabled={recipeModified? false : true}
+                      onClick = {()=>restoreOriginalValues()}>	
+                  Cancelar alterações
+              </button>
+            </div>
+        }
     </div>
   );
 };

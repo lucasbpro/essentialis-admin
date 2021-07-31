@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 const URL_API = "https://essentialis-api.herokuapp.com"; // Production API
 
+=======
+const URL_API = process.env.REACT_APP_ENVIRONMENT==="production"? "https://essentialis-main.herokuapp.com" : 
+                    process.env.REACT_APP_ENVIRONMENT==="develop"? "https://essentialis-api-main.herokuapp.com" : "http://localhost:5000";
+            
+>>>>>>> develop
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
