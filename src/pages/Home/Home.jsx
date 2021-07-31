@@ -6,11 +6,10 @@ import { setRecipeList, setCustomerList, setOrderList, setMaterialsList } from '
 import {getAllRecipes, 
         getAllCustomers,
         getAllOrders,
-        getAllMaterials, 
-        getEnvType } from '../../services';
+        getAllMaterials } from '../../services';
 
 const Home = () => {
-    console.log(getEnvType())
+    console.log(process.env.REACT_APP_ENVIRONMENT)
     const userLogged = useSelector(state => state.isUserLogged);
     const dispatch = useDispatch();
 
