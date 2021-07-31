@@ -1,5 +1,8 @@
-const URL_API = process.env.ENVTYPE==="production"? "https://essentialis-main.herokuapp.com" : 
-                    process.env.ENVTYPE==="develop"? "https://essentialis-api-main.herokuapp.com" : "http://localhost:5000";
+
+
+const env_type = getEnvType();
+const URL_API = env_type==="production"? "https://essentialis-main.herokuapp.com" : 
+                    env_type==="develop"? "https://essentialis-api-main.herokuapp.com" : "http://localhost:5000";
             
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
@@ -8,6 +11,11 @@ const URL_ORDERS = `${URL_API}/orders`;
 const URL_CUSTOMERS = `${URL_API}/customers`;
 
 const axios = require('axios');
+
+
+export async function getEnvType() {
+  return process.env.ENVTYPE;
+}
 
 async function get(URL){
   return fetch(URL).then(async (response) => {
