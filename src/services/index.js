@@ -1,5 +1,5 @@
-const URL_API = process.env.BRANCH==="master"? "https://essentialis-main.herokuapp.com" : 
-                    process.env.BRANCH==="develop"? "https://essentialis-api-main.herokuapp.com" : "http://localhost:5000";
+const URL_API = process.env.ENVTYPE==="production"? "https://essentialis-main.herokuapp.com" : 
+                    process.env.ENVTYPE==="develop"? "https://essentialis-api-main.herokuapp.com" : "http://localhost:5000";
             
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
