@@ -1,4 +1,6 @@
-const URL_API = "http://localhost:5000"; //https://essentialis-api-main.herokuapp.com"; // Development API
+const URL_API = process.env.BRANCH==="master"? "https://essentialis-main.herokuapp.com" : 
+                    process.env.BRANCH==="develop"? "https://essentialis-api-main.herokuapp.com" : "http://localhost:5000";
+            
 const URL_AUTH = `${URL_API}/auth`;
 const URL_RECIPES = `${URL_API}/recipes`;
 const URL_MATERIALS = `${URL_API}/raw_materials`;
