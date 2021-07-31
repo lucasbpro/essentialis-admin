@@ -9,6 +9,7 @@ import {getAllRecipes,
         getAllMaterials } from '../../services';
 
 const Home = () => {
+    console.log(process.env.REACT_APP_ENVIRONMENT)
     const userLogged = useSelector(state => state.isUserLogged);
     const dispatch = useDispatch();
 
