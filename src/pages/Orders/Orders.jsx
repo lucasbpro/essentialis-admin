@@ -83,7 +83,7 @@ const Orders = () => {
                 Novo Pedido 
             </button>
 
-            {ordersReady? <Loading/> : <OrderTable ordersList={filteredOrders}/>}
+            {ordersReady? <OrderTable ordersList={filteredOrders}/> : <Loading/>}
 
             {(isFilterApplied && filteredOrders.length===0) && 
                 <h3 className="filter-no-results"> O filtro não retornou resultados. </h3>}
