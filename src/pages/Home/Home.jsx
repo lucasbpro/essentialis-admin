@@ -9,7 +9,7 @@ import {getAllRecipes,
         getAllMaterials } from '../../services';
 
 const Home = () => {
-
+    console.log(process.env.BRANCH)
     const userLogged = useSelector(state => state.isUserLogged);
     const dispatch = useDispatch();
 
