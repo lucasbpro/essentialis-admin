@@ -71,6 +71,10 @@ async function createMaterial(newMaterial){
   return axios.post(`${URL_MATERIALS}`,newMaterial).then(r => r); 
 }
 
+async function updateMaterial(newMaterial){
+  return axios.put(`${URL_MATERIALS}`,newMaterial).then(r => r); 
+}
+
 async function deleteMaterial(materialId){
   return axios.delete(`${URL_MATERIALS}/${materialId}`).then(r => r); 
 }
@@ -132,6 +136,7 @@ export {
     getMaterialById,
     getMaterialsByIds,
     createMaterial,
+    updateMaterial,
     deleteMaterial,
     getAllOrders,
     getOrderById,
